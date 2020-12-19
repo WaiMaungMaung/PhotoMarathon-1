@@ -8,6 +8,7 @@ define('LARAVEL_START', microtime(true));
 /*
 
 testing wai mg and eel
+testing waimg at 12:11
 
 |--------------------------------------------------------------------------
 | Check If Application Is Under Maintenance
