@@ -7,9 +7,15 @@ define('LARAVEL_START', microtime(true));
 
 /*
 
+Testing again 
+
 testing wai mg and eel
+<<<<<<< HEAD
 testing myat
 
+=======
+testing waimg at 12:11
+>>>>>>> 32419166a03e300ce04b7ab89a74ba65f821a069
 
 |--------------------------------------------------------------------------
 | Check If Application Is Under Maintenance
