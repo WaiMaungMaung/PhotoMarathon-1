@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 define('LARAVEL_START', microtime(true));
 
 /*
+
+testing wai mg and eel
+
 |--------------------------------------------------------------------------
 | Check If Application Is Under Maintenance
 |--------------------------------------------------------------------------
