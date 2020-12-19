@@ -19,6 +19,18 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="/css/master.css" rel="stylesheet"/>
+    <meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=myanmar3' />
+	<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=zawgyi' />	
+	<style type="text/css">
+		.zawgyi{
+			font-family:Zawgyi-One;
+		}
+		.unicode{
+			font-family:Myanmar3,Yunghkio,'Masterpiece Uni Sans';
+		}
+	</style>
 </head>
 <body>
     <div id="app">
