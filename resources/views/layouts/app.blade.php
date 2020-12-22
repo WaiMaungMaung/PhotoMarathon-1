@@ -24,16 +24,20 @@
     <div id="app">
             <!-- Just an image -->
 
-        <div class="container">
+        <div class="container-fluid fixed-top ">
+            <div class="container-fluid logo">
             <div class="row">
-                <div class="col-sm dresp">                
-                    <img class="imgresp" src="/img/canon_logo.png"> 
-                </div>
-                <div class="col-sm dresp">
-                    <img class="imgresp" src="/img/marathon_logo .jpg">
-                </div>
-                <div class="col-sm dresp">
-                    <img class="imgresp" src="/img/MGR.png">       
+                
+               <div class="col-sm-4 col-lg-4  ">                
+                <img class="imgresp canon" src="/img/canon_logo.png"> 
+            </div>
+            <div class="col-lg-4 col-sm-4">
+                <img class="imgresp marathon" src="/img/marathon_logo .jpg">
+
+            </div>
+
+                <div class="col-sm-4  ml-auto col-lg-4 ">
+                    <img class="imgresp mgr" src="/img/MGR.png">       
                 </div>
             </div>
         </div>
@@ -51,7 +55,8 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{-- {{ config('app.name', 'Laravel') }} --}}
+                    
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -77,6 +82,13 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
+
+
+
+
+
+
+
                             @endif
                         @else
                             <li class="nav-item dropdown">
@@ -101,10 +113,64 @@
                 </div>
             </div>
         </nav>
+        </div>
 
         <main class="py-4">
+            
+          
+                
+
+            <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+          
+              </div>
+
+
+
+            <div id="content">
             @yield('content')
+
+            </div>
         </main>
+        <footer class="bg-light text-center ">
+            <!-- Grid container -->
+            <div class="container p-4">
+              <!--Grid row-->
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">Footer text</h5>
+          
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                    aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                  </p>
+                </div>
+                <!--Grid column-->
+          
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">Footer text</h5>
+          
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                    aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                  </p>
+                </div>
+                <!--Grid column-->
+              </div>
+              <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+          
+            <!-- Copyright -->
+            <div class="text-center p-3 " style="background-color: rgba(0, 0, 0, 0.2)">
+              © 2020 Copyright:
+              <a class="text-dark" href="https://mgr.com.mm/">mgr.com</a>
+            </div>
+            <!-- Copyright -->
+          </footer>
     </div>
 </body>
 </html>
