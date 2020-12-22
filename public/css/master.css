@@ -1,0 +1,18 @@
+.imgresp{
+    width:80%;
+    height: auto;
+}
+.dresp{
+    width:100%;
+    height: auto;
+}
+@media screen and (max-width: 480px){
+    .imgresp{
+        width:33%;
+        height: 30%;
+    }
+    .dresp{
+        width:50%;
+        height: auto;
+    }
+}

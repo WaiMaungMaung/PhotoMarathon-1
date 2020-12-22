@@ -18,9 +18,36 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="/css/master.css" rel="stylesheet"/>
 </head>
 <body>
     <div id="app">
+            <!-- Just an image -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm dresp">                
+                    <img class="imgresp" src="/img/canon_logo.png"> 
+                </div>
+                <div class="col-sm dresp">
+                    <img class="imgresp" src="/img/marathon_logo .jpg">
+                </div>
+                <div class="col-sm dresp">
+                    <img class="imgresp" src="/img/MGR.png">       
+                </div>
+            </div>
+        </div>
+        <!-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <a class="navbar-brand" href="#">
+            <img src="/img/canon_logo.png">
+        </a>
+        <a class="navbar-brand" href="#">
+            <img src="/img/marathon_logo .jpg" >            
+        </a>
+        <a class="navbar-brand">
+            <img src="/img/MGR.png">
+        </a>
+        </nav> -->
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
