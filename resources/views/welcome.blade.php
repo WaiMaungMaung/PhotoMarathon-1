@@ -31,3 +31,6 @@
 </div>
 </div>
 @stop
+@section('content')
+    sfdoa;jewffewj
+@endsection
