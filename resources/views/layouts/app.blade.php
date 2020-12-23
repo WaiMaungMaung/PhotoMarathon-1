@@ -23,7 +23,7 @@
 
 </head>
 <body>
-    <div id="app">
+    <div id="app" class= "container-fluid">
             <!-- Just an image -->
 
         <div class="container-fluid fixed-top ">
