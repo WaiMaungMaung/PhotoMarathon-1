@@ -55,7 +55,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{-- {{ config('app.name', 'Laravel') }} --}}
+                    {{-- {{ config('app.name', 'PHOTOMARATHON') }} --}}
                     
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -64,8 +64,22 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
+                    <ul class="navbar-nav mr-auto">                        
+                        @if(Route::has('about'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('about')}}">{{ __('About') }} </a>
+                            </li>
+                        @endif
+                        @if(Route::has('contact'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('contact')}}">{{ __('Contact') }} </a>
+                            </li>
+                        @endif
+                        @if(Route::has('termncondition'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('termncondition')}}">{{ __('Term & Condition') }} </a>
+                            </li>
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -82,12 +96,6 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
-
-
-
-
-
-
 
                             @endif
                         @else
@@ -115,22 +123,12 @@
         </nav>
         </div>
 
-        <main class="py-4">
-            
-          
-                
-
-            <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-          
-              </div>
-
-
-
+        <main class="py-4">            
             <div id="content">
-            @yield('content')
-
+                @yield('content')
             </div>
         </main>
+
         <footer class="bg-light text-center ">
             <!-- Grid container -->
             <div class="container p-4">
@@ -165,12 +163,14 @@
             <!-- Grid container -->
           
             <!-- Copyright -->
-            <div class="text-center p-3 " style="background-color: rgba(0, 0, 0, 0.2)">
+            <div class="text-left p-3" style="background-color: rgba(0, 0, 0, 0.2)">
               © 2020 Copyright:
-              <a class="text-dark" href="https://mgr.com.mm/">mgr.com</a>
+              <a class="text-dark" href="https://mgr.com.mm/">myanmargoldenrock.com.mm</a>
+              <div class="sharethis-inline-follow-buttons text-right"></div>
             </div>
-            <!-- Copyright -->
+            <!-- Copyright -->             
           </footer>
     </div>
 </body>
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5edf63078d9f5e00138d7ac1&product=inline-follow-buttons" async="async"></script>
 </html>

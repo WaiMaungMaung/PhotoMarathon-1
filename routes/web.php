@@ -31,6 +31,12 @@ Auth::routes(['verify' => true]);
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
+Route::get('/about', [App\Http\Controllers\MyController::class, 'about'])->name('about');
+
+Route::get('/contact', [App\Http\Controllers\MyController::class, 'contact'])->name('contact');
+
+Route::get('/termncondition', [App\Http\Controllers\MyController::class, 'termncondition'])->name('termncondition');
+
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
