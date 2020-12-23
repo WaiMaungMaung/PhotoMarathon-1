@@ -1,6 +1,6 @@
 .imgresp{
 
-    width:75%;
+    width:70%;
     height: auto;
 }
 h2.headertekst {
@@ -27,6 +27,8 @@ h2.headertekst {
     background: #fff;
 }
 @media screen and (max-width: 480px){
+    
+
    .mgr,.canon{
        display: none;
    }
