@@ -32,5 +32,7 @@
 </div>
 @stop
 @section('content')
-    sfdoa;jewffewj
-@endsection
+    <div>
+        hello welcome
+    </div>
+@stop

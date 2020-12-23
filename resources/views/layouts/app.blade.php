@@ -19,6 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="/css/master.css" rel="stylesheet"/>
+<<<<<<< HEAD
     <meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=myanmar3' />
@@ -31,9 +32,13 @@
 			font-family:Myanmar3,Yunghkio,'Masterpiece Uni Sans';
 		}
 	</style>
+=======
+    
+
+>>>>>>> 4368d42ac43683953e887ab5697cd5650feaeadd
 </head>
 <body>
-    <div id="app">
+    <div id="app" class= "container-fluid">
             <!-- Just an image -->
 
         <div class="container-fluid fixed-top ">
@@ -135,7 +140,7 @@
         </nav>
         </div>
 
-        <main class="py-4">            
+        <main class="py-4 container">            
             <div id="content">
                 @yield('content')
             </div>
@@ -175,10 +180,10 @@
             <!-- Grid container -->
           
             <!-- Copyright -->
-            <div class="text-left p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
               © 2020 Copyright:
-              <a class="text-dark" href="https://mgr.com.mm/">myanmargoldenrock.com.mm</a>
-              <div class="sharethis-inline-follow-buttons text-right"></div>
+              <a class="text-dark" href="https://mgr.com.mm/">myanmargoldenrock.com.mm</a>              
+              <div class="sharethis-inline-share-buttons"></div>
             </div>
             <!-- Copyright -->             
           </footer>
