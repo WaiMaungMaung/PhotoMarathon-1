@@ -19,6 +19,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="/css/master.css" rel="stylesheet"/>
+    
+
 </head>
 <body>
     <div id="app">
@@ -123,7 +125,7 @@
         </nav>
         </div>
 
-        <main class="py-4">            
+        <main class="py-4 container">            
             <div id="content">
                 @yield('content')
             </div>
@@ -163,14 +165,14 @@
             <!-- Grid container -->
           
             <!-- Copyright -->
-            <div class="text-left p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
               © 2020 Copyright:
-              <a class="text-dark" href="https://mgr.com.mm/">myanmargoldenrock.com.mm</a>
-              <div class="sharethis-inline-follow-buttons text-right"></div>
+              <a class="text-dark" href="https://mgr.com.mm/">myanmargoldenrock.com.mm</a>              
+              <div class="sharethis-inline-share-buttons"></div>
             </div>
             <!-- Copyright -->             
           </footer>
     </div>
 </body>
-<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5edf63078d9f5e00138d7ac1&product=inline-follow-buttons" async="async"></script>
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5edf63078d9f5e00138d7ac1&product=inline-follow-buttons' async='async'></script>
 </html>

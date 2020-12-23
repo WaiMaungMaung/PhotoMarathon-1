@@ -1,4 +1,6 @@
-@extends('layouts.master')
-@section('nav-content')
-    @yield('layouts.navigation')
+@extends('layouts.app')
+@section('content')
+    <div>
+        hello welcome
+    </div>
 @stop
