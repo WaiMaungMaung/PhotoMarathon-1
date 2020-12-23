@@ -49,12 +49,18 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $data['new_nrc']=$data['nrc-box']."/".$data['nrc-code'].$data['nrc-type'].$data['nrc'];
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'new_nrc' => ['required','string', 'max:255', 'unique:users,nrc'],
+
         ]);
+        
     }
+
+    
 
     /**
      * Create a new user instance after a valid registration.
@@ -67,6 +73,7 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'nrc'=> $data['nrc-box']."/".$data['nrc-code'].$data['nrc-type'].$data['nrc'],
             'password' => Hash::make($data['password']),
         ]);
     }

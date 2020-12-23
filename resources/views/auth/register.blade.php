@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -9,8 +11,20 @@
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
-                        
                         @csrf
+
+
+                        @error('new_nrc')
+                       
+
+                          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                           U can't registered two times with one NRC.
+                            
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                         @enderror
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
@@ -25,7 +39,8 @@
                                 @enderror
                             </div>
                         </div>
-                      
+
+
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
@@ -33,6 +48,42 @@
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                      
+                        <div class="form-group row">
+                            <label for="nrc" class="col-md-4 col-form-label text-md-right">{{ __('NRC') }}</label>
+
+                            <div class="col-md-6">
+                                <select name="nrc-box" id="nrc-box" class="form-control col-md-2 float-left">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+
+                                </select>
+                                <input class="form-control col-md-2 float-left" type="text" placeholder="/" readonly>
+                                <select name="nrc-code" id="nrc-code" class="form-control col-md-4 float-left">
+                                    <option value="Ahmara">Ahmara</option>
+                                    <option value="Bago">Bago</option>
+                                    <option value="MayanGone">MayanGone</option>
+                                    <option value="Hlaing">Hlaing</option>
+
+                                </select>
+
+                                <select name="nrc-type" id="nrc-type" class="form-control col-md-3 float-left">
+                                    <option value="N">N</option>
+                                    <option value="P">P</option>
+                                    <option value="T">T</option>
+
+                                </select>
+                                <input id="nrc" type="text" class="form-control col-md-4 @error('nrc') is-invalid @enderror" name="nrc" required >
+
+                                @error('nrc')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
