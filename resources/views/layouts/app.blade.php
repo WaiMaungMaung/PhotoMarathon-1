@@ -18,8 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="/css/master.css" rel="stylesheet"/>
-<<<<<<< HEAD
+    <link href="{{ asset('css/master.css')}}" rel="stylesheet"/>
     <meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=myanmar3' />
@@ -32,10 +31,6 @@
 			font-family:Myanmar3,Yunghkio,'Masterpiece Uni Sans';
 		}
 	</style>
-=======
-    
-
->>>>>>> 4368d42ac43683953e887ab5697cd5650feaeadd
 </head>
 <body>
     <div id="app" class= "container-fluid">
