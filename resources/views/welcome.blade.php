@@ -14,7 +14,7 @@
       <img class="d-block w-100" src="{{url('/img/wel1.jpg')}}" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="{{url('/img/we12.jpg')}}" alt="Second slide">
+      <img class="d-block w-100" src="{{url('/img/wel2.jpg')}}" alt="Second slide">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="{{url('/img/wel3.jpg')}}" alt="Third slide">
