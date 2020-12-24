@@ -3,6 +3,9 @@
     width:70%;
     height: auto;
 }
+.child_logo{
+    padding-left: 40px;
+}
 h2.headertekst {
     text-align: center;
   }

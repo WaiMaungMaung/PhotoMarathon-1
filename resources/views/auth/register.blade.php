@@ -29,7 +29,7 @@
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
@@ -44,7 +44,7 @@
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
@@ -56,18 +56,18 @@
                         </div>
                       
                         <div class="form-group row">
-                            <label for="nrc" class="col-md-4 col-form-label text-md-right">{{ __('NRC') }}</label>
+                            <label for="nrc" class="col-4 col-form-label text-md-right">{{ __('NRC') }}</label>
 
-                            <div class="col-md-6">
-                                <select name="nrc-box" id="nrc-box" class="form-control col-md-2 float-left">
+                            <div class="col-lg-8">
+                                <select name="nrc-box" id="nrc-box" class="form-control col-2 float-left">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
 
                                 </select>
-                                <input class="form-control col-md-2 float-left" type="text" placeholder="/" readonly>
-                                <select name="nrc-code" id="nrc-code" class="form-control col-md-4 float-left">
+                                <input class="form-control col-1 float-left" type="text" placeholder="/" readonly>
+                                <select name="nrc-code" id="nrc-code" class="form-control col-3 float-left">
                                     <option value="Ahmara">Ahmara</option>
                                     <option value="Bago">Bago</option>
                                     <option value="MayanGone">MayanGone</option>
@@ -75,13 +75,13 @@
 
                                 </select>
 
-                                <select name="nrc-type" id="nrc-type" class="form-control col-md-3 float-left">
+                                <select name="nrc-type" id="nrc-type" class="form-control col-2 float-left">
                                     <option value="N">N</option>
                                     <option value="P">P</option>
                                     <option value="T">T</option>
 
                                 </select>
-                                <input id="nrc" type="text" class="form-control col-md-4 @error('nrc') is-invalid @enderror" name="nrc" required >
+                                <input id="nrc" type="text" class="form-control col-4 @error('nrc') is-invalid @enderror" name="nrc" required >
 
                                 @error('nrc')
                                     <span class="invalid-feedback" role="alert">
@@ -94,7 +94,7 @@
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
@@ -108,7 +108,7 @@
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>

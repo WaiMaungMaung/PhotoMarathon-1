@@ -44,18 +44,19 @@
         <div class="container-fluid fixed-top ">
             <div class="container-fluid logo">
             <div class="row">
-                
-               <div class="col-sm-4 col-lg-4  ">                
-                <img class="imgresp canon" src="/img/canon_logo.png"> 
+             
+               <div class="col-sm-4 col-lg-4 child_logo">                
+                <img class="imgresp canon" src="/img/canon_logo.png" > 
             </div>
-            <div class="col-lg-4 col-sm-4">
+            <div class="col-lg-4 col-sm-4 child_logo">
                 <img class="imgresp marathon" src="/img/marathon_logo .jpg">
 
             </div>
 
-                <div class="col-sm-4  ml-auto col-lg-4 ">
+                <div class="col-sm-4  ml-auto col-lg-4 child_logo">
                     <img class="imgresp mgr" src="/img/MGR.png">       
                 </div>
+           
             </div>
         </div>
         <!-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -72,7 +73,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{-- {{ config('app.name', 'PHOTOMARATHON') }} --}}
+                   Home {{-- {{ config('app.name', 'PHOTOMARATHON') }} --}}
                     
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
