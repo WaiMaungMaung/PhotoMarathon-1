@@ -18,8 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="/css/master.css" rel="stylesheet"/>
-<<<<<<< HEAD
+    <link href="{{ asset('css/master.css')}}" rel="stylesheet"/>
     <meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=myanmar3' />
@@ -32,10 +31,6 @@
 			font-family:Myanmar3,Yunghkio,'Masterpiece Uni Sans';
 		}
 	</style>
-=======
-    
-
->>>>>>> 4368d42ac43683953e887ab5697cd5650feaeadd
 </head>
 <body>
     <div id="app" class= "container-fluid">
@@ -46,15 +41,15 @@
             <div class="row">
                 
                <div class="col-sm-4 col-lg-4  ">                
-                <img class="imgresp canon" src="/img/canon_logo.png"> 
+                <img class="imgresp canon" src="{{url('/img/canon_logo.png')}}"> 
             </div>
             <div class="col-lg-4 col-sm-4">
-                <img class="imgresp marathon" src="/img/marathon_logo .jpg">
+                <img class="imgresp marathon" src="{{url('/img/marathon_logo.jpg')}}">
 
             </div>
 
                 <div class="col-sm-4  ml-auto col-lg-4 ">
-                    <img class="imgresp mgr" src="/img/MGR.png">       
+                    <img class="imgresp mgr" src="{{url('/img/MGR.png')}}">       
                 </div>
             </div>
         </div>
