@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<h2 class="headertekst" style="color: #800000;"><strong>Canon Photo Marathon Myanmar 2020 (Rules & Regulations) </strong></h2>
+<h2 class="headertekst" style="color: #800000;"><strong>Canon Photo Marathon Myanmar 2021 (Rules & Regulations) </strong></h2>
 
 <h2 class="headertekst" style="color: #800000;"><strong>“ ပြိုင်ပွဲဝင်စည်းမျဥ်းစည်းကမ်းများ ” </strong></h2>
 <body class=paragraph>
@@ -8,7 +8,7 @@
 <ol>
 <li>
 Myanmar Golden Rock International Co., Ltd. မှ ဒုတိယအကြိမ်အဖြစ်ကြီးမှူးကျင်းပသော နိုင်ငံတကာအဆင့်မှီ “ Canon Photo Marathon Myanmar 2020” ပြိုင်ပွဲကြီးကို
-(15.2.2020) တွင် Rose Garden Hotel တွင်ကျင်းပမည်ဖြစ်ပါသဖြင့်စာရင်းပေးသွင်းနိုင်ကြပါပြီဖြစ်သည်။ </li>
+(15.2.2021) တွင် Rose Garden Hotel တွင်ကျင်းပမည်ဖြစ်ပါသဖြင့်စာရင်းပေးသွင်းနိုင်ကြပါပြီဖြစ်သည်။ </li>
 <li>သတ်မှတ်ထားသောပြိုင်ပွဲဦးရေထက်ကျော်လွန်ပြီးမှ စာရင်းလာရောက်ပေးသွင်းသူများကိုလက်ခံမည့်မဟုတ်၊ ဦးရာလူနစ်ဖြင့်သာခွဲဝေသွားပြီး နောက်ကျမှစာရင်းလာရောက်ပေးသွင်း
 သူများကိုလက်ခံမည်မဟုတ်ပါ</li>
 <li>အကြောင်းကြောင်းကြောင့် ပြိုင်ပွဲအား ရက်၊ နေရာ၊ အချိန် ပြောင်းလဲခဲ့ပါက ပြိုင်ပွဲနေ့မတိုင်ခင်
