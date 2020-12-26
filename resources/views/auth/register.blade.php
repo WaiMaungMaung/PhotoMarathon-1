@@ -12,14 +12,10 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
-
-                        @error('new_nrc')
-                       
+                        @error('new_nrc')                      
 
                           <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                           U can't registered two times with one NRC.
-                            
+                           U can't registered two times with one NRC.                            
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
@@ -60,11 +56,10 @@
 
                             <div class="col-md-6">
                                 <select name="nrc-box" id="nrc-box" class="form-control col-md-2 float-left">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-
+                                    <option value="">-</option>
+                                    @for($i = 1; $i < 16; $i++)
+                                        <option value="{{ $i }}">{{ $i }}</option>
+                                    @endfor
                                 </select>
                                 <input class="form-control col-md-2 float-left" type="text" placeholder="/" readonly>
                                 <select name="nrc-code" id="nrc-code" class="form-control col-md-4 float-left">
@@ -72,7 +67,6 @@
                                     <option value="Bago">Bago</option>
                                     <option value="MayanGone">MayanGone</option>
                                     <option value="Hlaing">Hlaing</option>
-
                                 </select>
 
                                 <select name="nrc-type" id="nrc-type" class="form-control col-md-3 float-left">
