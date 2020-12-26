@@ -60,3 +60,9 @@ h2.headertekst {
 	margin-left: auto;
 	margin-right: auto;
 }
+#bg-nav{
+    background-color:#871c11;     
+}
+.nav-link,#hm-nav,#lin-nav-1,#lin-nav-2,#lin-nav-3,#navbarDropdown,#lgout-nav{
+    color: #fff;
+}
