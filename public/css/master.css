@@ -3,6 +3,9 @@
     width:70%;
     height: auto;
 }
+.child_logo{
+    padding-left: 40px;
+}
 h2.headertekst {
     text-align: center;
   }
@@ -57,7 +60,15 @@ h2.headertekst {
 	margin-left: auto;
 	margin-right: auto;
 }
+<<<<<<< HEAD
 .paragraph{
     text-align: justify;
     
+=======
+#bg-nav{
+    background-color:#871c11;     
+}
+.nav-link,#hm-nav,#lin-nav-1,#lin-nav-2,#lin-nav-3,#navbarDropdown,#lgout-nav{
+    color: #fff;
+>>>>>>> b3a177c6e4d802dacfee07d6ab9208e7dd155e13
 }

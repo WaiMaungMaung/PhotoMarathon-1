@@ -13,6 +13,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     
+<<<<<<< HEAD
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5edf63078d9f5e00138d7ac1&product=inline-follow-buttons" async="async"></script>
     <script type="text/javascript">
       var msg  = document.title;
@@ -34,6 +35,9 @@
   
       moveTitle();
   </script>
+=======
+    
+>>>>>>> b3a177c6e4d802dacfee07d6ab9208e7dd155e13
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -54,43 +58,56 @@
 			font-family:Myanmar3,Yunghkio,'Masterpiece Uni Sans';
 		}
 	</style>
+    <script type="text/javascript" src="{{url('js/jquery.js')}}"></script>
+    <script>
+    /*Get Township short term json */
+    $(document).ready(function(){
+        var tsc = "{{ url('document/townshipcode.json')}}";
+        $.getJSON( tsc , function( result ){ 
+            $.each(result, function(i, option){
+                $('#nrc-code').append($('<option/>').attr("value", option.value).text(option.value));
+            });
+        });
+    });
+    </script>
 </head>
 <body>
     <div id="app" class= "container-fluid">
             <!-- Just an image -->
 
-        <div class="container-fluid fixed-top ">
-            <div class="container-fluid logo">
+        <div class="fixed-top ">
+            <div class="logo">
             <div class="row">
-                
-               <div class="col-sm-4 col-lg-4  ">                
-                <img class="imgresp canon" src="{{url('/img/canon_logo.png')}}"> 
+             
+               <div class="col-sm-4 col-lg-4 child_logo">                
+                <img class="imgresp canon" src="{{url('/img/canon_logo.png')}}" > 
             </div>
-            <div class="col-lg-4 col-sm-4">
-                <img class="imgresp marathon" src="{{url('/img/marathon_logo.jpg')}}">
+            <div class="col-lg-4 col-sm-4 child_logo">
+                <img class="imgresp marathon" src="{{url('/img/marathon_logo .jpg')}}">
 
             </div>
 
-                <div class="col-sm-4  ml-auto col-lg-4 ">
+                <div class="col-sm-4  ml-auto col-lg-4 child_logo">
                     <img class="imgresp mgr" src="{{url('/img/MGR.png')}}">       
                 </div>
+           
             </div>
         </div>
         <!-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <a class="navbar-brand" href="#">
-            <img src="/img/canon_logo.png">
+            <img src="{{url('/img/canon_logo.png')}}">
         </a>
         <a class="navbar-brand" href="#">
-            <img src="/img/marathon_logo .jpg" >            
+            <img src="{{url('/img/marathon_logo .jpg')}}" >            
         </a>
         <a class="navbar-brand">
-            <img src="/img/MGR.png">
+            <img src="{{url('/img/MGR.png')}}">
         </a>
         </nav> -->
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" id="bg-nav">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{-- {{ config('app.name', 'PHOTOMARATHON') }} --}}
+                <a class="navbar-brand" href="{{ url('/') }}" id="hm-nav">
+                   Home {{-- {{ config('app.name', 'PHOTOMARATHON') }} --}}
                     
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -102,17 +119,17 @@
                     <ul class="navbar-nav mr-auto">                        
                         @if(Route::has('about'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('about')}}">{{ __('About') }} </a>
+                                <a class="nav-link" id="lin-nav-1" href="{{ route('about')}}">{{ __('About') }} </a>
                             </li>
                         @endif
                         @if(Route::has('contact'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('contact')}}">{{ __('Contact') }} </a>
+                                <a class="nav-link" id="lin-nav-2" href="{{ route('contact')}}">{{ __('Contact') }} </a>
                             </li>
                         @endif
                         @if(Route::has('termncondition'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('termncondition')}}">{{ __('Term & Condition') }} </a>
+                                <a class="nav-link" id="lin-nav-3" href="{{ route('termncondition')}}">{{ __('Term & Condition') }} </a>
                             </li>
                         @endif
                     </ul>
@@ -140,7 +157,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item" id="lgout-nav" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
@@ -157,13 +174,11 @@
             </div>
         </nav>
         </div>
-
         <main class="py-4 container">            
             <div id="content">
                 @yield('content')
             </div>
         </main>
-
         <footer class="bg-light text-center ">
             <!-- Grid container -->
             <div class="container p-4">
@@ -207,4 +222,5 @@
           </footer>
     </div>
 </body>
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5edf63078d9f5e00138d7ac1&product=inline-follow-buttons" async="async"></script>
 </html>

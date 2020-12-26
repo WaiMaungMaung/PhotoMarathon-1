@@ -1,0 +1,1202 @@
+[
+    {
+      "key": "NRC01",
+      "value": "AHGAPA"
+    },
+    {
+      "key": "NRC02",
+      "value": "AHGAYA"
+    },
+    {
+      "key": "NRC03",
+      "value": "AHLANA"
+    },
+    {
+      "key": "NRC04",
+      "value": "AHMANA"
+    },
+    {
+      "key": "NRC05",
+      "value": "AHMATA"
+    },
+    {
+      "key": "NRC06",
+      "value": "AHMAYA"
+    },
+    {
+      "key": "NRC07",
+      "value": "AHMAZA"
+    },
+    {
+      "key": "NRC08",
+      "value": "AHPHANA"
+    },
+    {
+      "key": "NRC09",
+      "value": "AHSANA"
+    },
+    {
+      "key": "NRC10",
+      "value": "AHTANA"
+    },
+    {
+      "key": "NRC11",
+      "value": "AHYATA"
+    },
+    {
+      "key": "NRC12",
+      "value": "BAAHNA"
+    },
+    {
+      "key": "NRC13",
+      "value": "BAHANA"
+    },
+    {
+      "key": "NRC14",
+      "value": "BAKALA"
+    },
+    {
+      "key": "NRC15",
+      "value": "BALAKHA"
+    },
+    {
+      "key": "NRC16",
+      "value": "BALANA"
+    },
+    {
+      "key": "NRC17",
+      "value": "BAMANA"
+    },
+    {
+      "key": "NRC18",
+      "value": "BAPANA"
+    },
+    {
+      "key": "NRC19",
+      "value": "BATAHTA"
+    },
+    {
+      "key": "NRC20",
+      "value": "BATALA"
+    },
+    {
+      "key": "NRC21",
+      "value": "BATHASA"
+    },
+    {
+      "key": "NRC22",
+      "value": "BATHATA"
+    },
+    {
+      "key": "NRC23",
+      "value": "DADAYA"
+    },
+    {
+      "key": "NRC24",
+      "value": "DAGAMA"
+    },
+    {
+      "key": "NRC25",
+      "value": "DAGANA"
+    },
+    {
+      "key": "NRC26",
+      "value": "DAGASA"
+    },
+    {
+      "key": "NRC27",
+      "value": "DAGATA"
+    },
+    {
+      "key": "NRC28",
+      "value": "DAGAYA"
+    },
+    {
+      "key": "NRC29",
+      "value": "DAKHATHA"
+    },
+    {
+      "key": "NRC30",
+      "value": "DALANA"
+    },
+    {
+      "key": "NRC31",
+      "value": "DAMASA"
+    },
+    {
+      "key": "NRC32",
+      "value": "DANAPHA"
+    },
+    {
+      "key": "NRC33",
+      "value": "DAPANA"
+    },
+    {
+      "key": "NRC34",
+      "value": "DAPAYA"
+    },
+    {
+      "key": "NRC35",
+      "value": "DAPHAYA"
+    },
+    {
+      "key": "NRC36",
+      "value": "DAUNA"
+    },
+    {
+      "key": "NRC37",
+      "value": "GAGANA"
+    },
+    {
+      "key": "NRC38",
+      "value": "GAMANA"
+    },
+    {
+      "key": "NRC39",
+      "value": "HAKAKA"
+    },
+    {
+      "key": "NRC40",
+      "value": "HAKHANA"
+    },
+    {
+      "key": "NRC41",
+      "value": "HAMALA"
+    },
+    {
+      "key": "NRC42",
+      "value": "HAMANA"
+    },
+    {
+      "key": "NRC43",
+      "value": "HAPANA"
+    },
+    {
+      "key": "NRC44",
+      "value": "HAPATA"
+    },
+    {
+      "key": "NRC45",
+      "value": "HATHATA"
+    },
+    {
+      "key": "NRC46",
+      "value": "HTAKHANA"
+    },
+    {
+      "key": "NRC47",
+      "value": "HTALANA"
+    },
+    {
+      "key": "NRC48",
+      "value": "HTATALA"
+    },
+    {
+      "key": "NRC49",
+      "value": "HTATAPA"
+    },
+    {
+      "key": "NRC50",
+      "value": "HTAWANA"
+    },
+    {
+      "key": "NRC51",
+      "value": "KABALA"
+    },
+    {
+      "key": "NRC52",
+      "value": "KADANA"
+    },
+    {
+      "key": "NRC53",
+      "value": "KAHANA"
+    },
+    {
+      "key": "NRC54",
+      "value": "KAHTANA"
+    },
+    {
+      "key": "NRC55",
+      "value": "KAKAHTA"
+    },
+    {
+      "key": "NRC56",
+      "value": "KAKAKA"
+    },
+    {
+      "key": "NRC57",
+      "value": "KAKANA"
+    },
+    {
+      "key": "NRC58",
+      "value": "KAKATA"
+    },
+    {
+      "key": "NRC59",
+      "value": "KAKAYA"
+    },
+    {
+      "key": "NRC60",
+      "value": "KAKHAKA"
+    },
+    {
+      "key": "NRC61",
+      "value": "KAKHANA"
+    },
+    {
+      "key": "NRC62",
+      "value": "KALAAH"
+    },
+    {
+      "key": "NRC63",
+      "value": "KALAHTA"
+    },
+    {
+      "key": "NRC64",
+      "value": "KALANA"
+    },
+    {
+      "key": "NRC65",
+      "value": "KALATA"
+    },
+    {
+      "key": "NRC66",
+      "value": "KALAWA"
+    },
+    {
+      "key": "NRC67",
+      "value": "KAMAMA"
+    },
+    {
+      "key": "NRC68",
+      "value": "KAMANA"
+    },
+    {
+      "key": "NRC69",
+      "value": "KAMATA"
+    },
+    {
+      "key": "NRC70",
+      "value": "KAMAYA"
+    },
+    {
+      "key": "NRC71",
+      "value": "KANANA"
+    },
+    {
+      "key": "NRC72",
+      "value": "KAPAKA"
+    },
+    {
+      "key": "NRC73",
+      "value": "KAPALA"
+    },
+    {
+      "key": "NRC74",
+      "value": "KAPANA"
+    },
+    {
+      "key": "NRC75",
+      "value": "KAPATA"
+    },
+    {
+      "key": "NRC76",
+      "value": "KAPHANA"
+    },
+    {
+      "key": "NRC77",
+      "value": "KASAKA"
+    },
+    {
+      "key": "NRC78",
+      "value": "KASANA"
+    },
+    {
+      "key": "NRC79",
+      "value": "KATAKHA"
+    },
+    {
+      "key": "NRC80",
+      "value": "KATALA"
+    },
+    {
+      "key": "NRC81",
+      "value": "KATANA"
+    },
+    {
+      "key": "NRC82",
+      "value": "KATATA"
+    },
+    {
+      "key": "NRC83",
+      "value": "KATHANA"
+    },
+    {
+      "key": "NRC84",
+      "value": "KAWANA"
+    },
+    {
+      "key": "NRC85",
+      "value": "KAYAYA"
+    },
+    {
+      "key": "NRC86",
+      "value": "KHAAHZA"
+    },
+    {
+      "key": "NRC87",
+      "value": "KHABADA"
+    },
+    {
+      "key": "NRC88",
+      "value": "KHALAPHA"
+    },
+    {
+      "key": "NRC89",
+      "value": "KHAMANA"
+    },
+    {
+      "key": "NRC90",
+      "value": "KHAMASA"
+    },
+    {
+      "key": "NRC91",
+      "value": "KHAPANA"
+    },
+    {
+      "key": "NRC92",
+      "value": "KHAPHANA"
+    },
+    {
+      "key": "NRC93",
+      "value": "KHASANA"
+    },
+    {
+      "key": "NRC94",
+      "value": "KHATANA"
+    },
+    {
+      "key": "NRC95",
+      "value": "KHAUNA"
+    },
+    {
+      "key": "NRC96",
+      "value": "KHAUTA"
+    },
+    {
+      "key": "NRC97",
+      "value": "KHAYAHA"
+    },
+    {
+      "key": "NRC98",
+      "value": "KHAYATA"
+    },
+    {
+      "key": "NRC99",
+      "value": "LABANA"
+    },
+    {
+      "key": "NRC100",
+      "value": "LAGANA"
+    },
+    {
+      "key": "NRC101",
+      "value": "LAHANA"
+    },
+    {
+      "key": "NRC102",
+      "value": "LAKANA"
+    },
+    {
+      "key": "NRC103",
+      "value": "LAKHANA"
+    },
+    {
+      "key": "NRC104",
+      "value": "LAKHATA"
+    },
+    {
+      "key": "NRC105",
+      "value": "LALANA"
+    },
+    {
+      "key": "NRC106",
+      "value": "LAMANA"
+    },
+    {
+      "key": "NRC107",
+      "value": "LAMATA"
+    },
+    {
+      "key": "NRC108",
+      "value": "LAPATA"
+    },
+    {
+      "key": "NRC109",
+      "value": "LATHANA"
+    },
+    {
+      "key": "NRC110",
+      "value": "LATHAYA"
+    },
+    {
+      "key": "NRC111",
+      "value": "LAWANA"
+    },
+    {
+      "key": "NRC112",
+      "value": "LAYANA"
+    },
+    {
+      "key": "NRC113",
+      "value": "LAYANA"
+    },
+    {
+      "key": "NRC114",
+      "value": "MAAHNA"
+    },
+    {
+      "key": "NRC115",
+      "value": "MAAHPA"
+    },
+    {
+      "key": "NRC116",
+      "value": "MAAHTA"
+    },
+    {
+      "key": "NRC117",
+      "value": "MABANA"
+    },
+    {
+      "key": "NRC118",
+      "value": "MADANA"
+    },
+    {
+      "key": "NRC119",
+      "value": "MAGADA"
+    },
+    {
+      "key": "NRC120",
+      "value": "MAGATA"
+    },
+    {
+      "key": "NRC121",
+      "value": "MAHAMA"
+    },
+    {
+      "key": "NRC122",
+      "value": "MAHAYA"
+    },
+    {
+      "key": "NRC123",
+      "value": "MAHTALA"
+    },
+    {
+      "key": "NRC124",
+      "value": "MAHTANA"
+    },
+    {
+      "key": "NRC125",
+      "value": "MAKANA"
+    },
+    {
+      "key": "NRC126",
+      "value": "MAKATA"
+    },
+    {
+      "key": "NRC127",
+      "value": "MAKHABA"
+    },
+    {
+      "key": "NRC128",
+      "value": "MAKHANA"
+    },
+    {
+      "key": "NRC129",
+      "value": "MAKHATA"
+    },
+    {
+      "key": "NRC130",
+      "value": "MALAMA"
+    },
+    {
+      "key": "NRC131",
+      "value": "MALANA"
+    },
+    {
+      "key": "NRC132",
+      "value": "MAMAKA"
+    },
+    {
+      "key": "NRC133",
+      "value": "MAMANA"
+    },
+    {
+      "key": "NRC134",
+      "value": "MAMATA"
+    },
+    {
+      "key": "NRC135",
+      "value": "MANAMA"
+    },
+    {
+      "key": "NRC136",
+      "value": "MANANA"
+    },
+    {
+      "key": "NRC137",
+      "value": "MANATA"
+    },
+    {
+      "key": "NRC138",
+      "value": "MANGANA"
+    },
+    {
+      "key": "NRC139",
+      "value": "MANYANA"
+    },
+    {
+      "key": "NRC140",
+      "value": "MAPANA"
+    },
+    {
+      "key": "NRC141",
+      "value": "MAPATA"
+    },
+    {
+      "key": "NRC142",
+      "value": "MAPHANA"
+    },
+    {
+      "key": "NRC143",
+      "value": "MAPHATA"
+    },
+    {
+      "key": "NRC144",
+      "value": "MASAKA"
+    },
+    {
+      "key": "NRC145",
+      "value": "MASANA"
+    },
+    {
+      "key": "NRC146",
+      "value": "MASATA"
+    },
+    {
+      "key": "NRC147",
+      "value": "MATANA"
+    },
+    {
+      "key": "NRC148",
+      "value": "MATAPA"
+    },
+    {
+      "key": "NRC149",
+      "value": "MATATA"
+    },
+    {
+      "key": "NRC150",
+      "value": "MATAYA"
+    },
+    {
+      "key": "NRC151",
+      "value": "MATHANA"
+    },
+    {
+      "key": "NRC152",
+      "value": "MAUNA"
+    },
+    {
+      "key": "NRC153",
+      "value": "MAWATA"
+    },
+    {
+      "key": "NRC154",
+      "value": "MAYAKA"
+    },
+    {
+      "key": "NRC155",
+      "value": "MAYAMA"
+    },
+    {
+      "key": "NRC156",
+      "value": "MAYANA"
+    },
+    {
+      "key": "NRC157",
+      "value": "MAYATA"
+    },
+    {
+      "key": "NRC158",
+      "value": "NAHTAKA"
+    },
+    {
+      "key": "NRC159",
+      "value": "NAKHANA"
+    },
+    {
+      "key": "NRC160",
+      "value": "NAKHATA"
+    },
+    {
+      "key": "NRC161",
+      "value": "NAMANA"
+    },
+    {
+      "key": "NRC162",
+      "value": "NAMATA"
+    },
+    {
+      "key": "NRC163",
+      "value": "NAPHANA"
+    },
+    {
+      "key": "NRC164",
+      "value": "NASANA"
+    },
+    {
+      "key": "NRC165",
+      "value": "NATALA"
+    },
+    {
+      "key": "NRC166",
+      "value": "NATANA"
+    },
+    {
+      "key": "NRC167",
+      "value": "NAYANA"
+    },
+    {
+      "key": "NRC168",
+      "value": "NAYATA"
+    },
+    {
+      "key": "NRC169",
+      "value": "NGAPATA"
+    },
+    {
+      "key": "NRC170",
+      "value": "NGAPHANA"
+    },
+    {
+      "key": "NRC171",
+      "value": "NGASANA"
+    },
+    {
+      "key": "NRC172",
+      "value": "NGATHAKHA"
+    },
+    {
+      "key": "NRC173",
+      "value": "NGATHAYA"
+    },
+    {
+      "key": "NRC174",
+      "value": "NGAYAKA"
+    },
+    {
+      "key": "NRC175",
+      "value": "NGAZANA"
+    },
+    {
+      "key": "NRC176",
+      "value": "NYALAPA"
+    },
+    {
+      "key": "NRC177",
+      "value": "NYATANA"
+    },
+    {
+      "key": "NRC178",
+      "value": "NYAUNA"
+    },
+    {
+      "key": "NRC179",
+      "value": "NYAYANA"
+    },
+    {
+      "key": "NRC180",
+      "value": "PABANA"
+    },
+    {
+      "key": "NRC181",
+      "value": "PABATA"
+    },
+    {
+      "key": "NRC182",
+      "value": "PABATHA"
+    },
+    {
+      "key": "NRC183",
+      "value": "PAKAKHA"
+    },
+    {
+      "key": "NRC184",
+      "value": "PAKAMA"
+    },
+    {
+      "key": "NRC185",
+      "value": "PAKANA"
+    },
+    {
+      "key": "NRC186",
+      "value": "PAKHAKA"
+    },
+    {
+      "key": "NRC187",
+      "value": "PAKHANA"
+    },
+    {
+      "key": "NRC188",
+      "value": "PAKHATA"
+    },
+    {
+      "key": "NRC189",
+      "value": "PALABA"
+    },
+    {
+      "key": "NRC190",
+      "value": "PALAKA"
+    },
+    {
+      "key": "NRC191",
+      "value": "PALANA"
+    },
+    {
+      "key": "NRC192",
+      "value": "PALATA"
+    },
+    {
+      "key": "NRC193",
+      "value": "PALAWA"
+    },
+    {
+      "key": "NRC194",
+      "value": "PAMANA"
+    },
+    {
+      "key": "NRC195",
+      "value": "PANADA"
+    },
+    {
+      "key": "NRC196",
+      "value": "PANAKA"
+    },
+    {
+      "key": "NRC197",
+      "value": "PANATA"
+    },
+    {
+      "key": "NRC198",
+      "value": "PAPHANA"
+    },
+    {
+      "key": "NRC199",
+      "value": "PASALA"
+    },
+    {
+      "key": "NRC200",
+      "value": "PASANA"
+    },
+    {
+      "key": "NRC201",
+      "value": "PATAAH"
+    },
+    {
+      "key": "NRC202",
+      "value": "PATANA"
+    },
+    {
+      "key": "NRC203",
+      "value": "PATATA"
+    },
+    {
+      "key": "NRC204",
+      "value": "PATAYA"
+    },
+    {
+      "key": "NRC205",
+      "value": "PATHAKA"
+    },
+    {
+      "key": "NRC206",
+      "value": "PATHANA"
+    },
+    {
+      "key": "NRC207",
+      "value": "PATHAYA"
+    },
+    {
+      "key": "NRC208",
+      "value": "PAULA"
+    },
+    {
+      "key": "NRC209",
+      "value": "PAWANA"
+    },
+    {
+      "key": "NRC210",
+      "value": "PAYANA"
+    },
+    {
+      "key": "NRC211",
+      "value": "PAZATA"
+    },
+    {
+      "key": "NRC212",
+      "value": "PHAKHANA"
+    },
+    {
+      "key": "NRC213",
+      "value": "PHALANA"
+    },
+    {
+      "key": "NRC214",
+      "value": "PHAMANA"
+    },
+    {
+      "key": "NRC215",
+      "value": "PHAPANA"
+    },
+    {
+      "key": "NRC216",
+      "value": "PHASANA"
+    },
+    {
+      "key": "NRC217",
+      "value": "PHAYASA"
+    },
+    {
+      "key": "NRC218",
+      "value": "SABATA"
+    },
+    {
+      "key": "NRC219",
+      "value": "SADANA"
+    },
+    {
+      "key": "NRC220",
+      "value": "SAKAKHA"
+    },
+    {
+      "key": "NRC221",
+      "value": "SAKANA"
+    },
+    {
+      "key": "NRC222",
+      "value": "SAKATA"
+    },
+    {
+      "key": "NRC223",
+      "value": "SAKHANA"
+    },
+    {
+      "key": "NRC224",
+      "value": "SALAKA"
+    },
+    {
+      "key": "NRC225",
+      "value": "SAMANA"
+    },
+    {
+      "key": "NRC226",
+      "value": "SAPABA"
+    },
+    {
+      "key": "NRC227",
+      "value": "SAPAWA"
+    },
+    {
+      "key": "NRC228",
+      "value": "SAPHANA"
+    },
+    {
+      "key": "NRC229",
+      "value": "SASANA"
+    },
+    {
+      "key": "NRC230",
+      "value": "SATANA"
+    },
+    {
+      "key": "NRC231",
+      "value": "SATAYA"
+    },
+    {
+      "key": "NRC232",
+      "value": "TAKANA"
+    },
+    {
+      "key": "NRC233",
+      "value": "TAKATA"
+    },
+    {
+      "key": "NRC234",
+      "value": "TAKHALA"
+    },
+    {
+      "key": "NRC235",
+      "value": "TAKHANA"
+    },
+    {
+      "key": "NRC236",
+      "value": "TALANA"
+    },
+    {
+      "key": "NRC237",
+      "value": "TAMANA"
+    },
+    {
+      "key": "NRC238",
+      "value": "TAMANYA"
+    },
+    {
+      "key": "NRC239",
+      "value": "TANANA"
+    },
+    {
+      "key": "NRC240",
+      "value": "TANANYA"
+    },
+    {
+      "key": "NRC241",
+      "value": "TANGANA"
+    },
+    {
+      "key": "NRC242",
+      "value": "TAPAWA"
+    },
+    {
+      "key": "NRC243",
+      "value": "TASANA"
+    },
+    {
+      "key": "NRC244",
+      "value": "TATAKA"
+    },
+    {
+      "key": "NRC245",
+      "value": "TATANA"
+    },
+    {
+      "key": "NRC246",
+      "value": "TATATA"
+    },
+    {
+      "key": "NRC247",
+      "value": "TATAU"
+    },
+    {
+      "key": "NRC248",
+      "value": "TATHANA"
+    },
+    {
+      "key": "NRC249",
+      "value": "TATHAYA"
+    },
+    {
+      "key": "NRC250",
+      "value": "TAYANA"
+    },
+    {
+      "key": "NRC251",
+      "value": "TAZANA"
+    },
+    {
+      "key": "NRC252",
+      "value": "THAGAKA"
+    },
+    {
+      "key": "NRC253",
+      "value": "THAHTANA"
+    },
+    {
+      "key": "NRC254",
+      "value": "THAKANA"
+    },
+    {
+      "key": "NRC255",
+      "value": "THAKATA"
+    },
+    {
+      "key": "NRC256",
+      "value": "THAKHANA"
+    },
+    {
+      "key": "NRC257",
+      "value": "THALANA"
+    },
+    {
+      "key": "NRC258",
+      "value": "THANANA"
+    },
+    {
+      "key": "NRC259",
+      "value": "THANAPA"
+    },
+    {
+      "key": "NRC260",
+      "value": "THAPAKA"
+    },
+    {
+      "key": "NRC261",
+      "value": "THAPANA"
+    },
+    {
+      "key": "NRC262",
+      "value": "THAPHAYA"
+    },
+    {
+      "key": "NRC263",
+      "value": "THASANA"
+    },
+    {
+      "key": "NRC264",
+      "value": "THATAKA"
+    },
+    {
+      "key": "NRC265",
+      "value": "THATANA"
+    },
+    {
+      "key": "NRC266",
+      "value": "THAWATA"
+    },
+    {
+      "key": "NRC267",
+      "value": "THAYAKHA"
+    },
+    {
+      "key": "NRC268",
+      "value": "THAYANA"
+    },
+    {
+      "key": "NRC269",
+      "value": "UKAMA"
+    },
+    {
+      "key": "NRC270",
+      "value": "UKATA"
+    },
+    {
+      "key": "NRC271",
+      "value": "UTATHA"
+    },
+    {
+      "key": "NRC272",
+      "value": "WAKHAMA"
+    },
+    {
+      "key": "NRC273",
+      "value": "WALANA"
+    },
+    {
+      "key": "NRC274",
+      "value": "WAMANA"
+    },
+    {
+      "key": "NRC275",
+      "value": "WATANA"
+    },
+    {
+      "key": "NRC276",
+      "value": "WATHANA"
+    },
+    {
+      "key": "NRC277",
+      "value": "YABANA"
+    },
+    {
+      "key": "NRC278",
+      "value": "YABANA"
+    },
+    {
+      "key": "NRC279",
+      "value": "YADADA"
+    },
+    {
+      "key": "NRC280",
+      "value": "YAKANA"
+    },
+    {
+      "key": "NRC281",
+      "value": "YAMANA"
+    },
+    {
+      "key": "NRC282",
+      "value": "YAMAPA"
+    },
+    {
+      "key": "NRC283",
+      "value": "YAMATHA"
+    },
+    {
+      "key": "NRC284",
+      "value": "YANAKHA"
+    },
+    {
+      "key": "NRC285",
+      "value": "YANGANA"
+    },
+    {
+      "key": "NRC286",
+      "value": "YAPATHA"
+    },
+    {
+      "key": "NRC287",
+      "value": "YAPHANA"
+    },
+    {
+      "key": "NRC288",
+      "value": "YASAKA"
+    },
+    {
+      "key": "NRC289",
+      "value": "YASANA"
+    },
+    {
+      "key": "NRC290",
+      "value": "YATANA"
+    },
+    {
+      "key": "NRC291",
+      "value": "YATAYA"
+    },
+    {
+      "key": "NRC292",
+      "value": "YATHANA"
+    },
+    {
+      "key": "NRC293",
+      "value": "YATHATA"
+    },
+    {
+      "key": "NRC294",
+      "value": "YATHAYA"
+    },
+    {
+      "key": "NRC295",
+      "value": "YAUNA"
+    },
+    {
+      "key": "NRC296",
+      "value": "YAZANA"
+    },
+    {
+      "key": "NRC297",
+      "value": "ZABATHA"
+    },
+    {
+      "key": "NRC298",
+      "value": "ZAKANA"
+    },
+    {
+      "key": "NRC299",
+      "value": "ZALANA"
+    },
+    {
+      "key": "NRC300",
+      "value": "ZAYATHA"
+    }
+  ]
