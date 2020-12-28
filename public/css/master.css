@@ -1,11 +1,12 @@
 .imgresp{
 
-    width:70%;
+    width:55%;
     height: auto;
 }
-.child_logo{
-    padding-left: 40px;
+#third-logo,#second-logo,#first-logo{
+margin-left: 90px;
 }
+
 h2.headertekst {
     text-align: center;
   }
@@ -32,7 +33,9 @@ h2.headertekst {
 }
 @media screen and (max-width: 480px){
     
-
+    #third-logo,#second-logo,#first-logo{
+        margin-left: 0;
+        }
    .mgr,.canon{
        display: none;
    }
