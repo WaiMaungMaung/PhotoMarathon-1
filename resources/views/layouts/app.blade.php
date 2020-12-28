@@ -13,7 +13,6 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     
-<<<<<<< HEAD
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5edf63078d9f5e00138d7ac1&product=inline-follow-buttons" async="async"></script>
     <script type="text/javascript">
       var msg  = document.title;
@@ -35,9 +34,6 @@
   
       moveTitle();
   </script>
-=======
-    
->>>>>>> b3a177c6e4d802dacfee07d6ab9208e7dd155e13
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -77,19 +73,19 @@
 
         <div class="fixed-top ">
             <div class="logo">
-            <div class="row">
+            <div class="row justify-content-center">
              
-               <div class="col-sm-4 col-lg-4 child_logo">                
-                <img class="imgresp canon" src="{{url('/img/canon_logo.png')}}" > 
-            </div>
-            <div class="col-lg-4 col-sm-4 child_logo">
-                <img class="imgresp marathon" src="{{url('/img/marathon_logo .jpg')}}">
 
-            </div>
+             <div class="col-sm-4 col-lg-4 child_logo">                
+                <img class="imgresp canon" id="first-logo" src="{{url('/img/Canon.png')}}" > 
+             </div>
+             <div class="col-lg-4 col-sm-4 child_logo">
+                <img class="imgresp marathon" id="second-logo" src="{{url('/img/cpmlogo.png')}}">
+             </div>
 
-                <div class="col-sm-4  ml-auto col-lg-4 child_logo">
-                    <img class="imgresp mgr" src="{{url('/img/MGR.png')}}">       
-                </div>
+              <div class="col-sm-4 col-lg-4 child_logo" >
+                    <img class="imgresp mgr" id="third-logo" src="{{url('/img/MGR.png')}}">       
+              </div>
            
             </div>
         </div>
