@@ -1,11 +1,12 @@
 .imgresp{
 
-    width:70%;
+    width:55%;
     height: auto;
 }
-.child_logo{
-    padding-left: 40px;
+#third-logo,#second-logo,#first-logo{
+margin-left: 90px;
 }
+
 h2.headertekst {
     text-align: center;
   }
@@ -27,6 +28,10 @@ h2.headertekst {
     background: #fff;
 }
 @media screen and (max-width: 480px){
+    
+    #third-logo,#second-logo,#first-logo{
+        margin-left: 0;
+        }
    .mgr,.canon{
        display: none;
    }
@@ -62,4 +67,10 @@ h2.headertekst {
 }
 #hm-nav,#lin-nav-1,#lin-nav-2,#lin-nav-3,#navbarDropdown,#lgout-nav,#log-nav,#reg-nav{
     color: #fff;
+}
+.enrollbtn{
+    
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        width: 250px;
+        float:right;
 }
