@@ -4,6 +4,7 @@
     
 <title>Canon Photo Marathon Myanmar II</title>
     <meta charset="utf-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
@@ -13,7 +14,6 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     
-<<<<<<< HEAD
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5edf63078d9f5e00138d7ac1&product=inline-follow-buttons" async="async"></script>
     <script type="text/javascript">
       var msg  = document.title;
@@ -35,21 +35,17 @@
   
       moveTitle();
   </script>
-=======
-    
->>>>>>> b3a177c6e4d802dacfee07d6ab9208e7dd155e13
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    {{-- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> --}}
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/master.css')}}" rel="stylesheet"/>
-    <meta charset="UTF-8">
+    <link href="{{ asset('css/master.css')}}" rel="stylesheet"/> 
 	<title>Document</title>
-	<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=myanmar3' />
-	<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=zawgyi' />	
+	<link rel="stylesheet" href='https://www.mmwebfonts.com/fonts/myanmar3.ttf' />
+	<link rel="stylesheet" href='https://www.mmwebfonts.com/fonts/zawgyi.ttf' />	
 	<style type="text/css">
 		.zawgyi{
 			font-family:Zawgyi-One;
@@ -77,102 +73,87 @@
 
         <div class="fixed-top ">
             <div class="logo">
-            <div class="row">
-             
-               <div class="col-sm-4 col-lg-4 child_logo">                
-                <img class="imgresp canon" src="{{url('/img/canon_logo.png')}}" > 
-            </div>
-            <div class="col-lg-4 col-sm-4 child_logo">
-                <img class="imgresp marathon" src="{{url('/img/marathon_logo .jpg')}}">
-
-            </div>
-
-                <div class="col-sm-4  ml-auto col-lg-4 child_logo">
-                    <img class="imgresp mgr" src="{{url('/img/MGR.png')}}">       
+                <div class="row">             
+                    <div class="col-sm-4 col-lg-4 child_logo">                
+                        <img class="imgresp canon" src="{{url('/img/canon_logo.png')}}" > 
+                    </div>
+                    <div class="col-lg-4 col-sm-4 child_logo">
+                        <img class="imgresp marathon" src="{{url('/img/marathon_logo .jpg')}}">
+                    </div>
+                    <div class="col-sm-4  ml-auto col-lg-4 child_logo">
+                        <img class="imgresp mgr" src="{{url('/img/MGR.png')}}">       
+                    </div>                           
                 </div>
-           
             </div>
-        </div>
-        <!-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-        <a class="navbar-brand" href="#">
-            <img src="{{url('/img/canon_logo.png')}}">
-        </a>
-        <a class="navbar-brand" href="#">
-            <img src="{{url('/img/marathon_logo .jpg')}}" >            
-        </a>
-        <a class="navbar-brand">
-            <img src="{{url('/img/MGR.png')}}">
-        </a>
-        </nav> -->
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm" id="bg-nav">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}" id="hm-nav">
-                   Home {{-- {{ config('app.name', 'PHOTOMARATHON') }} --}}
-                    
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <nav class="navbar navbar-expand-md navbar-light shadow-sm" id="bg-nav">
+                <div class="container">
+                    <a class="navbar-brand" href="{{ url('/') }}" id="hm-nav">
+                    Home {{-- {{ config('app.name', 'PHOTOMARATHON') }} --}}
+                        
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">                        
-                        @if(Route::has('about'))
-                            <li class="nav-item">
-                                <a class="nav-link" id="lin-nav-1" href="{{ route('about')}}">{{ __('About') }} </a>
-                            </li>
-                        @endif
-                        @if(Route::has('contact'))
-                            <li class="nav-item">
-                                <a class="nav-link" id="lin-nav-2" href="{{ route('contact')}}">{{ __('Contact') }} </a>
-                            </li>
-                        @endif
-                        @if(Route::has('termncondition'))
-                            <li class="nav-item">
-                                <a class="nav-link" id="lin-nav-3" href="{{ route('termncondition')}}">{{ __('Term & Condition') }} </a>
-                            </li>
-                        @endif
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav mr-auto">                        
+                            @if(Route::has('about'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" id="lin-nav-1" href="{{ route('about')}}">{{ __('About') }} </a>
                                 </li>
                             @endif
-                            
-                            @if (Route::has('register'))
+                            @if(Route::has('contact'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" id="lin-nav-2" href="{{ route('contact')}}">{{ __('Contact') }} </a>
                                 </li>
-
                             @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+                            @if(Route::has('termncondition'))
+                                <li class="nav-item">
+                                    <a class="nav-link" id="lin-nav-3" href="{{ route('termncondition')}}">{{ __('Term & Condition') }} </a>
+                                </li>
+                            @endif
+                        </ul>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" id="lgout-nav" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                        <!-- Right Side Of Navbar -->
+                        <ul class="navbar-nav ml-auto">
+                            <!-- Authentication Links -->
+                            @guest
+                                @if (Route::has('login'))
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('login') }}" id="log-nav">{{ __('Login') }}</a>
+                                    </li>
+                                @endif
+                                
+                                @if (Route::has('register'))
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('register') }}" id="reg-nav">{{ __('Register') }}</a>
+                                    </li>
+
+                                @endif
+                            @else
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="lgout-ddl">
+                                        <a class="dropdown-item" id="lgout-nav" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            @endguest
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
         </div>
         <main class="py-4 container">            
             <div id="content">

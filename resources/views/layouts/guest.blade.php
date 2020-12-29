@@ -20,6 +20,6 @@
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
         </div>
-        <h1>testing</h1>
+        <h1></h1>
     </body>
 </html>

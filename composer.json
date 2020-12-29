@@ -40,13 +40,17 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [    
+            "app/http/Helper.php"            
+        ]
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
         }
     },
+    
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
