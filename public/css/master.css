@@ -69,3 +69,9 @@ h2.headertekst {
 .nav-link,#hm-nav,#lin-nav-1,#lin-nav-2,#lin-nav-3,#navbarDropdown,#lgout-nav{
     color: #fff;
 }
+.enrollbtn{
+    
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        width: 250px;
+        float:right;
+}

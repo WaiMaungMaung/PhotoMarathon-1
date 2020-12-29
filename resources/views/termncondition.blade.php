@@ -1,18 +1,21 @@
-@extends('layouts.master')
+@extends('layouts.app')
 @section('content')
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $(".show-toast").click(function(){
+        $("#myToast").toast('show');
+    });
+    
+</script>
 <h2 class="headertekst" style="color: #800000;"><strong>Canon Photo Marathon Myanmar 2021 (Rules & Regulations) </strong></h2>
 <h2 class="headertekst" style="color: #800000;"><strong>“ ပြိုင်ပွဲဝင်စည်းမျဥ်းစည်းကမ်းများ ” </strong></h2>
-<body class=paragraph>
 <div class="container">
      <div id="accordion">
-        <div class="card">
+        <div class="card ">
             <div class="card-header">
-        <a class="card-link" data-toggle="collapse" href="#collapseOne"><strong>
-        “ ပြိုင်ပွဲဝင်စည်းမျဥ်းစည်းကမ်းများ ”</strong></a>
+        <a class="card-link" style="color: #000000;" data-toggle="collapse" href="#collapseOne">
+        “ ပြိုင်ပွဲဝင်စည်းမျဥ်းစည်းကမ်းများ ”</a>
             </div>
         <div id="collapseOne" class="collapse" data-parent="#accordion">
         <div class="card-body">
@@ -51,10 +54,10 @@
 </div>
 </div>
 </div>
-                    <div class="card">
+                    <div class="card ">
                          <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-                        <strong>“ ပြိုင်ပွဲဝင်စည်းကမ်းများ ”</strong></a>
+                        <a class="collapsed card-link " style="color: #000000;"  data-toggle="collapse" href="#collapseTwo">
+                        “ ပြိုင်ပွဲဝင်စည်းကမ်းများ ”</a>
                         </div>
                     <div id="collapseTwo" class="collapse" data-parent="#accordion">
                             <div class="card-body">
@@ -92,10 +95,10 @@
                     </div>
                     </div>
                     </div>
-<div class="card">
+                        <div class="card ">
                         <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                        <strong>“ ပြိုင်ပွဲအစီအစဥ်”</strong></a>
+                        <a class="collapsed card-link " style="color: #000000;" data-toggle="collapse" href="#collapseThree">
+                       “ ပြိုင်ပွဲအစီအစဥ်”</a>
                         </div>
                         <div id="collapseThree" class="collapse" data-parent="#accordion">
                     <div class="card-body">
@@ -112,16 +115,16 @@
             </div>
             </div>
 
-            <div class="card">
+            <div class="card ">
                 <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
-                        <strong>“ ဆောင်ရန် ၊ ရှောင်ရန် ”</strong></a>
+                        <a class="collapsed card-link" style="color: #000000;"  data-toggle="collapse" href="#collapseFour">
+                        “ ဆောင်ရန် ၊ ရှောင်ရန် ”</a>
                 </div>
       <div id="collapseFour" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
+                    <div class="card-body ">
 
-                        <li>ပြိုင်ပွဲဝင်များသည် မှတ်ပုံတင် (သို့) ကျောင်းသားကဒ် ၊ ဝန်ထမ်းကဒ်များ မဖြစ်မနေယူဆောင်လာရမည်။
-                        </br>မှတ်ပုံတင်သည်ပြိုင်ပွဲစာရင်းပြုလုပ်ရန်ဖြစ်သည်။</li></br>
+                        <ul><li>ပြိုင်ပွဲဝင်များသည် မှတ်ပုံတင် (သို့) ကျောင်းသားကဒ် ၊ ဝန်ထမ်းကဒ်များ မဖြစ်မနေယူဆောင်လာရမည်။
+                        </br>မှတ်ပုံတင်သည်ပြိုင်ပွဲစာရင်းပြုလုပ်ရန်ဖြစ်သည်။</li></ul></br>
 
                         <ol><h5 class="headertekst" ><strong>ဆောင်ရန် </strong> </h5>
                         <li>ကောင်းမွန်စွာပြင်ဆင်ခဲ့ပါ။ အားသွင်းထားသော Battery ၊ Lens ၊ Memory Card အပိုများနှင့်</br>ခိုင်ခံ့သော Camera အိတ်များယူလာရမည်။ Battery အားသွင်းရန် နေရာများ စီစဥ်ပေးထားခြင်းမရှိပါ။</li>
@@ -146,5 +149,4 @@
 </div>
 </div>
 
-</body>
 @stop

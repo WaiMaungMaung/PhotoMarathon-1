@@ -43,5 +43,3 @@
 </div>
 </div>
 @stop
-@section('content')
-@stop
