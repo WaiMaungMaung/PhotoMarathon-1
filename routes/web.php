@@ -35,6 +35,8 @@ Route::get('/contact', [App\Http\Controllers\MyController::class, 'contact'])->n
 
 Route::get('/termncondition', [App\Http\Controllers\MyController::class, 'termncondition'])->name('termncondition');
 
+Route::get('/enroll', [App\Http\Controllers\EnrollController::class, 'index'])->name('enroll');
+
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
