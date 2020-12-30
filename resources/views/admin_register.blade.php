@@ -116,7 +116,7 @@
                                     </label>
                                   </div>
                                   <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="access" id="exampleRadios2" value="1">
+                                    <input class="form-check-input" type="radio" name="access" id="exampleRadios2" value="2">
                                     <label class="form-check-label" for="exampleRadios2">
                                       Admin
                                     </label>
