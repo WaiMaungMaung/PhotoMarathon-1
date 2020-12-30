@@ -52,11 +52,11 @@ $(document).ready(function()
   <label class="col-md-5" for="cbrand">Camera Brand</label>
   <input class="col-md-5" list="cbrand" name="cameras">
   <datalist class="col-md-5" id="cbrand">
-    <option value="Camera 1">
-    <option value="Camera 2">
-    <option value="Camera 4">
-    <option value="Camera 5">
-    <option value="Camera 6">
+    <option value="Cannon">
+    <option value="Fugi">
+    <option value="Sony">
+    <option value="Nikon">
+    <option value="Other">
   </datalist><br>
   
   <label class="col-md-5" for="tshirt">T-shirt Size</label>
@@ -65,14 +65,15 @@ $(document).ready(function()
     <option value="Small">
     <option value="Medium">
     <option value="Large">
+    <option value="XL">
   </datalist><br>
 
 <label class="col-md-5" for="pmethod">Payment Method</label>
 
 
-<button  type="button" class="btn btn-primary kbz">KBZ</button>
-<button  type="button" class="btn btn-primary one">ONE Pay</button>
-<button  type="button" class="btn btn-primary wave">wave</button></br></br>
+<button  type="button" class="btn btn-danger kbz">KBZ</button>
+<button  type="button" class="btn btn-primary one">Onepay</button>
+<button  type="button" class="btn btn-warning wave">Wave</button></br></br>
 <p  id="kbzpay" Type="hidden">
 <label class="col-md-5" for="cpmid">kbz</label>
   <label class="col-md-5" style="border:red;" for="cpmid">AUTO-FILL</label></br>
