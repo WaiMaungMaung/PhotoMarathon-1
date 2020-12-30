@@ -170,8 +170,8 @@
                                     @endif
 
                                     @if(Auth::user()->access==1)
-                    <a class="dropdown-item" id="lgout-nav" href="{{ route('admin_reg')}}">{{ __('Create admin') }} </a>
-                        @endif
+                                        <a class="dropdown-item" id="lgout-nav" href="{{ route('admin_reg')}}">{{ __('Create admin') }} </a>
+                                    @endif
                                     
                                     <a class="dropdown-item" id="lgout-nav" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
