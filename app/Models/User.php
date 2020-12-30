@@ -23,7 +23,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'nrc',
         'dob',
         'cmp',
-        'role'
+        'access'
     ];
 
     /**

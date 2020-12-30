@@ -21,6 +21,9 @@ class MyController extends Controller
     {
         return view('contact');
     }
+    public function admin_reg(){
+        return view('admin_register');
+    }
 
     public function termncondition()
     {
