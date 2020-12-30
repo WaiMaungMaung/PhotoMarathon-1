@@ -80,3 +80,8 @@ h2.headertekst {
         width: 250px;
         float:right;
 }
+
+form label.col-one-half{
+	float: left;
+	width: 50%;
+}
