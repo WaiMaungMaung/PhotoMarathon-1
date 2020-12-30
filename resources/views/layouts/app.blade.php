@@ -155,8 +155,8 @@
                         @else
                             
                         @if(Route::has('dashboard'))
-                        <li class="nav-item">
-                    <a class="nav-link" id="lin-nav-1" href="{{ route('dashboard')}}">{{ __('Enrollment') }} </a>
+                            <li class="nav-item">
+                                <a class="nav-link" id="lin-nav-1" href="{{ route('dashboard')}}">{{ __('Enrollment') }} </a>
                             </li>
                         @endif
                             <li class="nav-item dropdown">
@@ -221,8 +221,8 @@
             <!-- Grid container -->
           
             <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-              © 2020 Copyright:
+            <div class="text-center p-3" style="background-color: rgba(138, 23, 23, 0.2)">
+              ©️ 2020 Copyright:
               <a class="text-dark" href="https://mgr.com.mm/">myanmargoldenrock.com.mm</a>              
               <div class="sharethis-inline-share-buttons"></div>
             </div>

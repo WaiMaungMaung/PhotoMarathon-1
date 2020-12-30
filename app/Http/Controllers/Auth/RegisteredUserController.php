@@ -36,10 +36,12 @@ class RegisteredUserController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
+            'nrc-box' => 'required',
+            'nrc-type' => 'required',
+            'nrc-code' => 'required',
             'nrc' => 'required|string|max:255|unique:users',
             'password' => 'required|string|confirmed|min:8',
-            
-
+            'dob' =>'required',            
         ]);
 
         Auth::login($user = User::create([

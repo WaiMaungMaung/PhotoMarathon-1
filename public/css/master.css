@@ -14,13 +14,9 @@ h2.headertekst {
  .partnerphoto{
      box-align:center;
      height:fixed;
-     width: fit-content;
-
-    
+     width: fit-content;    
 }
 .dresp{
-    
-    
     height: auto;
 }
 
@@ -63,10 +59,13 @@ h2.headertekst {
 	margin-left: auto;
 	margin-right: auto;
 }
-#bg-nav{
+#bg-nav,#lgout-ddl{
     background-color:#871c11;     
 }
-.nav-link,#hm-nav,#lin-nav-1,#lin-nav-2,#lin-nav-3,#navbarDropdown,#lgout-nav{
+#lgout-ddl:hover,#lgout-nav:hover{
+    background-color: #641f16;
+}
+#hm-nav,#lin-nav-1,#lin-nav-2,#lin-nav-3,#navbarDropdown,#lgout-nav,#log-nav,#reg-nav{
     color: #fff;
 }
 .enrollbtn{

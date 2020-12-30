@@ -8,6 +8,9 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
+use App\Http\Helper as Helper;
+
 
 class RegisterController extends Controller
 {
@@ -54,11 +57,13 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'nrc-box' => ['required'],
+            'nrc-code' => ['required'],
+            'nrc-type' => ['required'],
             'nrc' =>['required','string','min:6'],
             'new_nrc' => ['required','string', 'max:255', 'unique:users,nrc'],
-
+            'dob' => ['required']
         ]);
-        
     }   
 
     /**
@@ -69,11 +74,22 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $users=DB::table('users')->latest()->first();
+        if($users != null){            
+            $cmp = $users->cmp;
+        }else{
+            $cmp = null;
+        }
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'nrc'=> $data['nrc-box']."/".$data['nrc-code'].$data['nrc-type'].$data['nrc'],
             'password' => Hash::make($data['password']),
+            'dob'=>$data['dob'],
+            'role' => '2',
+            'cmp'=>Helper::getCMPID($cmp)
         ]);
     }
+    
 }
