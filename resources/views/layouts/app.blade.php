@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     
-<title>Canon Photo Marathon Myanmar II</title>
+<title>Canon Photomarathon Myanmar III</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -124,14 +124,14 @@
                                 <a class="nav-link" id="lin-nav-1" href="{{ route('about')}}">{{ __('About') }} </a>
                             </li>
                         @endif
+                        @if(Route::has('termncondition'))
+                            <li class="nav-item">
+                                <a class="nav-link" id="lin-nav-3" href="{{ route('termncondition')}}">{{ __('Terms & Conditions') }} </a>
+                            </li>
+                        @endif
                         @if(Route::has('contact'))
                             <li class="nav-item">
                                 <a class="nav-link" id="lin-nav-2" href="{{ route('contact')}}">{{ __('Contact') }} </a>
-                            </li>
-                        @endif
-                        @if(Route::has('termncondition'))
-                            <li class="nav-item">
-                                <a class="nav-link" id="lin-nav-3" href="{{ route('termncondition')}}">{{ __('Term & Condition') }} </a>
                             </li>
                         @endif
                     </ul>
@@ -156,7 +156,7 @@
                             
                         @if(Route::has('dashboard'))
                             <li class="nav-item">
-                                <a class="nav-link" id="lin-nav-1" href="{{ route('dashboard')}}">{{ __('Enrollment') }} </a>
+                                <a class="nav-link" id="lin-nav-1" href="{{ route('dashboard')}}">{{ __('CPM-Enrollment') }} </a>
                             </li>
                         @endif
                             <li class="nav-item dropdown">
