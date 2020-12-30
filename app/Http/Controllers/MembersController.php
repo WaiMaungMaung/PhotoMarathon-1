@@ -35,7 +35,7 @@ class MembersController extends Controller
             $users->appends(['q' => $search]);
         }
         else{
-            $users = User::paginate(2);
+            $users = User::paginate(5);
         }
         return view('admin_view',['data'=>$users]);
 

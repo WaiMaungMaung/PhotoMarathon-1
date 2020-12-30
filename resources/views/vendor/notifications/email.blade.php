@@ -7,6 +7,7 @@
 # @lang('Whoops!')
 @else
 # @lang('Hello!')
+
 @endif
 @endif
 
@@ -15,6 +16,7 @@
 {{ $line }}
 
 @endforeach
+
 
 {{-- Action Button --}}
 @isset($actionText)
