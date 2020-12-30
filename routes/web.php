@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\MembersController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,16 +27,26 @@ require __DIR__.'/auth.php';
 
 Auth::routes(['verify' => true]);
 
+
+
+
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 Route::get('/about', [App\Http\Controllers\MyController::class, 'about'])->name('about');
 
 Route::get('/contact', [App\Http\Controllers\MyController::class, 'contact'])->name('contact');
+Route::get('/admin_reg', [App\Http\Controllers\MyController::class, 'admin_reg'])->name('admin_reg');
+
 
 Route::get('/termncondition', [App\Http\Controllers\MyController::class, 'termncondition'])->name('termncondition');
+Route::get('/admin_view', 'App\Http\Controllers\MembersController@index')->name('admin_view');
+
+// Route::post('/admin_reg', 'App\Http\Controllers\MembersController@create')->name('data');
 
 Route::get('/enroll', [App\Http\Controllers\EnrollController::class, 'index'])->name('enroll');
 
+Route::post('/admin_reg', [MembersController::class, 'store']);
+                
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

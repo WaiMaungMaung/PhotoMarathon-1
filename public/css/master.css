@@ -3,6 +3,12 @@
     width:55%;
     height: auto;
 }
+.btn{
+    background: #871c11;
+}
+.btn:hover{
+    background: #641f16;
+}
 #third-logo,#second-logo,#first-logo{
 margin-left: 90px;
 }

@@ -15,9 +15,12 @@ class AddColsToUsersTbl extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //add cols
-            $table->string('role');
+            
+            $table->string('access')->nullable();
+
             $table->string('cmp');
-            $table->date('dob');
+            $table->date('dob')->nullable();
+            
         });
     }
 
