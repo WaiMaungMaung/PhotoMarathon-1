@@ -4,7 +4,6 @@
     
 <title>Canon Photo Marathon Myanmar II</title>
     <meta charset="utf-8">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
@@ -42,14 +41,15 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    {{-- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> --}}
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/master.css')}}" rel="stylesheet"/> 
+    <link href="{{ asset('css/master.css')}}" rel="stylesheet"/>
+    <meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href='https://www.mmwebfonts.com/fonts/myanmar3.ttf' />
-	<link rel="stylesheet" href='https://www.mmwebfonts.com/fonts/zawgyi.ttf' />	
+	<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=myanmar3' />
+	<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=zawgyi' />	
 	<style type="text/css">
 		.zawgyi{
 			font-family:Zawgyi-One;
@@ -136,29 +136,27 @@
                         @endif
                     </ul>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav mr-auto">                        
-                            @if(Route::has('about'))
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" id="lin-nav-1" href="{{ route('about')}}">{{ __('About') }} </a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
-                            @if(Route::has('contact'))
+                            
+                            @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" id="lin-nav-2" href="{{ route('contact')}}">{{ __('Contact') }} </a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
-                            @endif
-                            @if(Route::has('termncondition'))
-                                <li class="nav-item">
-                                    <a class="nav-link" id="lin-nav-3" href="{{ route('termncondition')}}">{{ __('Term & Condition') }} </a>
-                                </li>
+
                             @endif
                         @else
                             
                         @if(Route::has('dashboard'))
-                        <li class="nav-item">
-                    <a class="nav-link" id="lin-nav-1" href="{{ route('dashboard')}}">{{ __('Enrollment') }} </a>
+                            <li class="nav-item">
+                                <a class="nav-link" id="lin-nav-1" href="{{ route('dashboard')}}">{{ __('Enrollment') }} </a>
                             </li>
                         @endif
                             <li class="nav-item dropdown">
@@ -173,23 +171,16 @@
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="lgout-ddl">
-                                        <a class="dropdown-item" id="lgout-nav" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                            @csrf
-                                        </form>
-                                    </div>
-                                </li>
-                            @endguest
-                        </ul>
-                    </div>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
                 </div>
-            </nav>
+            </div>
+        </nav>
         </div>
         <main class="py-4 container">            
             <div id="content">
@@ -230,8 +221,8 @@
             <!-- Grid container -->
           
             <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-              © 2020 Copyright:
+            <div class="text-center p-3" style="background-color: rgba(138, 23, 23, 0.2)">
+              ©️ 2020 Copyright:
               <a class="text-dark" href="https://mgr.com.mm/">myanmargoldenrock.com.mm</a>              
               <div class="sharethis-inline-share-buttons"></div>
             </div>
