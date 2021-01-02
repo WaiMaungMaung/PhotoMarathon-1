@@ -97,7 +97,7 @@
                             <label for="dob" class="col-md-4 col-form-label text-md-right">{{ __('Date Of Birth') }}</label>
                             <div class="col-md-8">
                                 {{-- date picker --}}
-                                <input id="dob" type="date" class="form-control @error('dob') is-invalid @enderror" name="dob" required>
+                                <input id="dob" type="text" class="form-control @error('dob') is-invalid @enderror" name="dob" required maxlength="10" minlength="10" placeholder="dd/mm/yyyy">
                                 @error('dob')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -105,6 +105,10 @@
                                 @enderror
                             </div>
                         </div>
+
+                        {{-- <p>Date: <input type="text" id="datepicker"></p> --}}
+
+                        
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
                             <div class="col-md-8">

@@ -80,14 +80,15 @@ class RegisterController extends Controller
         }else{
             $cmp = null;
         }
+        $role = '2';
 
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'nrc'=> $data['nrc-box']."/".$data['nrc-code'].$data['nrc-type'].$data['nrc'],
             'password' => Hash::make($data['password']),
-            'dob'=>$data['dob'],
-            'role' => '2',
+            'dob'=>date_format(date_create($data['dob']),"Y/m/d"),
+            'role' => $role,
             'cmp'=>Helper::getCMPID($cmp)
         ]);
     }

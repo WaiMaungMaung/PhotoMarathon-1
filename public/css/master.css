@@ -85,3 +85,9 @@ form label.col-one-half{
 	float: left;
 	width: 50%;
 }
+
+#txtFooter{
+    color: sandybrown;
+    font-style: bold;
+    font-weight: 900;
+}

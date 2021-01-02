@@ -10,6 +10,7 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
+        "@rollup/plugin-commonjs": "^11.0.2",
         "@tailwindcss/forms": "^0.2.1",
         "alpinejs": "^2.7.3",
         "autoprefixer": "^9.8.6",
@@ -17,6 +18,7 @@
         "bootstrap": "^4.0.0",
         "cross-env": "^7.0",
         "jquery": "^3.2",
+        "jquery-ui": "^1.12.1",
         "laravel-mix": "^5.0.1",
         "lodash": "^4.17.19",
         "popper.js": "^1.12",
