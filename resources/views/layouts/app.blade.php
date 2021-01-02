@@ -121,6 +121,7 @@
                                     <a class="nav-link" id="lin-nav-2" href="{{ route('contact')}}">{{ __('Contact') }} </a>
                                 </li>
                             @endif
+<<<<<<< HEAD
                         </ul>
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
@@ -136,6 +137,30 @@
                                     <li class="nav-item">
                                         <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                                     </li>
+=======
+                        @else
+                            
+                        @if(Route::has('dashboard'))
+                            <li class="nav-item">
+                                <a class="nav-link" id="lin-nav-1" href="{{ route('dashboard')}}">{{ __('CPM-Enrollment') }} </a>
+                            </li>
+                        @endif
+                        
+                        @if(Route::has('submission'))
+                            <li class="nav-item">
+                                <a class="nav-link" id="lin-nav-1" href="{{ route('submission')}}">{{ __('CPM-Submission') }} </a>
+                            </li>
+                        @endif
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="lgout-ddl">
+                                    @if(Auth::user()->access!=null)
+                                        <a class="dropdown-item" id="lgout-nav" href="{{ route('admin_view') }}"
+                                       >Admin View</a>
+                                    @endif
+>>>>>>> 5ad3bef5bcda9219b018db09dd83483c853f3b70
 
                                 @endif
                             @else

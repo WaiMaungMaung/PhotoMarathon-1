@@ -45,6 +45,10 @@ Route::get('/admin_view', 'App\Http\Controllers\MembersController@index')->name(
 
 Route::get('/enroll', [App\Http\Controllers\EnrollController::class, 'index'])->name('enroll');
 
+Route::get('/submission', [App\Http\Controllers\SubmissionController::class, 'index'])->name('submission');
+
+Route::get('/photosubmit', [App\Http\Controllers\PsubmitController::class, 'index'])->name('photosubmit');
+
 Route::post('/admin_reg', [MembersController::class, 'store']);
                 
 // Auth::routes();

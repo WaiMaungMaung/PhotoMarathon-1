@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header"><h4><strong>{{ __('Enrollment') }}</strong</h4></div>
+                <div class="card-header"><h4><strong>{{ __('Submit Your photo') }}</strong</h4></div>
 
                     <div class="card-body">
                     @if (session('status'))
@@ -30,7 +30,7 @@
                                         This is Theme I photo.</br>
                                         This is Theme I photo.</br>
                             
-                                        <a class="text-white" href="{{ route('enroll') }}"><button type="button" class="btn btn-success enrollbtn" >Enroll</button></a></br></br>
+                                        <a class="text-white" href="{{ route('photosubmit') }}"><button type="button" class="btn btn-success enrollbtn" >Submit</button></a></br></br>
     </div>
 </div>
 </div>
@@ -46,7 +46,7 @@
                             This is Theme II photo.</br>
                             This is Theme II photo.</br>
                             This is Theme II photo.</br>
-                            <a class="text-white" href="{{ route('enroll') }}"><button type="button" class="btn btn-success enrollbtn">Enroll</button></a></br></br>
+                            <a class="text-white" href="{{ route('photosubmit') }}"><button type="button" class="btn btn-success enrollbtn">Submit</button></a></br></br>
                             </div>
                             </div>
                             </div>
@@ -62,7 +62,7 @@
                             This is Theme III photo.</br>
                             This is Theme III photo.</br>
                             This is Theme III photo.</br>
-                            <a class="text-white" href="{{ route('enroll') }}"><button type="button" class="btn btn-success enrollbtn">Enroll</button></br></a></br>
+                            <a class="text-white" href="{{ route('photosubmit') }}"><button type="button" class="btn btn-success enrollbtn">Submit</button></br></a></br>
                             </div>
                             </div>
                             </div>
