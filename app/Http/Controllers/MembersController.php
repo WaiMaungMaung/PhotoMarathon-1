@@ -13,6 +13,7 @@ use App\Providers\RouteServiceProvider;
 use App\Http\Helper as Helper;
 
 
+
 class MembersController extends Controller
 {
     /**
@@ -35,7 +36,7 @@ class MembersController extends Controller
             $users->appends(['q' => $search]);
         }
         else{
-            $users = User::paginate(5);
+            $users = User::paginate(2);
         }
         return view('admin_view',['data'=>$users]);
 
@@ -107,9 +108,10 @@ class MembersController extends Controller
      * @param  \App\Models\Member  $member
      * @return \Illuminate\Http\Response
      */
-    public function edit(Member $member)
+    public function edit(String $id)
     {
-        //
+     $user1= User::findOrFail($id);
+     return view('edit')->with('data', $user1);
     }
 
     /**
@@ -122,6 +124,7 @@ class MembersController extends Controller
     public function update(Request $request, Member $member)
     {
         //
+         
     }
 
     /**
@@ -130,8 +133,12 @@ class MembersController extends Controller
      * @param  \App\Models\Member  $member
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Member $member)
+    public function destroy(String $id)
     {
-        //
+        $User_del = User::find($id);
+
+    $User_del->delete();
+    return redirect('admin_view');
+
     }
 }

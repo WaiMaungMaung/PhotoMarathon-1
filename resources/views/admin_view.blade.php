@@ -32,7 +32,14 @@
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->nrc}}</td>
-    
+                        <td>
+        <a href="{{ route('member.edit', $user->id) }}" class="btn btn-primary" method="get">Edit</a>
+        <a href="{{ route('member.destroy', $user->id) }}" class="btn btn-primary" method="get">Delete</a>
+                            
+
+
+                        </td>
+                       
                     </tr>
                     @endforeach
                     
@@ -41,6 +48,8 @@
                <div class="d-flex justify-content-center">
                 {{ $data->links() }}
             </div>
+            
+            
 
         </div>
     </div>

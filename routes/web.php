@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MembersController;
+use App\Models\Member;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -17,6 +18,8 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -44,6 +47,14 @@ Route::get('/admin_view', 'App\Http\Controllers\MembersController@index')->name(
 // Route::post('/admin_reg', 'App\Http\Controllers\MembersController@create')->name('data');
 
 Route::post('/admin_reg', [MembersController::class, 'store']);
+
+
+
+
+Route::get('/member/edit/{id}',[MembersController::class,'edit'])->name('member.edit');
+
+Route::get('/member/destroy/{id}',[MembersController::class,'destroy'])->name('member.destroy');
+
                 
 // Auth::routes();
 

@@ -97,7 +97,7 @@
                             <label for="dob" class="col-md-4 col-form-label text-md-right">{{ __('Date Of Birth') }}</label>
                             <div class="col-md-8">
                                 {{-- date picker --}}
-                                <input id="dob" type="date" class="form-control @error('dob') is-invalid @enderror" name="dob" required>
+                                <input id="dob" type="date" class="form-control @error('dob') is-invalid @enderror" name="dob" data-date-format="mm/dd/yyyy" required>
                                 @error('dob')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
