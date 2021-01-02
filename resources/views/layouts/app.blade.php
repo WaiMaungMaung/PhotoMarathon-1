@@ -121,7 +121,6 @@
                                     <a class="nav-link" id="lin-nav-2" href="{{ route('contact')}}">{{ __('Contact') }} </a>
                                 </li>
                             @endif
-<<<<<<< HEAD
                         </ul>
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
@@ -137,7 +136,6 @@
                                     <li class="nav-item">
                                         <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                                     </li>
-=======
                         @else
                             
                         @if(Route::has('dashboard'))
@@ -160,7 +158,6 @@
                                         <a class="dropdown-item" id="lgout-nav" href="{{ route('admin_view') }}"
                                        >Admin View</a>
                                     @endif
->>>>>>> 5ad3bef5bcda9219b018db09dd83483c853f3b70
 
                                 @endif
                             @else
