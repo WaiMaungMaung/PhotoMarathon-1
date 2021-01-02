@@ -137,19 +137,7 @@
                                         <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                                     </li>
                         @else
-                            
-                        @if(Route::has('dashboard'))
-                            <li class="nav-item">
-                                <a class="nav-link" id="lin-nav-1" href="{{ route('dashboard')}}">{{ __('CPM-Enrollment') }} </a>
-                            </li>
-                        @endif
-                        
-                        @if(Route::has('submission'))
-                            <li class="nav-item">
-                                <a class="nav-link" id="lin-nav-1" href="{{ route('submission')}}">{{ __('CPM-Submission') }} </a>
-                            </li>
-                        @endif
-                            <li class="nav-item dropdown">
+                      <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
@@ -167,6 +155,16 @@
                                     <a class="nav-link" id="lin-nav-1" href="{{ route('dashboard')}}">{{ __('CPM-Enrollment') }} </a>
                                 </li>
                             @endif
+                               @if(Route::has('submission'))
+                            <li class="nav-item">
+                                <a class="nav-link" id="lin-nav-1" href="{{ route('submission')}}">{{ __('CPM-Submission') }} </a>
+                            </li>
+                        @endif
+                           
+
+
+
+
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }}
