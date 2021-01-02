@@ -1,13 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-<script>
-$(document).ready(function(){
-    $(".show-toast").click(function(){
-        $("#myToast").toast('show');
-    });
-    
-</script>
 <h2 class="headertekst" style="color: #800000;"><strong>Canon Photo Marathon Myanmar 2021 (Rules & Regulations) </strong></h2>
 <h2 class="headertekst" style="color: #800000;"><strong>“ ပြိုင်ပွဲဝင်စည်းမျဥ်းစည်းကမ်းများ ” </strong></h2>
 <div class="container">
