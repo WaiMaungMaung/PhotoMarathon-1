@@ -1,9 +1,7 @@
-
-    @if(Auth::user()->access !=null)
-   
-
-@extends('layouts.master')
+@extends('layouts.app')
 @section('content')
+@if(Auth::user()->access !=null)
+
 
     <div class="container">
         <div class="row justify-content-center">
