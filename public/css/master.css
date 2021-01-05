@@ -65,7 +65,7 @@ h2.headertekst {
 #bg-nav,#lgout-ddl{
     background-color:#871c11;     
 }
-#lgout-ddl:hover,#lgout-nav:hover{
+.dropdown-item:hover,#lgout-nav:hover{
     background-color: #641f16;
 }
 #hm-nav,#lin-nav-1,#lin-nav-2,#lin-nav-3,#navbarDropdown,#lgout-nav,#log-nav,#reg-nav{
