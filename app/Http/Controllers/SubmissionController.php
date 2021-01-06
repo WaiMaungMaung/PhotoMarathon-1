@@ -14,4 +14,6 @@ class SubmissionController extends Controller
     public function index(){
         return view('submission');
 }
+
+
 }

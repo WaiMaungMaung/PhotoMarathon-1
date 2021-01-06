@@ -21,6 +21,7 @@ class MyController extends Controller
     {
         return view('contact');
     }
+    
     public function admin_reg(){
         return view('admin_register');
     }
@@ -28,5 +29,20 @@ class MyController extends Controller
     public function termncondition()
     {
         return view('termncondition');
+    }
+
+    public function prizes()
+    {
+        return view('prizes');
+    }
+
+    public function ptogallery()
+    {
+        return view('ptogallery');
+    }
+
+    public function howto()
+    {
+        return view('howto');
     }
 }
