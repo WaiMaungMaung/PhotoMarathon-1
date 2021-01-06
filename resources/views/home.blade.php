@@ -20,7 +20,7 @@
                             <div id="accordion">
                                 <div class="card">
                                    <div class="card-header">
-                                        <a class="card-link" data-toggle="collapse" href="#collapseOne"><strong>Theme I</strong></a>
+                                        <a class="card-link" data-toggle="collapse" href="#collapseOne"><strong>Student Category</strong></a>
                                     </div>
                                     <div id="collapseOne" class="collapse show" data-parent="#accordion">
                                         <div class="card-body">
@@ -47,7 +47,7 @@
                     <div class="card">
                          <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-                        <strong>Theme II</strong></a>
+                        <strong>Open Category Theme - 1</strong></a>
                         </div>
                     <div id="collapseTwo" class="collapse" data-parent="#accordion">
                             <div class="card-body">
@@ -75,7 +75,7 @@
                     <div class="card">
                          <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                        <strong>Theme III</strong></a>
+                        <strong>Open Category Theme - 2</strong></a>
                         </div>
                     <div id="collapseThree" class="collapse" data-parent="#accordion">
                             <div class="card-body">This is Theme III photo.</br>

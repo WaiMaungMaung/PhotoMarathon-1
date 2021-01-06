@@ -20,15 +20,15 @@
                             <div id="accordion">
                                 <div class="card">
                                    <div class="card-header">
-                                        <a class="card-link" data-toggle="collapse" href="#collapseOne"><strong>Theme I</strong></a>
+                                        <a class="card-link" data-toggle="collapse" href="#collapseOne"><strong>Student Category</strong></a>
                                     </div>
                                     <div id="collapseOne" class="collapse show" data-parent="#accordion">
                                         <div class="card-body">
-                                        This is Theme I photo.</br>
-                                        This is Theme I photo.</br>
-                                        This is Theme I photo.</br>
-                                        This is Theme I photo.</br>
-                                        This is Theme I photo.</br>
+                                        This is student category photo.</br>
+                                        This is student category photo.</br>
+                                        This is student category photo.</br>
+                                        This is student category photo.</br>
+                                        This is student category photo.</br>
                             
                                         <a class="text-white" href="{{ url('photosubmit/1') }}"><button type="button" class="btn btn-success enrollbtn" >Submit</button></a></br></br>
     </div>
@@ -37,15 +37,15 @@
                     <div class="card">
                          <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-                        <strong>Theme II</strong></a>
+                        <strong>Open Category Theme - I</strong></a>
                         </div>
                     <div id="collapseTwo" class="collapse" data-parent="#accordion">
                             <div class="card-body">
-                            This is Theme II photo.</br>
-                            This is Theme II photo.</br>
-                            This is Theme II photo.</br>
-                            This is Theme II photo.</br>
-                            This is Theme II photo.</br>
+                            This is Theme I photo.</br>
+                            This is Theme I photo.</br>
+                            This is Theme I photo.</br>
+                            This is Theme I photo.</br>
+                            This is Theme I photo.</br>
                             <a class="text-white" href="{{ route('photosubmit') }}"><button type="button" class="btn btn-success enrollbtn">Submit</button></a></br></br>
                             </div>
                             </div>
@@ -54,14 +54,15 @@
                     <div class="card">
                          <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                        <strong>Theme III</strong></a>
+                        <strong>Open Category Theme - II</strong></a>
                         </div>
                     <div id="collapseThree" class="collapse" data-parent="#accordion">
-                            <div class="card-body">This is Theme III photo.</br>
-                            This is Theme III photo.</br>
-                            This is Theme III photo.</br>
-                            This is Theme III photo.</br>
-                            This is Theme III photo.</br>
+                            <div class="card-body">
+                            This is Theme II photo.</br>
+                            This is Theme II photo.</br>
+                            This is Theme II photo.</br>
+                            This is Theme II photo.</br>
+                            This is Theme II photo.</br>
                             <a class="text-white" href="{{ route('photosubmit') }}"><button type="button" class="btn btn-success enrollbtn">Submit</button></br></a></br>
                             </div>
                             </div>

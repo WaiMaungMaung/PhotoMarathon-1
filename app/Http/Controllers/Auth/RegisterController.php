@@ -62,7 +62,8 @@ class RegisterController extends Controller
             'nrc-type' => ['required'],
             'nrc' =>['required','string','min:6'],
             'new_nrc' => ['required','string', 'max:255', 'unique:users,nrc'],
-            'dob' => ['required']
+            'dob' => ['required'],
+            'ph-no'=>['required']
         ]);
     }   
 
@@ -80,16 +81,16 @@ class RegisterController extends Controller
         }else{
             $cmp = null;
         }
-        $role = '2';
 
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'nrc'=> $data['nrc-box']."/".$data['nrc-code'].$data['nrc-type'].$data['nrc'],
             'password' => Hash::make($data['password']),
-            'dob'=>date_format(date_create($data['dob']),"Y/m/d"),
-            'role' => $role,
-            'cmp'=>Helper::getCMPID($cmp)
+            'dob'=>date_create($data['dob']),        
+            'cmp'=>Helper::getCMPID($cmp),
+            'ph-no'=>$data['ph-no'],
+            'location'=>$data['location']
         ]);
     }
     

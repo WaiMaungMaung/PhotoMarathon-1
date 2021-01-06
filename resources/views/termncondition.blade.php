@@ -7,11 +7,10 @@
      <div id="accordion">
         <div class="card ">
             <div class="card-header">
-        <a class="card-link" style="color: #000000;" data-toggle="collapse" href="#collapseOne">
-        “ ပြိုင်ပွဲဝင်စည်းမျဥ်းစည်းကမ်းများ ”</a>
+        <a class="card-link" style="color: #000000;" data-toggle="collapse" href="#collapseOne">“ ပြိုင်ပွဲဝင်စည်းမျဥ်းစည်းကမ်းများ ”</a>
             </div>
-        <div id="collapseOne" class="collapse" data-parent="#accordion">
-        <div class="card-body">
+        <div class="collapse multi-collapse" id="collapseOne">
+      <div class="card card-body">
                     <ol>
                     <li>
                     Myanmar Golden Rock International Co., Ltd. မှ ဒုတိယအကြိမ်အဖြစ်ကြီးမှူးကျင်းပသော နိုင်ငံတကာအဆင့်မှီ “ Canon Photo Marathon Myanmar 2020” ပြိုင်ပွဲကြီးကို
@@ -52,8 +51,8 @@
                         <a class="collapsed card-link " style="color: #000000;"  data-toggle="collapse" href="#collapseTwo">
                         “ ပြိုင်ပွဲဝင်စည်းကမ်းများ ”</a>
                         </div>
-                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                            <div class="card-body">
+                    <div class="collapse multi-collapse" id="collapseTwo">
+                    <div class="card card-body">
 
                     <ol>
                     <li>ပြိုင်ပွဲဝင်များသည်ပြိုင်ပွဲဝင် T-Shirt ကိုဝတ်ဆင်ယှဥ်ပြိုင်ရမည်။</li>
@@ -93,8 +92,9 @@
                         <a class="collapsed card-link " style="color: #000000;" data-toggle="collapse" href="#collapseThree">
                        “ ပြိုင်ပွဲအစီအစဥ်”</a>
                         </div>
-                        <div id="collapseThree" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
+                       
+                    <div class="collapse multi-collapse" id="collapseThree">
+                <div class="card card-body">
             <ol>
 
             <li>ပြိုင်ပွဲခေါင်းစဥ်အား ပြိုင်ပွဲကျင်းပမည့်နံနက်တွင်ပြိုင်ပွဲအားလုံးကိုကြေညာပေးပါမည်။</li>
@@ -113,8 +113,9 @@
                         <a class="collapsed card-link" style="color: #000000;"  data-toggle="collapse" href="#collapseFour">
                         “ ဆောင်ရန် ၊ ရှောင်ရန် ”</a>
                 </div>
-      <div id="collapseFour" class="collapse" data-parent="#accordion">
-                    <div class="card-body ">
+    
+                <div class="collapse multi-collapse" id="collapseFour">
+                <div class="card card-body">
 
                         <ul><li>ပြိုင်ပွဲဝင်များသည် မှတ်ပုံတင် (သို့) ကျောင်းသားကဒ် ၊ ဝန်ထမ်းကဒ်များ မဖြစ်မနေယူဆောင်လာရမည်။
                         </br>မှတ်ပုံတင်သည်ပြိုင်ပွဲစာရင်းပြုလုပ်ရန်ဖြစ်သည်။</li></ul></br>

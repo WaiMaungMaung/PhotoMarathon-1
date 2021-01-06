@@ -85,7 +85,7 @@
                                     <option value="(Ei)">(Ei)</option>
                                     <option value="(Pyu)">(Pyu)</option>
                                 </select>                                
-                                <input id="nrc" type="text" class="form-control col-4 @error('nrc') is-invalid @enderror" maxlength="6" name="nrc" required >
+                                <input id="nrc" type="text" class="form-control col-4 @error('nrc') is-invalid @enderror" onkeypress="return isNumberKey(event)" maxlength="6" name="nrc" required >
                                 @error('nrc')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -104,11 +104,7 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div>
-
-                        {{-- <p>Date: <input type="text" id="datepicker"></p> --}}
-
-                        
+                        </div>                        
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
                             <div class="col-md-8">
@@ -124,6 +120,18 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
                             <div class="col-md-8">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="ph-no" class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
+                            <div class="col-md-8">
+                                <input id="ph-no" type="text" class="form-control" name="ph-no" required onkeypress="return isNumberKey(event)" minlength="9" maxlength="11">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="location" class="col-md-4 col-form-label text-md-right">{{ __('Location') }}</label>
+                            <div class="col-md-8">
+                                <input id="location" type="text" class="form-control" name="location">
                             </div>
                         </div>
                         <div class="form-group row mb-0">

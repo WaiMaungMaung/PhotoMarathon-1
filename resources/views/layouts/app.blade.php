@@ -48,6 +48,14 @@
   
       moveTitle();
   </script>
+  <script>
+    function isNumberKey(evt){
+        var charCode = (evt.which) ? evt.which : evt.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+        return true;
+    }
+    </script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -112,9 +120,24 @@
                                     <a class="nav-link" id="lin-nav-1" href="{{ route('about')}}">{{ __('About') }} </a>
                                 </li>
                             @endif
+                            @if(Route::has('prizes'))
+                                <li class="nav-item">
+                                    <a class="nav-link" id="lin-nav-1" href="{{ route('prizes')}}">{{ __('Contest & Prizes') }} </a>
+                                </li>
+                            @endif
                             @if(Route::has('termncondition'))
                                 <li class="nav-item">
                                     <a class="nav-link" id="lin-nav-3" href="{{ route('termncondition')}}">{{ __('Terms & Conditions') }} </a>
+                                </li>
+                            @endif
+                            @if(Route::has('ptogallery'))
+                                <li class="nav-item">
+                                    <a class="nav-link" id="lin-nav-1" href="{{ route('ptogallery')}}">{{ __('Photo Gallery') }} </a>
+                                </li>
+                            @endif
+                            @if(Route::has('howto'))
+                                <li class="nav-item">
+                                    <a class="nav-link" id="lin-nav-1" href="{{ route('howto')}}">{{ __('How To Register') }} </a>
                                 </li>
                             @endif
                             @if(Route::has('contact'))
@@ -147,16 +170,11 @@
                                     <a class="nav-link" id="lin-nav-1" href="{{ route('dashboard')}}">{{ __('CPM-Enrollment') }} </a>
                                 </li>
                             @endif
-                               @if(Route::has('submission'))
-                            <li class="nav-item">
-                                <a class="nav-link" id="lin-nav-1" href="{{ route('submission')}}">{{ __('CPM-Submission') }} </a>
-                            </li>
-                                @endif
-                           
-
-
-
-
+                            @if(Route::has('submission'))
+                                <li class="nav-item">
+                                    <a class="nav-link" id="lin-nav-1" href="{{ route('submission')}}">{{ __('CPM-Submission') }} </a>
+                                </li>
+                            @endif
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }}

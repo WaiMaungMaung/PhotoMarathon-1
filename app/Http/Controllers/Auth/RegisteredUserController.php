@@ -41,7 +41,8 @@ class RegisteredUserController extends Controller
             'nrc-code' => 'required',
             'nrc' => 'required|string|max:255|unique:users',
             'password' => 'required|string|confirmed|min:8',
-            'dob' =>'required',            
+            'dob' =>'required',
+            'ph-no'=>'required'           
         ]);
 
         Auth::login($user = User::create([

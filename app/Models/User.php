@@ -23,7 +23,9 @@ class User extends Authenticatable implements MustVerifyEmail
         'nrc',
         'dob',
         'cmp',
-        'access'
+        'access',
+        'ph-no',
+        'location'
     ];
 
     /**
