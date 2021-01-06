@@ -1,12 +1,9 @@
 <?php
 
 use App\Http\Controllers\MembersController;
-<<<<<<< HEAD
 use App\Http\Controllers\UploadFileController;
-=======
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\EnrollmentController;
->>>>>>> 4c6ad91246404e5a38182a2f9fdf9de0c1ded978
 use App\Models\Member;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
