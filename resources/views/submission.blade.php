@@ -30,7 +30,7 @@
                                         This is Theme I photo.</br>
                                         This is Theme I photo.</br>
                             
-                                        <a class="text-white" href="{{ route('photosubmit') }}"><button type="button" class="btn btn-success enrollbtn" >Submit</button></a></br></br>
+                                        <a class="text-white" href="{{ url('photosubmit/1') }}"><button type="button" class="btn btn-success enrollbtn" >Submit</button></a></br></br>
     </div>
 </div>
 </div>

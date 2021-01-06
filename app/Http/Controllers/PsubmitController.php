@@ -14,4 +14,8 @@ class PsubmitController extends Controller
     public function index(){
         return view('photosubmit');
 }
+
+public function show(String $id){
+    return view('photosubmit')->with('id',$id);
+}
 }
