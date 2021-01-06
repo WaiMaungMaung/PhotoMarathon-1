@@ -85,7 +85,7 @@
                                     <option value="(Ei)">(Ei)</option>
                                     <option value="(Pyu)">(Pyu)</option>
                                 </select>                                
-                                <input id="nrc" type="text" class="form-control col-4 @error('nrc') is-invalid @enderror" maxlength="6" name="nrc" required >
+                                <input id="nrc" type="text" class="form-control col-4 @error('nrc') is-invalid @enderror" onkeypress="return isNumberKey(event)" maxlength="6" name="nrc" required >
                                 @error('nrc')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

@@ -37,11 +37,19 @@ Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])-
 
 Route::get('/about', [App\Http\Controllers\MyController::class, 'about'])->name('about');
 
+Route::get('/prizes', [App\Http\Controllers\MyController::class, 'prizes'])->name('prizes');
+
+Route::get('/ptogallery', [App\Http\Controllers\MyController::class, 'ptogallery'])->name('ptogallery');
+
+Route::get('/howto', [App\Http\Controllers\MyController::class, 'howto'])->name('howto');
+
 Route::get('/contact', [App\Http\Controllers\MyController::class, 'contact'])->name('contact');
+
 Route::get('/admin_reg', [App\Http\Controllers\MyController::class, 'admin_reg'])->name('admin_reg');
 
 
 Route::get('/termncondition', [App\Http\Controllers\MyController::class, 'termncondition'])->name('termncondition');
+
 Route::get('/admin_view', 'App\Http\Controllers\MembersController@index')->name('admin_view');
 
 // Route::post('/admin_reg', 'App\Http\Controllers\MembersController@create')->name('data');

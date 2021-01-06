@@ -120,9 +120,24 @@
                                     <a class="nav-link" id="lin-nav-1" href="{{ route('about')}}">{{ __('About') }} </a>
                                 </li>
                             @endif
+                            @if(Route::has('prizes'))
+                                <li class="nav-item">
+                                    <a class="nav-link" id="lin-nav-1" href="{{ route('prizes')}}">{{ __('Contest & Prizes') }} </a>
+                                </li>
+                            @endif
                             @if(Route::has('termncondition'))
                                 <li class="nav-item">
                                     <a class="nav-link" id="lin-nav-3" href="{{ route('termncondition')}}">{{ __('Terms & Conditions') }} </a>
+                                </li>
+                            @endif
+                            @if(Route::has('ptogallery'))
+                                <li class="nav-item">
+                                    <a class="nav-link" id="lin-nav-1" href="{{ route('ptogallery')}}">{{ __('Photo Gallery') }} </a>
+                                </li>
+                            @endif
+                            @if(Route::has('howto'))
+                                <li class="nav-item">
+                                    <a class="nav-link" id="lin-nav-1" href="{{ route('howto')}}">{{ __('How To Register') }} </a>
                                 </li>
                             @endif
                             @if(Route::has('contact'))
