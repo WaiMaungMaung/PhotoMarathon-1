@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MembersController;
+use App\Http\Controllers\UploadFileController;
 use App\Models\Member;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -60,6 +61,9 @@ Route::post('/admin_reg', [MembersController::class, 'store']);
 Route::get('/member/edit/{id}',[MembersController::class,'edit'])->name('member.edit');
 
 Route::get('/member/destroy/{id}',[MembersController::class,'destroy'])->name('member.destroy');
+
+Route::get('/fileupload',[UploadFileController::class,'imageUpload']);
+Route::post('/fileupload',[UploadFileController::class,'imageUploadPost'])->name('image.upload.post');
 
                 
 // Auth::routes();

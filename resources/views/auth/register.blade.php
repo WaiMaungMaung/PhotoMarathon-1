@@ -1,4 +1,9 @@
 @extends('layouts.app')
+<style>
+    #txtdiv{
+        display: none;
+    }
+</style>
 
 @section('content')
 
@@ -8,7 +13,7 @@
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
                         @error('new_nrc')
                           <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -123,9 +128,14 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="ph-no" class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
+                            <label for="ph-no" class="col-md-4 col-form-label text-md-right">{{ __('Contact Number') }}</label>
                             <div class="col-md-8">
                                 <input id="ph-no" type="text" class="form-control" name="ph-no" required onkeypress="return isNumberKey(event)" minlength="9" maxlength="11">
+                                @error('ph-no')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                             </div>
                         </div>
                         <div class="form-group row">
@@ -134,6 +144,55 @@
                                 <input id="location" type="text" class="form-control" name="location">
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="t-shirt-size" class="col-md-4 col-form-label text-md-right">{{ __('T-shirt Size') }}</label>
+                            <div class="col-md-8">
+                                <select name="t-shirt-size" id="t-shirt-size" class="form-control float-left" required>
+                                    <option value="">-</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="XXL">XXL</option>
+                                </select>
+                                @error('t-shirt-size')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="payment" class="col-md-4 col-form-label text-md-right">{{ __('Payment Method') }}</label>
+                            <div class="col-md-8 col-sm-8" id="payment-div">
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-2">
+                                        <img class="logo" src="{{url('/img/kbzpaylogo.png')}}" alt="kbz pay" onclick="kbzform()">
+                                    </div>
+                                    <div class="col-md-2 col-sm-2">
+                                        <img class="logo" src="{{url('/img/onepaylogo.png')}}" alt="one pay" onclick="onepayform()">
+                                    </div>
+                                    <div class="col-md-2 col-sm-2">
+                                        <img class="logo" src="{{url('/img/wavepaylogo.png')}}" alt="wave pay" onclick="wavepayform()">
+                                    </div>
+                                    <div class="col-md-2 col-sm-2">
+                                        <img class="logo" src="{{url('/img/cbpaylogo.png')}}" alt="cb pay" onclick="cbpayform()">
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="form-group row">                            
+                            <label for="image" id="lblimage" class="col-md-4 col-form-label text-md-right"></label>
+                            <div class="col-md-8" id="pf">
+                                <input id="image" type="file" class="form-control" name="image" required>
+                                @error('image')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <input type="hidden" id="payment-type" name="payment-type"/>
+                        </div>                        
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

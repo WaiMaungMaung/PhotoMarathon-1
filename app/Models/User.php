@@ -25,7 +25,11 @@ class User extends Authenticatable implements MustVerifyEmail
         'cmp',
         'access',
         'ph-no',
-        'location'
+        'location',
+        't-shirt-size',
+        'payment-type',
+        'status',
+        'image'
     ];
 
     /**

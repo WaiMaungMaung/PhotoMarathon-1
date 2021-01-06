@@ -86,6 +86,96 @@
             });
         });
     });
+    $(document).ready(function(){
+        document.getElementById("lblimage").style.display="none";
+        document.getElementById("image").style.display="none";
+        // document.getElementById("onepay-pf").style.display="none";
+        // document.getElementById("wavepay-pf").style.display="none";
+        // document.getElementById("cbpay-pf").style.display="none";
+        // document.getElementById("kbz-pf").style.display="none";
+        // document.getElementById("lbl-kbz-pf").style.display="none";
+        // document.getElementById("lbl-onepay-pf").style.display="none";
+        // document.getElementById("lbl-wavepay-pf").style.display="none";
+        // document.getElementById("lbl-cbpay-pf").style.display="none";
+        // document.getElementById("payment-type").value="";
+    });
+    function kbzform() {
+        // document.getElementById("wavepay-pf").style.display="none";
+        // document.getElementById("cbpay-pf").style.display="none";
+        // document.getElementById("lbl-onepay-pf").style.display="none";
+        // document.getElementById("lbl-cbpay-pf").style.display="none";
+        // document.getElementById("lbl-wavepay-pf").style.display="none";
+        document.getElementById("payment-type").value="kbzpay";
+        var x = document.getElementById("image");
+        var y= document.getElementById("lblimage");
+        if (x.style.display === "none" || y.innerHTML != "KBZ Pay") {
+            y.innerHTML = "KBZ Pay";
+            y.style.display = "block";
+            x.style.display = "block";
+        } else {
+            y.style.display ="none";
+            x.style.display = "none";
+        }
+    }
+    function onepayform(){
+        // document.getElementById("kbz-pf").style.display="none";
+        // document.getElementById("wavepay-pf").style.display="none";
+        // document.getElementById("cbpay-pf").style.display="none";        
+        // document.getElementById("lbl-kbz-pf").style.display="none";
+        // document.getElementById("lbl-wavepay-pf").style.display="none";
+        // document.getElementById("lbl-cbpay-pf").style.display="none";
+        document.getElementById("payment-type").value="onepay";
+        var x = document.getElementById("image");
+        var y= document.getElementById("lblimage");
+        if (x.style.display === "none" || y.innerHTML != "One Pay") {            
+            y.innerHTML="One Pay";
+            x.style.display = "block";
+            y.style.display = "block";
+
+        } else {
+            x.style.display = "none";
+            y.style.display = "none";
+
+        }
+    }
+    function wavepayform(){
+        // document.getElementById("kbz-pf").style.display="none";
+        // document.getElementById("onepay-pf").style.display="none";
+        // document.getElementById("cbpay-pf").style.display="none";
+        // document.getElementById("lbl-kbz-pf").style.display="none";
+        // document.getElementById("lbl-onepay-pf").style.display="none";
+        // document.getElementById("lbl-cbpay-pf").style.display="none";
+        document.getElementById("payment-type").value="wavepay";
+        var x = document.getElementById("image");
+        var y= document.getElementById("lblimage");
+        if (x.style.display === "none" || y.innerHTML != "Wave Pay") {
+            y.innerHTML = "Wave Pay";
+            x.style.display = "block";
+            y.style.display = "block";
+        } else {
+            x.style.display = "none";
+            y.style.display = "none";
+        }
+    }
+    function cbpayform(){
+        // document.getElementById("kbz-pf").style.display="none";
+        // document.getElementById("wavepay-pf").style.display="none";
+        // document.getElementById("onepay-pf").style.display="none";
+        // document.getElementById("lbl-kbz-pf").style.display="none";
+        // document.getElementById("lbl-wavepay-pf").style.display="none";
+        // document.getElementById("lbl-onepay-pf").style.display="none";
+        document.getElementById("payment-type").value="cbpay";
+        var x = document.getElementById("image");
+        var y= document.getElementById("lblimage");
+        if (x.style.display === "none" || y.innerHTML != "CB Pay") {
+            y.innerHTML = "CB Pay";
+            x.style.display = "block";
+            y.style.display = "block";
+        } else {
+            x.style.display = "none";
+            y.style.display = "none";
+        }
+    }
     </script>
 </head>
 <body>
@@ -200,7 +290,7 @@
             <!-- Grid container -->
             <div class="container">
               <!--Grid row-->
-              <div class="row justify-content-center">
+              <div class="row justify-content-center" id="txtdiv">
                 <!--Grid column-->
                 <div class="col-lg-10 col-md-12 mb-4 mb-md-0 ft-bg ">
                   <h3 class="text-uppercase" id="txtFooter">The Region’s Largest On-Ground Photography Competition</h3>
