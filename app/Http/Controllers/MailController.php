@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 use App\Http\Requests;
@@ -19,13 +20,15 @@ class MailController extends Controller {
       echo "Basic Email Sent. Check your inbox.";
    }
    public function html_email() {
-      $data = array('name'=>"Virat Gandhi");
+      $data = array('theme_cat'=>$theme_cat);
       Mail::send('mail', $data, function($message) {
-         $message->to('mgwaimaungmaung@gmail.com', 'Tutorials Point')->subject
-            ('Laravel HTML Testing Mail');
-         $message->from('waimaungmaung@myanmargoldenrock.com','Virat Gandhi');
+         $message->to(Auth::user()->email, 'Tutorials Point')->subject
+            ('ENROLLED!');
+         $message->from('waimaungmaung@myanmargoldenrock.com','Canon Photo Marathon');
       });
-      echo "HTML Email Sent. Check your inbox.";
+
+
+      return redirect('/dashboard')->with('success','Enroll done');
    }
    public function attachment_email() {
       $data = array('name'=>"Virat Gandhi");

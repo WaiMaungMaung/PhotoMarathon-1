@@ -14,8 +14,8 @@ class TShirtSizeAndPaymentAddToUsersTbl extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('t-shirt-size')->nullable();
-            $table->string('payment-type')->nullable(); 
+            $table->string('t_shirt_size')->nullable();
+            $table->string('payment_type')->nullable(); 
             $table->string('status')->nullable();
             $table->boolean('agreewith')->nullable();
         });

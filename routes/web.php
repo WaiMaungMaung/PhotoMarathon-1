@@ -60,7 +60,7 @@ Route::get('/admin_view', 'App\Http\Controllers\MembersController@index')->name(
 // Route::get('/enroll', [App\Http\Controllers\EnrollmentController::class, 'index'])->name('enroll');
 
 Route::resource('/enrollment', EnrollmentController::class);
-
+Route:pu
 // Route::post('/enrollment/store', [EnrollmentController::class, 'store']);
 
 
@@ -72,6 +72,9 @@ Route::get('/photosubmit/{id}', [App\Http\Controllers\PsubmitController::class, 
 
 
 Route::post('/admin_reg', [MembersController::class, 'store']);
+
+Route::get('/update_approve/{id}', [MembersController::class, 'update'])->name('/update_approve/id');
+
 
 
 

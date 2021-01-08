@@ -11,8 +11,8 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 use App\Http\Helper as Helper;
-
-
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Redirect;
 
 class MembersController extends Controller
 {
@@ -30,13 +30,17 @@ class MembersController extends Controller
         if($search!=""){
             $users = User::where(function ($query) use ($search){
                 $query->where('name', 'like', '%'.$search.'%')
-                    ->orWhere('email', 'like', '%'.$search.'%');
+                    ->orWhere('email', 'like', '%'.$search.'%')
+                    ->orWhere('nrc','like','%'.$search.'%')
+                    ->orWhere('Status','=',$search)
+                    ->orWhere('payment_type','=',$search)
+                    ->Where('access','=',null);
             })
-            ->paginate(2);  
+            ->paginate(10);  
             $users->appends(['q' => $search]);
         }
         else{
-            $users = User::paginate(2);
+            $users = User::where('access','=',null)->paginate(10);
         }
         return view('admin_view',['data'=>$users]);
 
@@ -69,20 +73,14 @@ class MembersController extends Controller
             
 
         ]);
-        $users=DB::table('users')->latest()->first();
-        if($users != null){            
-            $cmp = $users->cmp;
-        }else{
-            $cmp = null;
-        }
-
+       
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'nrc'=> $request['nrc-box']."/".$request['nrc-code'].$request['nrc-type'].$request['nrc'],
             'password' => Hash::make($request->password),
             'access'=> $request->access,
-            'cmp'=>Helper::getCMPID($cmp),
+            
 
         ]);
 
@@ -121,10 +119,33 @@ class MembersController extends Controller
      * @param  \App\Models\Member  $member
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Member $member)
+    
+    public function update(String $id)
     {
-        //
-         
+        $users=DB::table('users')->orderBy('cmp', 'desc')->first();
+        if($users != null){            
+            $cmp = $users->cmp;
+        }else{
+            $cmp = null;
+        }
+
+        $contact = User::find($id);
+        $contact->status = "Approved";
+        if($contact->cmp==null)
+        $contact->cmp= Helper::getCMPID($cmp);
+        
+        $data = array('user_cmp'=>$contact->cmp,
+                    'user_name'=>$contact->name,
+        );
+       Mail::send('approved_mail', $data, function($message) {
+          $message->to(Auth::user()->email, 'Canon Photo Marathon')->subject
+             ('Approved!');
+          $message->from('waimaungmaung@myanmargoldenrock.com','Canon Photo Marathon');
+       });
+        
+        $contact->save();
+
+        return redirect()->back()->withInput();;
     }
 
     /**

@@ -43,9 +43,9 @@ class RegisteredUserController extends Controller
             'nrc' => 'required|string|max:255|unique:users',
             'password' => 'required|string|confirmed|min:8',
             'dob' =>'required',
-            'ph-no'=>'required',            
-            't-shirt-size' => 'required',
-            'payment-type'=>'required',
+            'ph_no'=>'required',            
+            't_shirt_size' => 'required',
+            'payment_type'=>'required',
             'image' => 'required',
         ]);
 
