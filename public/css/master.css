@@ -97,3 +97,13 @@ h2.headertekst {
     font-style: bold;
     font-weight: 900;
 }
+#payment-div{
+    width: 100%;
+}
+.logo{
+    width:90.7%;
+    height: auto;
+}
+/* #kbz-pf,#onepay-pf,#wavepay-pf,#cbpay-pf{
+    display: none;
+} */

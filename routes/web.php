@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\MembersController;
+use App\Http\Controllers\UploadFileController;
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\EnrollmentController;
 use App\Models\Member;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -54,11 +57,19 @@ Route::get('/admin_view', 'App\Http\Controllers\MembersController@index')->name(
 
 // Route::post('/admin_reg', 'App\Http\Controllers\MembersController@create')->name('data');
 
-Route::get('/enroll', [App\Http\Controllers\EnrollController::class, 'index'])->name('enroll');
+// Route::get('/enroll', [App\Http\Controllers\EnrollmentController::class, 'index'])->name('enroll');
+
+Route::resource('/enrollment', EnrollmentController::class);
+
+// Route::post('/enrollment/store', [EnrollmentController::class, 'store']);
+
 
 Route::get('/submission', [App\Http\Controllers\SubmissionController::class, 'index'])->name('submission');
 
 Route::get('/photosubmit', [App\Http\Controllers\PsubmitController::class, 'index'])->name('photosubmit');
+
+Route::get('/photosubmit/{id}', [App\Http\Controllers\PsubmitController::class, 'show'])->name('photosubmit/id');
+
 
 Route::post('/admin_reg', [MembersController::class, 'store']);
 
@@ -68,6 +79,17 @@ Route::post('/admin_reg', [MembersController::class, 'store']);
 Route::get('/member/edit/{id}',[MembersController::class,'edit'])->name('member.edit');
 
 Route::get('/member/destroy/{id}',[MembersController::class,'destroy'])->name('member.destroy');
+
+Route::get('/fileupload',[UploadFileController::class,'imageUpload']);
+Route::post('/fileupload',[UploadFileController::class,'imageUploadPost'])->name('image.upload.post');
+
+Route::get('sendbasicemail','MailController@basic_email');
+Route::get('sendbasicemail',[MailController::class,'basic_email']);
+Route::get('html_email',[MailController::class,'html_email']);
+
+
+Route::get('sendhtmlemail','MailController@html_email');
+Route::get('sendattachmentemail','MailController@attachment_email');
 
                 
 // Auth::routes();

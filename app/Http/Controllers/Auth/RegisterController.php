@@ -63,7 +63,10 @@ class RegisterController extends Controller
             'nrc' =>['required','string','min:6'],
             'new_nrc' => ['required','string', 'max:255', 'unique:users,nrc'],
             'dob' => ['required'],
-            'ph-no'=>['required']
+            'ph-no'=>['required'],
+            't-shirt-size'=>['required'],
+            'payment-type'=>['required'],
+            'image' => ['required']
         ]);
     }   
 
@@ -81,8 +84,14 @@ class RegisterController extends Controller
         }else{
             $cmp = null;
         }
-
-        return User::create([
+        $status="pending";        
+        if(request()->hasFile('image')){
+            $now=time();
+            $img=request()->file('image')->getClientOriginalName();
+            request()->file('image')->move(public_path('payslips'),$now.$img,'');            
+        }
+        
+        $user=User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'nrc'=> $data['nrc-box']."/".$data['nrc-code'].$data['nrc-type'].$data['nrc'],
@@ -90,8 +99,13 @@ class RegisterController extends Controller
             'dob'=>date_create($data['dob']),        
             'cmp'=>Helper::getCMPID($cmp),
             'ph-no'=>$data['ph-no'],
-            'location'=>$data['location']
-        ]);
+            'location'=>$data['location'],
+            't-shirt-size'=>$data['t-shirt-size'],
+            'payment-type'=>$data['payment-type'],
+            'status'=>$status,
+            'image' => $now.$img,            
+        ]);        
+        return $user;
     }
     
 }

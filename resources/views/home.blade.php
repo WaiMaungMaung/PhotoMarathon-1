@@ -24,12 +24,23 @@
                                     </div>
                                     <div id="collapseOne" class="collapse show" data-parent="#accordion">
                                         <div class="card-body">
-                                        This is Student Category photo.</br>
-                                        This is Student Category photo.</br>
-                                        This is Student Category photo.</br>
-                                        This is Student Category photo.</br>
-                                        This is Student Category photo.</br>
-                                        <a class="text-white" href="{{ route('enroll') }}"><button type="button" class="btn btn-success enrollbtn" >Enroll</button></a></br></br>
+                                        This is Theme I photo.</br>
+                                        This is Theme I photo.</br>
+                                        This is Theme I photo.</br>
+                                        This is Theme I photo.</br>
+                                        This is Theme I photo.</br>
+                                            
+                                        @if(DB::table('enrollments')
+                                        ->where([
+                                            ['cpm','=',Auth::user()->cmp],
+                                        ['theme_category','=','Theme1'],
+                                        ])->first())
+                            <a class="text-white" href="{{ url('/photosubmit/1') }}"><button type="button" class="btn btn-danger enrollbtn" >Submit Photo</button></a></br></br>
+
+                            @else
+                                        <a class="text-white" href="{{ url('enrollment/1') }}"><button type="button" class="btn btn-success enrollbtn" >Enroll</button></a></br></br>
+                            @endif
+
     </div>
 </div>
 </div>
@@ -40,12 +51,23 @@
                         </div>
                     <div id="collapseTwo" class="collapse" data-parent="#accordion">
                             <div class="card-body">
-                            This is Theme I photo.</br>
-                            This is Theme I photo.</br>
-                            This is Theme I photo.</br>
-                            This is Theme I photo.</br>
-                            This is Theme I photo.</br>
-                            <a class="text-white" href="{{ route('enroll') }}"><button type="button" class="btn btn-success enrollbtn">Enroll</button></a></br></br>
+                            This is Theme II photo.</br>
+                            This is Theme II photo.</br>
+                            This is Theme II photo.</br>
+                            This is Theme II photo.</br>
+                            This is Theme II photo.</br>
+                            @if(DB::table('enrollments')
+                            ->where([
+                                ['cpm','=',Auth::user()->cmp],
+                            ['theme_category','=','Theme2'],
+                            ])->first())
+                           
+
+                            <a class="text-white" href="{{ url('/photosubmit/2') }}"><button type="button" class="btn btn-danger enrollbtn" >Submit Photo</button></a></br></br>
+
+                            @else
+                                        <a class="text-white" href="{{ url('enrollment/2') }}"><button type="button" class="btn btn-success enrollbtn" >Enroll</button></a></br></br>
+                            @endif
                             </div>
                             </div>
                             </div>
@@ -56,13 +78,22 @@
                         <strong>Open Category Theme - 2</strong></a>
                         </div>
                     <div id="collapseThree" class="collapse" data-parent="#accordion">
-                            <div class="card-body">
-                            This is Theme II photo.</br>
-                            This is Theme II photo.</br>
-                            This is Theme II photo.</br>
-                            This is Theme II photo.</br>
-                            This is Theme II photo.</br>
-                            <a class="text-white" href="{{ route('enroll') }}"><button type="button" class="btn btn-success enrollbtn">Enroll</button></br></a></br>
+                            <div class="card-body">This is Theme III photo.</br>
+                            This is Theme III photo.</br>
+                            This is Theme III photo.</br>
+                            This is Theme III photo.</br>
+                            This is Theme III photo.</br>
+                            
+                            @if(DB::table('enrollments')
+                                        ->where([
+                                            ['cpm','=',Auth::user()->cmp],
+                                        ['theme_category','=','Theme3'],
+                                        ])->first())
+                            <a class="text-white" href="{{ url('/photosubmit/3') }}"><button type="button" class="btn btn-danger enrollbtn" >Submit Photo</button></a></br></br>
+
+                            @else
+                                        <a class="text-white" href="{{ url('enrollment/3') }}"><button type="button" class="btn btn-success enrollbtn" >Enroll</button></a></br></br>
+                            @endif
                             </div>
                             </div>
                             </div>

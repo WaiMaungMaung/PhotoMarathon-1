@@ -30,7 +30,7 @@
                                         This is student category photo.</br>
                                         This is student category photo.</br>
                             
-                                        <a class="text-white" href="{{ route('photosubmit') }}"><input type="submit" value="Submit" class="btn btn-success enrollbtn" ></input></a></br></br>
+                                        <a class="text-white" href="{{ url('photosubmit/1') }}"><button type="button" class="btn btn-success enrollbtn" >Submit</button></a></br></br>
     </div>
 </div>
 </div>
