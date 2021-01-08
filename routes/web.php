@@ -4,6 +4,7 @@ use App\Http\Controllers\MembersController;
 use App\Http\Controllers\UploadFileController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\EnrollmentController;
+use App\Http\Controllers\PsubmitController;
 use App\Models\Member;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -70,11 +71,10 @@ Route::get('/photosubmit', [App\Http\Controllers\PsubmitController::class, 'inde
 
 Route::get('/photosubmit/{id}', [App\Http\Controllers\PsubmitController::class, 'show'])->name('photosubmit/id');
 
+Route::post('/photosubmit/{id}',[PsubmitController::class,'store'])->name('photosubmit/id');
+
 
 Route::post('/admin_reg', [MembersController::class, 'store']);
-
-
-
 
 Route::get('/member/edit/{id}',[MembersController::class,'edit'])->name('member.edit');
 
@@ -90,6 +90,7 @@ Route::get('html_email',[MailController::class,'html_email']);
 
 Route::get('sendhtmlemail','MailController@html_email');
 Route::get('sendattachmentemail','MailController@attachment_email');
+
 
                 
 // Auth::routes();

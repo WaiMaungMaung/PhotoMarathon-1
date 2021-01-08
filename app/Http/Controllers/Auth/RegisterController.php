@@ -89,14 +89,13 @@ class RegisterController extends Controller
             $now=time();
             $img=request()->file('image')->getClientOriginalName();
             request()->file('image')->move(public_path('payslips'),$now.$img,'');            
-        }
-        
+        }        
         $user=User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'nrc'=> $data['nrc-box']."/".$data['nrc-code'].$data['nrc-type'].$data['nrc'],
             'password' => Hash::make($data['password']),
-            'dob'=>date_create($data['dob']),        
+            'dob'=>date("Y-m-d", strtotime($data['dob'])),
             'cmp'=>Helper::getCMPID($cmp),
             'ph-no'=>$data['ph-no'],
             'location'=>$data['location'],

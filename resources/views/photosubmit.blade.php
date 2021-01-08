@@ -7,22 +7,24 @@
                 <div class="card-header">{{ __('Photo Submission') }}</div>
 
                 <div class="card-body">
-                    <form class="form-horizonal" method="post" action="{{route('enrollment.update',$id)}}">
-                        @method('PUT') 
+                    <form class="form-horizonal" method="post" action="{{url('photosubmit',$id)}}" enctype="multipart/form-data">                        
                         @csrf
                         <label class="col-md-5" for="cpmid">CPM-ID:</label>
                         <input class="col-md-5" style="border:red;" name="cpm" value={{Auth::user()->cmp}} readonly>
                       
-                        <label class="col-md-5" for="cpmid">Name:</label>
+                        <label class="col-md-5" for="user_name">Name:</label>
                         <input class="col-md-5" style="border:red;" name="user_name" value={{Auth::user()->name}} readonly>
                       
                         <label class="col-md-5" for="theme_category">Theme Category:</label>
                         <input class="col-md-5" style="border:red;" name="theme_category" value="Theme{{$id}}" readonly>
-<label class="col-md-5" for="theme">Attach Photo</label>
-        <input class="col-md-5" type="file" id="myFile" name="filename"></br></br>
+                        <label class="col-md-5" for="image">Attach Photo</label>
+                        <input class="col-md-5" type="file" id="image" name="image"></br></br>
+                        
+                        <button type="submit" class="col-md-5 btn btn-primary">Submit</button>
 
-<button type="submit" class="btn btn-primary">Update</button>
-
-</form>
+                    </form>
+                </div>
+            </div>
+        </div>
 
 @endsection

@@ -21,7 +21,7 @@
     <script>
     $( function() {
         $( "#dob" ).datepicker({
-            dateFormat: 'dd/mm/yy',
+            dateFormat: 'dd-mm-yy',
             autoclose: true
         });
     } );
@@ -87,24 +87,10 @@
         });
     });
     $(document).ready(function(){
-        document.getElementById("lblimage").style.display="none";
+        document.getElementById("lblimage").display="none";
         document.getElementById("image").style.display="none";
-        // document.getElementById("onepay-pf").style.display="none";
-        // document.getElementById("wavepay-pf").style.display="none";
-        // document.getElementById("cbpay-pf").style.display="none";
-        // document.getElementById("kbz-pf").style.display="none";
-        // document.getElementById("lbl-kbz-pf").style.display="none";
-        // document.getElementById("lbl-onepay-pf").style.display="none";
-        // document.getElementById("lbl-wavepay-pf").style.display="none";
-        // document.getElementById("lbl-cbpay-pf").style.display="none";
-        // document.getElementById("payment-type").value="";
     });
     function kbzform() {
-        // document.getElementById("wavepay-pf").style.display="none";
-        // document.getElementById("cbpay-pf").style.display="none";
-        // document.getElementById("lbl-onepay-pf").style.display="none";
-        // document.getElementById("lbl-cbpay-pf").style.display="none";
-        // document.getElementById("lbl-wavepay-pf").style.display="none";
         document.getElementById("payment-type").value="kbzpay";
         var x = document.getElementById("image");
         var y= document.getElementById("lblimage");
@@ -118,12 +104,6 @@
         }
     }
     function onepayform(){
-        // document.getElementById("kbz-pf").style.display="none";
-        // document.getElementById("wavepay-pf").style.display="none";
-        // document.getElementById("cbpay-pf").style.display="none";        
-        // document.getElementById("lbl-kbz-pf").style.display="none";
-        // document.getElementById("lbl-wavepay-pf").style.display="none";
-        // document.getElementById("lbl-cbpay-pf").style.display="none";
         document.getElementById("payment-type").value="onepay";
         var x = document.getElementById("image");
         var y= document.getElementById("lblimage");
@@ -139,12 +119,6 @@
         }
     }
     function wavepayform(){
-        // document.getElementById("kbz-pf").style.display="none";
-        // document.getElementById("onepay-pf").style.display="none";
-        // document.getElementById("cbpay-pf").style.display="none";
-        // document.getElementById("lbl-kbz-pf").style.display="none";
-        // document.getElementById("lbl-onepay-pf").style.display="none";
-        // document.getElementById("lbl-cbpay-pf").style.display="none";
         document.getElementById("payment-type").value="wavepay";
         var x = document.getElementById("image");
         var y= document.getElementById("lblimage");
@@ -158,12 +132,6 @@
         }
     }
     function cbpayform(){
-        // document.getElementById("kbz-pf").style.display="none";
-        // document.getElementById("wavepay-pf").style.display="none";
-        // document.getElementById("onepay-pf").style.display="none";
-        // document.getElementById("lbl-kbz-pf").style.display="none";
-        // document.getElementById("lbl-wavepay-pf").style.display="none";
-        // document.getElementById("lbl-onepay-pf").style.display="none";
         document.getElementById("payment-type").value="cbpay";
         var x = document.getElementById("image");
         var y= document.getElementById("lblimage");
