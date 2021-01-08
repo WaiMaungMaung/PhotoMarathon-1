@@ -24,17 +24,26 @@ h2.headertekst {
 }
 
 #content{
-    margin-top: 190px;
+    margin-top: 160px;
     height: auto;
 }
 .logo{
     background: #fff;
 }
+
+@media screen and (min-width: 1920px){
+    
+    #content{
+        margin-top: 180px;
+            height: auto;
+    }
+}    
 @media screen and (max-width: 480px){
     
     #third-logo,#second-logo,#first-logo{
         margin-left: 0;
         }
+    
    .mgr,.canon{
        display: none;
    }
@@ -46,6 +55,11 @@ h2.headertekst {
         width:30%;
         height: 50%;
     }
+    
+    #content{
+    margin-top: 220px;
+    height: auto;
+}
 
     #footer {
         position: fixed;
