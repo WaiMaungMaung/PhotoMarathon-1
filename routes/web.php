@@ -60,7 +60,6 @@ Route::get('/admin_view', 'App\Http\Controllers\MembersController@index')->name(
 // Route::get('/enroll', [App\Http\Controllers\EnrollmentController::class, 'index'])->name('enroll');
 
 Route::resource('/enrollment', EnrollmentController::class);
-Route:pu
 // Route::post('/enrollment/store', [EnrollmentController::class, 'store']);
 
 
