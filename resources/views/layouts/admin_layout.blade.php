@@ -26,7 +26,7 @@
 
     $( function() {
         $( "#dob" ).datepicker({
-            dateFormat: 'dd-mm-yy',
+            dateFormat: 'dd/mm/yy',
             autoclose: true
         });
     } );
@@ -93,10 +93,24 @@
         });
     });
     $(document).ready(function(){
-        document.getElementById("lblimage").display="none";
+        document.getElementById("lblimage").style.display="none";
         document.getElementById("image").style.display="none";
+        // document.getElementById("onepay-pf").style.display="none";
+        // document.getElementById("wavepay-pf").style.display="none";
+        // document.getElementById("cbpay-pf").style.display="none";
+        // document.getElementById("kbz-pf").style.display="none";
+        // document.getElementById("lbl-kbz-pf").style.display="none";
+        // document.getElementById("lbl-onepay-pf").style.display="none";
+        // document.getElementById("lbl-wavepay-pf").style.display="none";
+        // document.getElementById("lbl-cbpay-pf").style.display="none";
+        // document.getElementById("payment-type").value="";
     });
     function kbzform() {
+        // document.getElementById("wavepay-pf").style.display="none";
+        // document.getElementById("cbpay-pf").style.display="none";
+        // document.getElementById("lbl-onepay-pf").style.display="none";
+        // document.getElementById("lbl-cbpay-pf").style.display="none";
+        // document.getElementById("lbl-wavepay-pf").style.display="none";
         document.getElementById("payment-type").value="kbzpay";
         var x = document.getElementById("image");
         var y= document.getElementById("lblimage");
@@ -110,6 +124,12 @@
         }
     }
     function onepayform(){
+        // document.getElementById("kbz-pf").style.display="none";
+        // document.getElementById("wavepay-pf").style.display="none";
+        // document.getElementById("cbpay-pf").style.display="none";        
+        // document.getElementById("lbl-kbz-pf").style.display="none";
+        // document.getElementById("lbl-wavepay-pf").style.display="none";
+        // document.getElementById("lbl-cbpay-pf").style.display="none";
         document.getElementById("payment-type").value="onepay";
         var x = document.getElementById("image");
         var y= document.getElementById("lblimage");
@@ -125,6 +145,7 @@
         }
     }
     function wavepayform(){
+       
         document.getElementById("payment-type").value="wavepay";
         var x = document.getElementById("image");
         var y= document.getElementById("lblimage");
@@ -138,6 +159,12 @@
         }
     }
     function cbpayform(){
+        // document.getElementById("kbz-pf").style.display="none";
+        // document.getElementById("wavepay-pf").style.display="none";
+        // document.getElementById("onepay-pf").style.display="none";
+        // document.getElementById("lbl-kbz-pf").style.display="none";
+        // document.getElementById("lbl-wavepay-pf").style.display="none";
+        // document.getElementById("lbl-onepay-pf").style.display="none";
         document.getElementById("payment-type").value="cbpay";
         var x = document.getElementById("image");
         var y= document.getElementById("lblimage");
@@ -161,7 +188,7 @@
                         <img class="imgresp canon" id="first-logo" src="{{url('/img/Canon.png')}}" > 
                     </div>
                     <div class="col-lg-4 col-sm-4 child_logo">
-                        <img class="imgresp marathon" id="second-logo" src="{{url('/img/cpmlogo.jpeg')}}">
+                        <img class="imgresp marathon" id="second-logo" src="{{url('/img/cpmlogo.png')}}">
                     </div>
                     <div class="col-sm-4 col-lg-4 child_logo" >
                         <img class="imgresp mgr" id="third-logo" src="{{url('/img/MGR.png')}}">       
@@ -179,36 +206,19 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mr-auto">                                
-                            @if(Route::has('about'))
-                                <li class="nav-item">
-                                    <a class="nav-link" id="lin-nav-1" href="{{ route('about')}}">{{ __('About') }} </a>
-                                </li>
-                            @endif
-                            @if(Route::has('prizes'))
-                                <li class="nav-item">
-                                    <a class="nav-link" id="lin-nav-1" href="{{ route('prizes')}}">{{ __('Contest & Prizes') }} </a>
-                                </li>
-                            @endif
-                            @if(Route::has('termncondition'))
-                                <li class="nav-item">
-                                    <a class="nav-link" id="lin-nav-3" href="{{ route('termncondition')}}">{{ __('Terms & Conditions') }} </a>
-                                </li>
-                            @endif
-                            @if(Route::has('ptogallery'))
-                                <li class="nav-item"> 
-                                    <a class="nav-link" id="lin-nav-1" href="{{ route('ptogallery')}}">{{ __('Photo Gallery') }} </a>
-                                </li>
-                            @endif
-                            @if(Route::has('howto'))
-                                <li class="nav-item">
-                                    <a class="nav-link" id="lin-nav-1" href="{{ route('howto')}}">{{ __('How To Register') }} </a>
-                                </li>
-                            @endif
+                           
                             @if(Route::has('contact'))
                                 <li class="nav-item">
-                                    <a class="nav-link" id="lin-nav-2" href="{{ route('contact')}}">{{ __('Contact') }} </a>
+                                    <a class="nav-link" id="lin-nav-2" href="{{ route('admin_view')}}">{{ __('All') }} </a>
                                 </li>
                             @endif
+                            <li class="nav-item">
+                                <a class="nav-link" id="lin-nav-2" href="{{ url('admin_view?q=Approved')}}">{{ __('Approved ') }} </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="lin-nav-2" href="{{ url('admin_view?q=Reject')}}">{{ __('Reject ') }} </a>
+                            </li>
+
                         </ul>
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
@@ -229,16 +239,7 @@
                                 @endif
                             @else
                                 
-                            @if(Route::has('dashboard'))
-                                <li class="nav-item">
-                                    <a class="nav-link" id="lin-nav-1" href="{{ route('dashboard')}}">{{ __('CPM-Enrollment') }} </a>
-                                </li>
-                            @endif
-                            @if(Route::has('submission'))
-                                <li class="nav-item">
-                                    <a class="nav-link" id="lin-nav-1" href="{{ route('submission')}}">{{ __('CPM-Submission') }} </a>
-                                </li>
-                            @endif
+                            
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }}
@@ -252,7 +253,6 @@
                                         @if(Auth::user()->access==1)
                                             <a class="dropdown-item" id="lgout-nav" href="{{ route('admin_reg')}}">{{ __('Create admin') }} </a>
                                         @endif
-                                        <a class="dropdown-item" id="lgout-nav" href="{{ route('member.edit', Auth::user()->id)}}">{{ __('Profile') }} </a>
                                         
                                         <a class="dropdown-item" id="lgout-nav" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
@@ -265,48 +265,21 @@
                                         </form>
                                     </div>
                                 </li>
-                            @endguest
+                        @endguest
                         </ul>
                     </div>
                 </div>
             </nav>
         </div>
-        <main class="py-4 container ">            
+                 
             <div id="content">
                 @yield('content')
             </div>
-        </main>
+       
         <footer class="bg-light text-center ">
             <!-- Grid container -->
-            <div class="container">
-              <!--Grid row-->
-              <div class="row justify-content-center" id="txtdiv">
-                <!--Grid column-->
-                <div class="col-lg-10 col-md-12 mb-4 mb-md-0 ft-bg ">
-                  <h3 class="text-uppercase" id="txtFooter">The Region’s Largest On-Ground Photography Competition</h3>
-                </div>
-                <div class="col-lg-6">
-                  <h4 id="ft-pg">
-                    Join the multitude of participants who rose to the challenge of this awesome photo competition and create photographic masterpieces in line with assigned themes - under time pressure.
-                  </h4>
-                </div>
-                {{-- <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                  <h5 class="text-uppercase">Footer text</h5>          
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                    aliquam voluptatem veniam, est atque cumque eum delectus sint!
-                  </p>
-                </div> --}}
-              </div>
-            </div>
-            <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(138, 23, 23, 0.2)">
-              ©️ 2020 Copyright:
-              <a class="text-dark" href="https://mgr.com.mm/">myanmargoldenrock.com.mm</a>              
-              <div class="sharethis-inline-share-buttons"></div>
-            </div>
-            <!-- Copyright -->             
+            
+                       
           </footer>
     </div>
 </body>

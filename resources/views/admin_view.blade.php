@@ -1,12 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.admin_layout')
 @section('content')
 @if(Auth::user()->access !=null)
 
 
-    <div class="container">
+    
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <form action="">
+                <form action="" >
 
                     
                     <div class="form-group row">
@@ -18,21 +18,25 @@
             <div class="col-md-10">
                 <table class="table">
                     <thead class="thead-dark">
-                        <td scope="col">ID</td>
                         <td scope="col">Name</td>
                         <td scope="col">Email</td>
                         <td scope="col">NRC</td>
                         <td scope="col">Created at</td>
+                        <td scope="col">Status</td>
+                        <td scope="col">action</td>
+
+
                     </thead>
                     @foreach($data as $user)
                     <tr>
-                        <td>{{$user->id}}</td>
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->nrc}}</td>
+                        <td>{{$user->created_at}}</td>
+                        {{-- <td><img src="{{url("/payslips/$user->image")}}" alt="img" id="payslip_img"></td> --}}
+                        <td>{{$user->status}}</td>
                         <td>
-        <a href="{{ route('member.edit', $user->id) }}" class="btn btn-primary" method="get">Edit</a>
-        <a href="{{ route('member.destroy', $user->id) }}" class="btn btn-primary" method="get">Delete</a>
+        <a href="{{ route('member.edit', $user->id) }}" class="btn btn-primary" method="get">Detail</a>
                             
 
 
@@ -40,7 +44,7 @@
                        
                     </tr>
                     @endforeach
-                    
+                  <p>Total User: {{$data->count()}}</p>  
 
                 </table>
                <div class="d-flex justify-content-center">
@@ -50,7 +54,7 @@
             
 
         </div>
-    </div>
+    
     
     
 @stop

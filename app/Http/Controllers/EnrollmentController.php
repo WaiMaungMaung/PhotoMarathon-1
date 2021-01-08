@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Enrollment;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class EnrollmentController extends Controller
@@ -48,7 +50,18 @@ class EnrollmentController extends Controller
 
         );
        $member->save();
+       $theme_cat=$request->get('theme_category');
+
+       $data = array('theme_cat'=>$theme_cat);
+       Mail::send('mail', $data, function($message) {
+          $message->to(Auth::user()->email, ' .')->subject
+             ('ENROLLED!');
+          $message->from('waimaungmaung@myanmargoldenrock.com','Canon Photo Marathon');
+       });
+ 
+ 
        return redirect('/dashboard')->with('success','Enroll done');
+
     }
 
     /**

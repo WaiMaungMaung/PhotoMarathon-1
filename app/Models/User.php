@@ -24,10 +24,10 @@ class User extends Authenticatable implements MustVerifyEmail
         'dob',
         'cmp',
         'access',
-        'ph-no',
+        'ph_no',
         'location',
-        't-shirt-size',
-        'payment-type',
+        't_shirt_size',
+        'payment_type',
         'status',
         'image'
     ];

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 use App\Http\Helper as Helper;
+use Illuminate\Http\Request;
 
 
 class RegisterController extends Controller
@@ -24,7 +25,7 @@ class RegisterController extends Controller
     | provide this functionality without requiring any additional code.
     |
     */
-
+    
     use RegistersUsers;
 
     /**
@@ -79,11 +80,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $users=DB::table('users')->latest()->first();
-        if($users != null){            
-            $cmp = $users->cmp;
-        }else{
-            $cmp = null;
-        }
+       
         $status="pending";        
         if(request()->hasFile('image')){
             $now=time();
@@ -96,15 +93,16 @@ class RegisterController extends Controller
             'nrc'=> $data['nrc-box']."/".$data['nrc-code'].$data['nrc-type'].$data['nrc'],
             'password' => Hash::make($data['password']),
             'dob'=>date("Y-m-d", strtotime($data['dob'])),
-            'cmp'=>Helper::getCMPID($cmp),
             'ph-no'=>$data['ph-no'],
             'location'=>$data['location'],
-            't-shirt-size'=>$data['t-shirt-size'],
-            'payment-type'=>$data['payment-type'],
+            't_shirt_size'=>$data['t-shirt-size'],
+            'payment_type'=>$data['payment-type'],
             'status'=>$status,
             'image' => $now.$img,            
         ]);        
         return $user;
     }
+
+    
     
 }
