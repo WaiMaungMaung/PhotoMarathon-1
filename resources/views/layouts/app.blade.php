@@ -97,7 +97,7 @@
                         <img class="imgresp canon" id="first-logo" src="{{url('/img/Canon.png')}}" > 
                     </div>
                     <div class="col-lg-4 col-sm-4 child_logo">
-                        <img class="imgresp marathon" id="second-logo" src="{{url('/img/cpmlogo.png')}}">
+                        <img class="imgresp marathon" id="second-logo" src="{{url('/img/cpmlogo.jpeg')}}">
                     </div>
                     <div class="col-sm-4 col-lg-4 child_logo" >
                         <img class="imgresp mgr" id="third-logo" src="{{url('/img/MGR.png')}}">       
