@@ -1,3 +1,5 @@
+@if(Auth::user()->cmp!=null)
+
 @extends('layouts.app')
 
 @section('content')
@@ -20,10 +22,10 @@
                             <div id="accordion">
                                 <div class="card">
                                    <div class="card-header">
-                                        <a class="card-link" data-toggle="collapse" href="#collapseOne"><strong>Student Category</strong></a>
+                                        <a class="card-link" data-toggle="collapse" href="#collapseOne"><strong>Student Category </strong></a>
                                     </div>
                                     <div id="collapseOne" class="collapse show" data-parent="#accordion">
-                                        <div class="card-body">
+                                        <div class="card-body ">
                                             This is Theme I photo.</br>
                                             This is Theme I photo.</br>
                                             This is Theme I photo.</br>
@@ -32,11 +34,15 @@
                                             @if(DB::table('enrollments')
                                                 ->where([
                                                     ['cpm','=',Auth::user()->cmp],
-                                                ['theme_category','=','Theme1'],
+                                                ['theme_category','=','Student'],
                                                 ])->first())
-                                                <a class="text-white" href="{{ url('/photosubmit/1') }}"><button type="button" class="btn btn-danger enrollbtn" >Submit Photo</button></a></br></br>
+                                <p class="alert text-center">You already Enrolled,
+                                                                                                Please submit your photo
+                                                                                                <a href="{{url('/submission')}}">CPM-submission</a> </p>
+                                                                                           
+
                                             @else
-                                                <a class="text-white" href="{{ url('enrollment/1') }}"><button type="button" class="btn btn-success enrollbtn" >Enroll</button></a></br></br>
+                                                <a class="text-white" href="{{ url('enrollment/Student') }}"><button type="button" class="btn btn-success enrollbtn" >Enroll</button></a></br></br>
                                             @endif
                                         </div>
                                     </div>
@@ -56,11 +62,13 @@
                                 @if(DB::table('enrollments')
                                     ->where([
                                         ['cpm','=',Auth::user()->cmp],
-                                    ['theme_category','=','Theme2'],
+                                    ['theme_category','=','Theme1'],
                                     ])->first())
-                                    <a class="text-white" href="{{ url('/photosubmit/2') }}"><button type="button" class="btn btn-danger enrollbtn" >Submit Photo</button></a></br></br>
+                                                                         <p class="alert text-center">You already Enrolled,
+                                                                            Please submit your photo
+                                                                            <a href="{{url('/submission')}}">CPM-submission</a> </p>
                                 @else
-                                    <a class="text-white" href="{{ url('enrollment/2') }}"><button type="button" class="btn btn-success enrollbtn" >Enroll</button></a></br></br>
+                                    <a class="text-white" href="{{ url('enrollment/Theme1') }}"><button type="button" class="btn btn-success enrollbtn" >Enroll</button></a></br></br>
                                 @endif
                             </div>
                         </div>
@@ -79,11 +87,13 @@
                                 @if(DB::table('enrollments')
                                     ->where([
                                         ['cpm','=',Auth::user()->cmp],
-                                    ['theme_category','=','Theme3'],
+                                    ['theme_category','=','Theme2'],
                                     ])->first())
-                                    <a class="text-white" href="{{ url('/photosubmit/3') }}"><button type="button" class="btn btn-danger enrollbtn" >Submit Photo</button></a></br></br>
+                                                                               <p class="alert text-center">You already Enrolled,
+                                                                                Please submit your photo
+                                                                                <a href="{{url('/submission')}}">CPM-submission</a> </p>
                                 @else
-                                    <a class="text-white" href="{{ url('enrollment/3') }}"><button type="button" class="btn btn-success enrollbtn" >Enroll</button></a></br></br>
+                                    <a class="text-white" href="{{ url('enrollment/Theme2') }}"><button type="button" class="btn btn-success enrollbtn" >Enroll</button></a></br></br>
                                 @endif
                             </div>
                         </div>
@@ -93,4 +103,10 @@
         </div>
     </div>
 </div>
-@endsection
+
+@stop
+
+@else 
+  <script>window.location = "/";</script>
+@endif
+

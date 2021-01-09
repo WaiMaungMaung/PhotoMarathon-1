@@ -93,7 +93,7 @@ class RegisterController extends Controller
             'nrc'=> $data['nrc-box']."/".$data['nrc-code'].$data['nrc-type'].$data['nrc'],
             'password' => Hash::make($data['password']),
             'dob'=>date("Y-m-d", strtotime($data['dob'])),
-            'ph-no'=>$data['ph-no'],
+            'ph_no'=>$data['ph-no'],
             'location'=>$data['location'],
             't_shirt_size'=>$data['t-shirt-size'],
             'payment_type'=>$data['payment-type'],
