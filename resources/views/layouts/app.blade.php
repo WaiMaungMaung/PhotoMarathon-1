@@ -12,22 +12,19 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
    
-    {{-- conflict with datepicker  --}}
     <script src="{{ asset('js/app.js') }}" defer></script>
-    {{-- start of datepicker script and css --}}
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    {{-- <script src="{{ asset('js/maginifier.js') }}"></script> --}}
-    
-
     <script>
-
-
     $( function() {
         $( "#dob" ).datepicker({
             dateFormat: 'dd-mm-yy',
-            autoclose: true
+            autoclose: true,
+            changeYear: true,
+            changeMonth: true,
+            yearRange: '1930:-18',
+            maxDate: '-18y'
         });
     } );
     </script> 
@@ -93,7 +90,7 @@
         });
     });
     $(document).ready(function(){
-        document.getElementById("lblimage").display="none";
+        document.getElementById("lblimage").style.display="none";
         document.getElementById("image").style.display="none";
     });
     function kbzform() {
@@ -148,6 +145,17 @@
         } else {
             x.style.display = "none";
             y.style.display = "none";
+        }
+    }
+    
+    function submitForm(){
+        var isClick = document.getElementById("payment-type").value;
+        if(isClick == ""){
+            // 
+            document.getElementById("reqClick").innerHTML = "Please Choose Payment Method.";
+            document.getElementById("reqClick").style.color = "red";
+        }else{
+            document.getElementById("regFrm").submit();
         }
     }
     </script>
