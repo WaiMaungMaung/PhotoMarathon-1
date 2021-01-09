@@ -67,7 +67,7 @@ class PsubmitController extends Controller
                 Mail::send('submitMail', $data, function($message) {                
                     $message->to(Auth::user()->email, '')->subject
                     ('Submission Successful!');
-                    $message->from('eieilwin@myanmargoldenrock.com','Cannon Photo Marathon');
+                    $message->from('waimaungmaung@myanmargoldenrock.com','Cannon Photo Marathon');
                 });
             }else{
                 $status="error";

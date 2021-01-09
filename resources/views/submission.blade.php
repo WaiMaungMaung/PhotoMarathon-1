@@ -52,7 +52,7 @@
                                     @if($data['theme2'] > 0)                                                                   
                                         <p class="alert text-center">You already uploaded photo.</p>
                                     @else
-                                        <a class="text-white" href="{{ url('photosubmit/2') }}"><button type="button" class="btn btn-success enrollbtn">Submit</button></a>
+                                        <a class="text-white" href="{{ url('photosubmit/Theme1') }}"><button type="button" class="btn btn-success enrollbtn">Submit</button></a>
                                         <br></br>
                                     @endif                                        
                                     
@@ -73,7 +73,7 @@
                                         @if($data['theme3'] > 0)                       
                                             <p class="alert text-center">You already uploaded photo.</p>
                                         @else
-                                            <a class="text-white" href="{{ url('photosubmit/3') }}"><button type="button" class="btn btn-success enrollbtn">Submit</button></a>
+                                            <a class="text-white" href="{{ url('photosubmit/Theme2') }}"><button type="button" class="btn btn-success enrollbtn">Submit</button></a>
                                             <br><br>
                                         @endif                                            
                                         

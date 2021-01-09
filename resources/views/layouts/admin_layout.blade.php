@@ -216,7 +216,10 @@
                                 <a class="nav-link" id="lin-nav-2" href="{{ url('admin_view?q=Approved')}}">{{ __('Approved ') }} </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="lin-nav-2" href="{{ url('admin_view?q=Reject')}}">{{ __('Reject ') }} </a>
+                                <a class="nav-link" id="lin-nav-2" href="{{ url('admin_view?q=Rejected')}}">{{ __('Reject ') }} </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="lin-nav-2" href="{{ url('admin_view?q=pending')}}">{{ __('Pending ') }} </a>
                             </li>
 
                         </ul>
@@ -271,11 +274,12 @@
                 </div>
             </nav>
         </div>
+        <main class="py-4 ">            
                  
             <div id="content">
                 @yield('content')
             </div>
-       
+        </main>
         <footer class="bg-light text-center ">
             <!-- Grid container -->
             
