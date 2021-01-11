@@ -92,6 +92,8 @@ Route::get('html_email',[MailController::class,'html_email']);
 Route::get('sendhtmlemail','MailController@html_email');
 Route::get('sendattachmentemail','MailController@attachment_email');
 
+// Route::get('/enroll',[EnrollmentController::class,'index'])->name('enroll');
+
 
                 
 // Auth::routes();
