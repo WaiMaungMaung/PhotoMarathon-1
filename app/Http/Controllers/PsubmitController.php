@@ -29,9 +29,9 @@ class PsubmitController extends Controller
     }
 
     public function store(Request $request, String $id){
-        // $request->validate([
-        //     'fileName' => 'required'
-        // ]);
+        $request->validate([
+            'image' => 'required'
+        ]);
         $cmp = $request->cpm;
         $name= $request->user_name;
         $themeCAT= $request->theme_category;
@@ -67,7 +67,7 @@ class PsubmitController extends Controller
                 Mail::send('submitMail', $data, function($message) {                
                     $message->to(Auth::user()->email, '')->subject
                     ('Submission Successful!');
-                    $message->from('waimaungmaung@myanmargoldenrock.com','Cannon Photo Marathon');
+                    $message->from(env('MAIL_FROM_ADDRESS'),'Cannon Photo Marathon');
                 });
             }else{
                 $status="error";
