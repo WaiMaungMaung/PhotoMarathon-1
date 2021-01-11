@@ -36,7 +36,7 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+            'host' => env('MAIL_HOST', 'smtp.office365.com'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'username' => env('MAIL_USERNAME'),
@@ -84,7 +84,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'eiei77442@gmail.com'),
+        'address' => env('MAIL_FROM_ADDRESS', env('MAIL_USERNAME')),
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 

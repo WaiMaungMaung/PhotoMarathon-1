@@ -76,9 +76,6 @@ Route::post('/admin_reg', [MembersController::class, 'store']);
 
 Route::get('/update_approve/{id}', [MembersController::class, 'update'])->name('/update_approve/id');
 
-
-
-
 Route::post('/admin_reg', [MembersController::class, 'store']);
 
 Route::get('/member/edit/{id}',[MembersController::class,'edit'])->name('member.edit');
@@ -92,9 +89,10 @@ Route::get('sendbasicemail','MailController@basic_email');
 Route::get('sendbasicemail',[MailController::class,'basic_email']);
 Route::get('html_email',[MailController::class,'html_email']);
 
-
 Route::get('sendhtmlemail','MailController@html_email');
 Route::get('sendattachmentemail','MailController@attachment_email');
+
+// Route::get('/enroll',[EnrollmentController::class,'index'])->name('enroll');
 
 
                 

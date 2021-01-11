@@ -4,7 +4,6 @@
         display: none;
     }
 </style>
-
 @section('content')
 
 <div class="container">
@@ -13,7 +12,7 @@
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data" id="regFrm">
                         @csrf
                         @error('new_nrc')
                           <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -165,9 +164,10 @@
                         <div class="form-group row">
                             <label for="payment" class="col-md-4 col-form-label text-md-right">{{ __('Payment Method') }}</label>
                             <div class="col-md-8 col-sm-8" id="payment-div">
+                                <label for="reqClick" id="reqClick"></label>
                                 <div class="row">
                                     <div class="col-md-2 col-sm-2">
-                                        <img class="logo" src="{{url('/img/kbzpaylogo.png')}}" alt="kbz pay" onclick="kbzform()">
+                                        <img class="logo" src="{{url('/img/kbzpaylogo.png')}}" alt="kbz pay" onclick="kbzform()" required>
                                     </div>
                                     <div class="col-md-2 col-sm-2">
                                         <img class="logo" src="{{url('/img/onepaylogo.png')}}" alt="one pay" onclick="onepayform()">
@@ -195,7 +195,7 @@
                         </div>                        
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" onclick="submitForm()">
                                     {{ __('Register') }}
                                 </button>
                             </div>

@@ -145,7 +145,7 @@ class MembersController extends Controller
         
         $contact->save();
 
-        return redirect()->back()->withInput();;
+        return redirect()->back()->withInput();
     }
 
     /**
@@ -156,10 +156,16 @@ class MembersController extends Controller
      */
     public function destroy(String $id)
     {
-        $User_del = User::find($id);
+        $contact = User::find($id);
+        $contact->status = "Rejected";
+        $contact->save();
 
-    $User_del->delete();
-    return redirect('admin_view');
+        return redirect()->back()->withInput();
+    
+        //     $User_del = User::find($id);
+
+    // $User_del->delete();
+    // return redirect('admin_view');
 
     }
 }

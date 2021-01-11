@@ -16,7 +16,7 @@ class CreateEnrollmentsTable extends Migration
         Schema::create('enrollments', function (Blueprint $table) {
             $table->id();
             $table->string('cpm');
-            $table->string('theme_category');
+            $table->enum('theme_category',['Student','Theme1','Theme2']);
             $table->string('camera_brand');
             $table->string('Email_Status')->nullable();
             $table->timestamp('enroll_at')->useCurrent();

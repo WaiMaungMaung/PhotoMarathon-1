@@ -17,19 +17,19 @@ class SubmissionController extends Controller
         $theme1 = DB::table('submissions')
         ->where([
             ['cmp','=',Auth::user()->cmp],
-            ['themeCAT','=','Theme1']
+            ['themeCAT','=','Student']
             ])->count();
 
         $theme2 = DB::table('submissions')
         ->where([
             ['cmp','=',Auth::user()->cmp],
-            ['themeCAT','=','Theme2']
+            ['themeCAT','=','Theme1']
             ])->count();
 
         $theme3 = DB::table('submissions')
         ->where([
             ['cmp','=',Auth::user()->cmp],
-            ['themeCAT','=','Theme3']
+            ['themeCAT','=','Theme2']
             ])->count();
             
         $data = array(

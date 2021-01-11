@@ -19,17 +19,17 @@ class MailController extends Controller {
       });
       echo "Basic Email Sent. Check your inbox.";
    }
-   public function html_email() {
-      $data = array('theme_cat'=>$theme_cat);
-      Mail::send('mail', $data, function($message) {
-         $message->to(Auth::user()->email, 'Tutorials Point')->subject
-            ('ENROLLED!');
-         $message->from('waimaungmaung@myanmargoldenrock.com','Canon Photo Marathon');
-      });
+   // public function html_email() {
+   //    $data = array('theme_cat'=>$theme_cat);
+   //    Mail::send('mail', $data, function($message) {
+   //       $message->to(Auth::user()->email, 'Tutorials Point')->subject
+   //          ('ENROLLED!');
+   //       $message->from('waimaungmaung@myanmargoldenrock.com','Canon Photo Marathon');
+   //    });
 
 
-      return redirect('/dashboard')->with('success','Enroll done');
-   }
+   //    return redirect('/dashboard')->with('success','Enroll done');
+   // }
    public function attachment_email() {
       $data = array('name'=>"Virat Gandhi");
       Mail::send('mail', $data, function($message) {

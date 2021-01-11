@@ -56,7 +56,7 @@ class EnrollmentController extends Controller
        Mail::send('mail', $data, function($message) {
           $message->to(Auth::user()->email, ' .')->subject
              ('ENROLLED!');
-          $message->from('waimaungmaung@myanmargoldenrock.com','Canon Photo Marathon');
+          $message->from(env('MAIL_FROM_ADDRESS'),'Canon Photo Marathon');
        });
  
  
