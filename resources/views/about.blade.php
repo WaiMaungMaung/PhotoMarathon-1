@@ -1,39 +1,193 @@
 @extends('layouts.app')
-@section('content')
-<div id="content" class="site-content">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12">
-                <div id="primary" class="content-area">
-                    <main id="main" class="site-main">
-                         
-<article id="post-591" class="post-591 page type-page status-publish hentry">
-	<div class="entry-content">
-		<div id="pl-591" class="panel-layout"><div id="pg-591-0" class="panel-grid panel-no-style"><div id="pgc-591-0-0" class="panel-grid-cell panel-grid-cell-empty"></div><div id="pgc-591-0-1" class="panel-grid-cell panel-grid-cell-mobile-last"><div id="panel-591-0-1-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="0"><div class="so-widget-sow-editor so-widget-sow-editor-base">
-<div class="siteorigin-widget-tinymce textwidget">
-	</div>
-</div></div></div><div id="pgc-591-0-2" class="panel-grid-cell panel-grid-cell-empty"></div></div><div id="pg-591-1" class="panel-grid panel-no-style"><div id="pgc-591-1-0" class="panel-grid-cell panel-grid-cell-empty"></div><div id="pgc-591-1-1" class="panel-grid-cell panel-grid-cell-mobile-last"><div id="panel-591-1-1-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="1"><div class="so-widget-sow-editor so-widget-sow-editor-base">
-<div class="siteorigin-widget-tinymce textwidget">
-	<h2><strong style="color: #800000;">About Us</strong></h2>
-<p><span style="color: #333333;">Myanmar Golden Rock International Co., Ltd. started off as Accel International Co., Ltd. in 1995.&nbsp;</span></p>
-<p><span style="color: #333333;">In 2002, Accel International Co., Ltd. was rebranded to Myanmar Golden Rock International Co., Ltd. (MGR) as our business diversified into the banking and telecommunication industry. Our mission is to be the total solution provider in the Business Imaging, Consumer Information and Imaging, Banking, Photo Finishing and Building &amp; Facilities Industries thru offering reliable products and providing premium after sales service to our customers.</span></p>
-<h2><strong style="color: #800000;">Our Policy</strong></h2>
-<p><span style="color: #333333;">MGR’s business concept of service excellence has been its pillar of strength in ensuring satisfied and delighted customers. Our policy of <strong>“No Service No Sales” </strong>is the motto for every sales and service personnel, whom are all well-trained to be at their very best in order to ensure that customers and clients embark upon a journey that is mutually beneficial.</span></p>
-<h2><strong style="color: #800000;">Our Product</strong></h2>
-<p><span style="color: #333333;">MGR was given the sole distributorship to represent Canon in the Republic of the Union of Myanmar in mid 1995. This representation covers the whole range of Canon products such as Multifunction printing devices, Facsimiles, Scanners, Ink jet and Laser Printers, Cameras and Calculators.</span></p>
-<p><span style="color: #333333;">To enhance our position as a total solution provider, in 2003, MGR entered into several other agency contracts, covering other international brands of equivalent standings. Today, MGR is the Distributor and Partner for below mentioned International Brands.</span></p>
-<p><img class="imgresp" src="http://mgr.com.mm/index/wp-content/uploads/2016/12/about-us-1024x581.png" alt="" width="800" height="454" srcset="http://mgr.com.mm/index/wp-content/uploads/2016/12/about-us-1024x581.png 1024w, http://mgr.com.mm/index/wp-content/uploads/2016/12/about-us-300x170.png 300w, http://mgr.com.mm/index/wp-content/uploads/2016/12/about-us-768x436.png 768w, http://mgr.com.mm/index/wp-content/uploads/2016/12/about-us.png 1251w" sizes="(max-width: 800px) 100vw, 800px"></p>
-<h2><strong style="color: #800000;">Our Strength</strong></h2>
-<p><span style="color: #333333;">MGR remains very focus in our range of products it carries and we are always on the search for more business opportunities to strengthen the product lines we already carried in order to have the maximum synergy effect possible. With our strong foundation and product line, we strive for quality sales and service excellence always, anytime anywhere.</span></p>
-<h3><span style="color: #008000;"><b>“With us – You, Our Valued Customer Always Come First.”</b></span></h3>
-</div>
-</div></div></div><div id="pgc-591-1-2" class="panel-grid-cell panel-grid-cell-empty"></div></div></div>	</div><!-- .entry-content -->
-</article><!-- #post-## -->
-                    </main><!-- #main -->
-                </div><!-- #primary -->
-            </div><!-- #primary -->
-	    </div>
-	</div>
+<style>
 
-	</div>
+div.b {
+  line-height: 1.6;
+}
+
+#rcorners1 {
+  border-radius: 10px;
+  background:  rgb(3, 196, 255);
+  padding: 2px; 
+  width: 400px;
+  border:2px solid rgb(4, 0, 255);
+  height: 40px;  
+  text-align:center;
+  font-size:20px;
+}
+
+#rcorners2 {
+  border-radius: 10px;
+  background:  rgb(216, 36, 36);
+  
+  border:2px solid rgb(4, 0, 255);
+  padding: 2px; 
+  width: 400px;
+  height: 40px;  
+  text-align:center;
+  font-size:20px;
+}
+</style>
+@section('content')
+        <p>
+        <h4><strong>CANON PHOTOMARATHON​</strong></h4>
+        <h5><strong>The Region’s Largest On-ground Photography Competition!</strong>​</h5>
+        Singapore was the birthplace of CPM back in 2003. With overwhelming response, the competition is now 
+        available in most parts of Asia, Hong Kong, Taiwan, the Philippines, Singapore, Malaysia,
+         Indonesia, Vietnam, India, Brunei, Cambodia, China and Sri Lanka.​
+         Join the multitude of participants who rose to the challenge of this photo competition and create
+         photographic masterpieces in line with assigned themes - under time pressure.<br>
+        </p>
+        
+        <p>
+        <h4><strong>CANON PHOTOMARATHON MYANMAR​​</strong></h4>
+        The first Canon PhotoMarathon Myanmar was hosted in year 2019 at Thuwunna Indoor Stadium, Yangon and a
+        total of over 700 enthusiastic contestants were participating under the two unusual themes in the event. Three
+        amazing prizes were awarded for each theme and one grand prize was awarded to a participant who showed
+        fantastic photographic idea.​<br>
+        </p>
+        <div class="row" >
+          <div class="offset-md-4 offset-sm-1 text-white" id="rcorners1">
+            <strong> 	THEME - 1 	</strong>
+          </div>
+        </div>	
+        <div class="row" >
+          <div class="offset-md-4 offset-sm-1 text-white" id="rcorners2">
+            <strong> SILHOUTTE 	</strong>
+          </div>
+        </div>
+        <BR>
+        <div class="row" >          
+          <div class="offset-md-4 offset-sm-1 text-white" id="rcorners1">
+            <strong> 	THEME - 2 	</strong>
+          </div>
+        </div>	
+
+        <div class="row" >
+          <div class="offset-md-4 offset-sm-1 text-white" id="rcorners2">
+            <strong> 	COMBINATION 	</strong>
+          </div>
+        </div>			   
+        
+        <br>
+        <div class="container w_slide" >
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="{{url('/img/1st.jpg')}}" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{{url('/img/2nd.jpg')}}" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{{url('/img/3rd.jpg')}}" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{{url('/img/Grand.jpg')}}" alt="First slide">
+              </div>
+            </div>
+            
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          </div>
+        <br>
+        <p>Even in menacing of Covid-19 outbreak in the world, the second Canon PhotoMarathon Myanmar was
+        successfully hosted in year 2020 at Rose Garden Hotel, Yangon and a total of over 400 enthusiastic
+        contestants were participating under the three unexpected themes in the event. In the 2nd CPM, the amateur
+        category was opened for competition for young talented photographer or camera user who wants to show
+        their creativity and imagination. Three amazing prizes were awarded for each theme and one grand prize 
+        was awarded to a participant who showed fantastic photographic idea.​
+        </p>
+        
+        <div class="row" >
+		
+          <div class="offset-md-4 offset-sm-1 text-white" id="rcorners1">
+            <strong> 	AMATEUR CATEGORY 	</strong>
+
+          </div>
+        </div>	
+        
+         
+        <div class="row" >
+		
+          <div class="offset-md-4 offset-sm-1 text-white" id="rcorners2">
+            <strong> WORK FOR LIFE	</strong>
+
+          </div>
+        </div>	
+        <br>
+        <div class="row" >
+		
+          <div class="offset-md-4 offset-sm-1 text-white" id="rcorners1">
+            <strong> 	PROFESSIONAL CATEGORY THEME - 1 	</strong>
+
+          </div>
+        </div>		
+        <div class="row" >
+		
+          <div class="offset-md-4 offset-sm-1 text-white" id="rcorners2">
+            <strong> 	DYNAMIC   	</strong>
+
+          </div>
+        </div>	   
+        <br>
+        <div class="container w_slide" >
+          <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators1" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators1" data-slide-to="4"></li>
+              <li data-target="#carouselExampleIndicators1" data-slide-to="5"></li>
+              <li data-target="#carouselExampleIndicators1" data-slide-to="6"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="{{url('/img/A_1st.jpg')}}" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{{url('/img/A_2nd.jpg')}}" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{{url('/img/A_3rd.jpg')}}" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{{url('/img/P_1st.jpg')}}" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{{url('/img/P_2nd.jpg')}}" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{{url('/img/P_3rd.jpg')}}" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{{url('/img/Grand2020.jpg')}}" alt="slide">
+              </div>
+            </div>
+            
+            <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          </div>
+
 @stop
