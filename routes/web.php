@@ -63,7 +63,7 @@ Route::get('/admin_view', 'App\Http\Controllers\MembersController@index')->name(
 Route::resource('/enrollment', EnrollmentController::class);
 // Route::post('/enrollment/store', [EnrollmentController::class, 'store']);
 Route::get('/member/{id}', [MembersController::class, 'show'])->name('member.show');
-Route::get('/enroll/{id}', [EnrollmentController::class, 'showByCat'])->name('member.showByCat');
+Route::get('/enroll/{id}', [EnrollmentController::class, 'showByCat'])->name('enroll.showByCat');
 
 
 
@@ -73,6 +73,11 @@ Route::get('/submission', [App\Http\Controllers\SubmissionController::class, 'in
 Route::get('/photosubmit', [App\Http\Controllers\PsubmitController::class, 'index'])->name('photosubmit');
 
 Route::get('/photosubmit/{id}', [App\Http\Controllers\PsubmitController::class, 'show'])->name('photosubmit/id');
+
+Route::get('/submit/{id}', [App\Http\Controllers\PsubmitController::class, 'showByCat'])->name('submit.showByCat');
+
+
+
 
 Route::post('/photosubmit/{id}',[PsubmitController::class,'store'])->name('photosubmit/id');
 

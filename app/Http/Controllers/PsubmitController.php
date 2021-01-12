@@ -28,6 +28,27 @@ class PsubmitController extends Controller
         return view('photosubmit')->with('id',$id);
     }
     
+    public function showByCat(Request $id,String $cat){
+
+
+        $search =  $id->input('q');
+        if($search!=""){
+            $users = submission::join('users','enrollments.cpm','=','users.cmp')
+            ->where('theme_category','=',$cat)
+            ->where(function ($query) use ($search){
+                    $query->where('name', 'like', '%'.$search.'%')
+                        ->orWhere('cpm', 'like', '%'.$search.'%');})->paginate(3);  
+            
+               $users->appends(['q' => $search]);
+            }
+        else{
+            $users = submission::
+            join('users','enrollments.cpm','=','users.cmp')
+            ->where('theme_category','=',$cat)
+            ->paginate(3);
+        }
+        return view('admin_enroll_view',['data'=>$users]);
+    }
 
     public function store(Request $request, String $id){
         $request->validate([

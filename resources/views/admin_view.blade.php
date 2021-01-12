@@ -33,13 +33,13 @@
             </div>
             <div class="col-md-10">
                 <table class="table">
-                    <thead class="thead-dark">
-                        <td scope="col">Name</td>
-                        <td scope="col">Email</td>
-                        <td scope="col">NRC</td>
-                        <td scope="col">Created at</td>
-                        <td scope="col">Status</td>
-                        <td scope="col">action</td>
+                    <thead class="thead-light">
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">NRC</th>
+                        <th scope="col">Created at</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">action</th>
 
 
                     </thead>
