@@ -48,7 +48,7 @@ class EnrollmentController extends Controller
             ->where('theme_category','=',$cat)
             ->paginate(3);
         }
-        return view('admin_enroll_view',['data'=>$users]);
+        return view('admin_enroll_view',['data'=>$users,'category'=>$cat]);
 
 
     }

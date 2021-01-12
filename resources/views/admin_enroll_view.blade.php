@@ -1,35 +1,47 @@
 @extends('layouts.admin_layout')
 @section('content')
 
-<nav class="navbar navbar-expand-md navbar-light shadow-sm admin-nav" id="">
+<div class="">
+    <div class="row justify-content-center">
+        <div class="col-2" id="admin_row">
 
-    <ul class="navbar-nav mr-auto admin-ul">                                
-                               
-                                
-        <li class="nav-item admin-li">
-            <a class="nav-link" href="{{ url('/enroll/student')}}">{{ __('Student ') }} </a>
-        </li>
-        <li class="nav-item admin-li">
-            <a class="nav-link"  href="{{ url('/enroll/theme1')}}">{{ __('Open Category Theme 1 ') }} </a>
-        </li>
-        <li class="nav-item admin-li">
-            <a class="nav-link" href="{{ url('/enroll/theme2')}}">Open Category Theme 2 </a>
-        </li>
-    
-    </ul>
-    </nav>
-        
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <form action="" >
+            <a class="nav-link text-white admin-li" style="text-align: center;" href="{{ url('/enroll/student')}}">{{ __('Student ') }} </a>
+        </div>
+        <div class="col-2"  id="admin_row">
+
+            <a class="nav-link text-white admin-li" style="text-align: center;" href="{{ url('/enroll/theme1')}}">{{ __('Open Category Theme 1 ') }} </a>
+        </div>
+        <div class="col-2"  id="admin_row">
+
+            <a class="nav-link text-white admin-li" style="text-align: center;" href="{{ url('/enroll/theme2')}}">{{ __('Open Category Theme 2 ') }}</a>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-2">
+
+            <form action="" >
     
                         
-                        <div class="form-group row">
-                            <input type="text" name="q" placeholder="Search...!" class="form-control col-10"/>
-                            <input type="submit" class="btn btn-primary col-2" value="Search"/>
-                        </div>
-                    </form>
+                <div class="form-inline row">
+                    <input type="text" name="q" placeholder="Search...!" class="form-control"/>
+                    <input type="submit" class="btn btn-danger" value="Search"/>
                 </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+<br>
+<h3 style="text-transform: capitalize;
+margin-left: 120px;color: #800000;"><strong>
+@if ($category!='student')
+    Open Category
+
+@endif
+
+    {{$category}} - Enrolled List</strong>
+</h3>
+            <div class="row justify-content-center">
+                
                 <div class="col-md-10">
                     
                     <table class="table">

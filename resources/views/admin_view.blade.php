@@ -1,36 +1,37 @@
 @extends('layouts.admin_layout')
 @section('content')
 @if(Auth::user()->access !=null)
+<div class="">
+    <div class="row justify-content-center">
+        <div class="col-2" id="admin_row">
 
-<nav class="navbar navbar-expand-md navbar-light shadow-sm admin-nav" id="bg-nav">
+            <a class="nav-link text-white admin-li" style="text-align: center;" href="{{ url('/member/pending')}}">{{ __('Registered ') }} </a>
+        </div>
+        <div class="col-2"  id="admin_row">
 
-<ul class="navbar-nav mr-auto admin-ul">                                
-                           
-                            
-    <li class="nav-item admin-li">
-        <a class="nav-link" id="lin-nav-2"  href="{{ url('/member/pending')}}">{{ __('Registered ') }} </a>
-    </li>
-    <li class="nav-item admin-li">
-        <a class="nav-link" id="lin-nav-2" href="{{ url('/member/approved')}}">{{ __('Approved List ') }} </a>
-    </li>
-    <li class="nav-item admin-li">
-        <a class="nav-link" id="lin-nav-2" href="{{ url('/member/rejected')}}">{{ __('Reject List ') }} </a>
-    </li>
+            <a class="nav-link text-white admin-li" style="text-align: center;" href="{{ url('/member/approved')}}">{{ __('Approved List') }} </a>
+        </div>
+        <div class="col-2"  id="admin_row">
 
-</ul>
-</nav>
+            <a class="nav-link text-white admin-li" style="text-align: center;" href="{{ url('/member/approved')}}">{{ __('Reject List') }}</a>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-2">
+
+            <form action="" >
     
+                        
+                <div class="form-inline row">
+                    <input type="text" name="q" placeholder="Search...!" class="form-control"/>
+                    <input type="submit" class="btn btn-danger" value="Search"/>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
         <div class="row justify-content-center">
-            <div class="col-md-10">
-                <form action="" >
-
-                    
-                    <div class="form-group row">
-                        <input type="text" name="q" placeholder="Search...!" class="form-control col-10"/>
-                        <input type="submit" class="btn btn-primary col-2" value="Search"/>
-                    </div>
-                </form>
-            </div>
+           
             <div class="col-md-10">
                 <table class="table">
                     <thead class="thead-light">

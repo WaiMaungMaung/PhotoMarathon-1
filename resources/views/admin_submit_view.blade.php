@@ -32,15 +32,15 @@
 </div>
         
             <br>
-        <h4 style="text-transform: capitalize;
-        margin-left: 120px;">
+        <h3 style="text-transform: capitalize;
+        margin-left: 120px;color: #800000;"><strong>
         @if ($category!='student')
             Open Category
         
         @endif
 
-            {{$category}} - Submission List
-        </h4>
+            {{$category}} - Submission List</strong>
+        </h3>
         </div>
             <div class="row justify-content-center">
                 <div class="col-md-10">
