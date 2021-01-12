@@ -25,10 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $id = Auth::user()->id;
-// print_r($id);
-        $users = DB::table('users')->find($id);
-
-        return view('home')->with('users',$users);
+        $dob = Auth::user()->dob;
+        $exedate = '2020-12-31';
+        $age= \Carbon\Carbon::parse($dob)->diff($exedate);
+        return view('home')->with('age',$age->y);
     }
 }

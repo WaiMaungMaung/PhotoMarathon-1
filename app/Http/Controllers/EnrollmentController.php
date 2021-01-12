@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Enrollment;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
@@ -16,8 +17,14 @@ class EnrollmentController extends Controller
      */
     public function index()
     {
-        return view('enroll');
-        
+    
+            // $user=Auth::user();
+            // $request->validate(
+            //     $minAge = ( ! empty($parameters)) ? (int) $parameters[0] : 21;
+            //     return 
+            //     echo"(new DateTime)->diff(new DateTime($value))->y>= $minAge;)";
+               
+            return view('home');
     }
 
     /**
