@@ -171,20 +171,8 @@
 </head>
 <body>
     <div id="app">
-        <div class="fixed-top ">
-            <div class="logo">
-                <div class="row justify-content-center">
-                    <div class="col-sm-4 col-lg-4 child_logo">                
-                        <img class="imgresp canon" id="first-logo" src="{{url('/img/Canon.png')}}" > 
-                    </div>
-                    <div class="col-lg-4 col-sm-4 child_logo">
-                        <img class="imgresp marathon" id="second-logo" src="{{url('/img/cpmlogo.png')}}">
-                    </div>
-                    <div class="col-sm-4 col-lg-4 child_logo" >
-                        <img class="imgresp mgr" id="third-logo" src="{{url('/img/MGR.png')}}">       
-                    </div>
-                </div>
-            </div>
+        <div class=" ">
+            
             <nav class="navbar navbar-expand-md navbar-light shadow-sm" id="bg-nav">
                 <div class="container">
                     
@@ -203,7 +191,7 @@
                                 <a class="nav-link" id="lin-nav-2" href="{{ url('/enroll/student')}}">{{ __('CPM-Enrollment ') }} </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="lin-nav-2" href="{{ url('admin_view?q=pending')}}">{{ __('CPM-submission ') }} </a>
+                                <a class="nav-link" id="lin-nav-2" href="{{ url('/submit/student')}}">{{ __('CPM-submission ') }} </a>
                             </li>
 
                         </ul>
@@ -261,7 +249,7 @@
         <main class="py-4 ">   
               
                  
-            <div id="content">
+            <div id="admin_content">
                 @yield('content')
             </div>
         </main>
