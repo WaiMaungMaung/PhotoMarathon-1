@@ -1,6 +1,5 @@
 @extends('layouts.admin_layout')
 @section('content')
-@if(Auth::user()->access !=null)
 
 <nav class="navbar navbar-expand-md navbar-light shadow-sm admin-nav" id="bg-nav">
 
@@ -81,9 +80,7 @@
     
 @stop
 
-@else 
-  <script>window.location = "/";</script>
-@endif
+
 
 
 
