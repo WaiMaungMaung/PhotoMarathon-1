@@ -38,7 +38,7 @@ class EnrollmentController extends Controller
             ->where('theme_category','=',$cat)
             ->where(function ($query) use ($search){
                     $query->where('name', 'like', '%'.$search.'%')
-                        ->orWhere('cpm', 'like', '%'.$search.'%');})->paginate(10);  
+                        ->orWhere('cpm', 'like', '%'.$search.'%');})->paginate(3);  
             
                $users->appends(['q' => $search]);
             }
@@ -46,7 +46,7 @@ class EnrollmentController extends Controller
             $users = Enrollment::
             join('users','enrollments.cpm','=','users.cmp')
             ->where('theme_category','=',$cat)
-            ->paginate(10);
+            ->paginate(3);
         }
         return view('admin_enroll_view',['data'=>$users]);
 

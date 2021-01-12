@@ -31,16 +31,18 @@
                     </form>
                 </div>
                 <div class="col-md-10">
+                    
                     <table class="table">
-                        <thead class="thead-dark">
-                            <td scope="col">CPM_ID</td>
-                            <td scope="col">Name</td>
-                            <td scope="col">Camera Brand</td>
-                            <td scope="col">Enrolled at</td>
-                            <td scope="col">Status</td>
+                        <thead class="thead-light">
+                            <th scope="col">CPM_ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Camera Brand</th>
+                            <th scope="col">Enrolled at</th>
+                            <th scope="col">Status</th>
     
     
                         </thead>
+                        <tbody>
                         
                         
                         @foreach($data as $user)
@@ -54,7 +56,7 @@
                         </tr>
                         @endforeach
                       <p>Total User: {{$data->count()}}</p>  
-    
+                    </tbody>
                     </table>
                    <div class="d-flex justify-content-center">
                     {{ $data->links() }}
