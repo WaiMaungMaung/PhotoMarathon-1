@@ -68,6 +68,12 @@
                 {{ $data->links() }}
             </div>
             
+
+            <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                
+                <a class="btn btn-secondary" href="{{ route('export') }}">Export All User Data</a>
+            </form>
             
 
         </div>
