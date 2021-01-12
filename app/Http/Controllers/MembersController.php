@@ -33,8 +33,7 @@ class MembersController extends Controller
                     ->orWhere('email', 'like', '%'.$search.'%')
                     ->orWhere('nrc','like','%'.$search.'%')
                     ->orWhere('Status','=',$search)
-                    ->orWhere('payment_type','=',$search)
-                    ->Where('access','=',null);
+                    ->orWhere('payment_type','=',$search);
             })
             ->paginate(10);  
             $users->appends(['q' => $search]);
@@ -95,9 +94,35 @@ class MembersController extends Controller
      * @param  \App\Models\Member  $member
      * @return \Illuminate\Http\Response
      */
-    public function show(Member $member)
+    public function show(Request $id,String $status)
     {
-        //
+        // $members=DB::select('select * from users where status = ?', [$id]);
+        
+        // return view('admin_view')->with('data',$members);
+
+//For pending state
+
+        $search =  $id->input('q');
+        if($search!=""){
+            $users = User::where('status','=',$status)
+            ->where('access','=',null)
+            ->where(function ($query) use ($search){
+                $query->where('name', 'like', '%'.$search.'%')
+                    ->orWhere('email', 'like', '%'.$search.'%')
+                    ->orWhere('nrc','like','%'.$search.'%')
+                    ->orWhere('Status','=',$search)
+                    ->orWhere('payment_type','=',$search);
+            })
+            ->paginate(10);  
+            $users->appends(['q' => $search]);
+        }
+        else{
+            $users = User::where('access','=',null)
+            ->where('status','=',$status)
+            ->paginate(10);
+        }
+        return view('admin_view',['data'=>$users]);
+        
     }
 
     /**

@@ -77,6 +77,27 @@ h2.headertekst {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.admin-nav{
+    width: 400px;
+    text-align: center;
+    margin-left:200px;
+    line-height: 10px;
+
+}
+.admin-li:hover{
+    text-decoration:underline;
+    transition: 1s;
+}
+.admin-ul{
+    background-color: rgba(138, 138, 170, 0.178);
+    text-align: center;
+    line-height: 20px;
+
+    padding-left: 10px;
+
+}
+
 #bg-nav,#lgout-ddl{
     background-color:#871c11;     
 }

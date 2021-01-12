@@ -1,6 +1,14 @@
+
+
+
 @extends('layouts.app')
 @section('content')
-</script>
+
+@if(DB::table('enrollments')->where([
+  ['cpm','=',Auth::user()->cmp],
+  ['theme_category','=',$id],
+])->first()==null)
+
 <script>
 $(document).ready(function()
 {
@@ -27,6 +35,7 @@ $(document).ready(function()
   });
 });
 </script>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -63,4 +72,11 @@ $(document).ready(function()
         </div> 
     </div>
 </div>
+
 @endsection
+@else 
+<script>alert('You already enrolled Theme1')</script>
+@endif
+
+
+

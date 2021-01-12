@@ -27,6 +27,7 @@ class PsubmitController extends Controller
     public function show(String $id){
         return view('photosubmit')->with('id',$id);
     }
+    
 
     public function store(Request $request, String $id){
         $request->validate([

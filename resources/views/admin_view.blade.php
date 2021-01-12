@@ -2,7 +2,23 @@
 @section('content')
 @if(Auth::user()->access !=null)
 
+<nav class="navbar navbar-expand-md navbar-light shadow-sm admin-nav" id="bg-nav">
 
+<ul class="navbar-nav mr-auto admin-ul">                                
+                           
+                            
+    <li class="nav-item admin-li">
+        <a class="nav-link" id="lin-nav-2"  href="{{ url('/member/pending')}}">{{ __('Registered ') }} </a>
+    </li>
+    <li class="nav-item admin-li">
+        <a class="nav-link" id="lin-nav-2" href="{{ url('/member/approved')}}">{{ __('Approved List ') }} </a>
+    </li>
+    <li class="nav-item admin-li">
+        <a class="nav-link" id="lin-nav-2" href="{{ url('/member/rejected')}}">{{ __('Reject List ') }} </a>
+    </li>
+
+</ul>
+</nav>
     
         <div class="row justify-content-center">
             <div class="col-md-10">
