@@ -8,6 +8,7 @@ use App\Http\Controllers\PsubmitController;
 use App\Models\Member;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\MyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -102,6 +103,11 @@ Route::get('sendhtmlemail','MailController@html_email');
 Route::get('sendattachmentemail','MailController@attachment_email');
 
 // Route::get('/enroll',[EnrollmentController::class,'index'])->name('enroll');
+
+//Excel Route
+Route::get('importExportView', [MyController::class, 'importExportView']);
+Route::get('export', [MyController::class, 'export'])->name('export');
+Route::post('import', [MyController::class, 'import'])->name('import');
 
 
                 
