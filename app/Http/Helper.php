@@ -45,6 +45,13 @@ class Helper{
                 }
                     
             }            
+        }else{
+            $d['reg'] = null;
+            $d['enroll']=null;
+            $d['student']=null;
+            $d['theme1']=null;
+            $d['theme2']=null;
+            
         }
         return $d;
     }
