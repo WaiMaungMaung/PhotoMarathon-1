@@ -77,7 +77,7 @@ class EnrollmentController extends Controller
            if( DB::table('enrollments')->where([
       ['cpm','=',Auth::user()->cmp],
       ['theme_category','=',$request->get('theme_category')],
-            ]))
+            ])){
         $request->validate([
             'camera'=>'required',
             
@@ -98,6 +98,10 @@ class EnrollmentController extends Controller
              ('ENROLLED!');
           $message->from(env('MAIL_FROM_ADDRESS'),'Canon Photo Marathon');
        });
+    }
+    else{
+        echo "no data";
+    }
     }
     catch(Exception $e){
         // return view('ErrorReport')->with('error',$e);

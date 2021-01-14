@@ -74,7 +74,9 @@ $(document).ready(function()
 
 @endsection
 @else 
-<script>alert('You already enrolled Theme1')</script>
+<script>alert('You already enrolled This Category')</script>
+<script>window.location = "/dashboard";</script>
+
 @endif
 
 

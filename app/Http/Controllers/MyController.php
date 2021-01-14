@@ -85,5 +85,8 @@ class MyController extends Controller
         return back();
     }
 
+    public function waiting_approve(){
+        return view('waiting_approve');
+    }
 
 }

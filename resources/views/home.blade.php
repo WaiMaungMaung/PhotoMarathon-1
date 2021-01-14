@@ -108,6 +108,9 @@
 @stop
 
 @else 
-  <script>window.location = "/";</script>
+<script>alert('Your payment slip is processing ,Please wait for Admin Approve');</script>
+
+<script>window.location = "/";</script>
+  
 @endif
 

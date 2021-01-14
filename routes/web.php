@@ -43,6 +43,9 @@ Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])-
 
 Route::get('/about', [App\Http\Controllers\MyController::class, 'about'])->name('about');
 
+Route::get('/waiting_approve', [App\Http\Controllers\MyController::class, 'waiting_approve'])->name('waiting_approve');
+
+
 Route::get('/prizes', [App\Http\Controllers\MyController::class, 'prizes'])->name('prizes');
 
 Route::get('/ptogallery', [App\Http\Controllers\MyController::class, 'ptogallery'])->name('ptogallery');
@@ -95,6 +98,7 @@ Route::get('/member/destroy/{id}',[MembersController::class,'destroy'])->name('m
 
 Route::get('/fileupload',[UploadFileController::class,'imageUpload']);
 Route::post('/fileupload',[UploadFileController::class,'imageUploadPost'])->name('image.upload.post');
+
 
 Route::get('sendbasicemail','MailController@basic_email');
 Route::get('sendbasicemail',[MailController::class,'basic_email']);
