@@ -109,6 +109,12 @@ Route::get('importExportView', [MyController::class, 'importExportView']);
 Route::get('export', [MyController::class, 'export'])->name('export');
 Route::post('import', [MyController::class, 'import'])->name('import');
 
+Route::get('enrollmentExport', [MyController::class, 'enrollmentExport'])->name('enrollmentExport');
+
+Route::get('submissionExport', [MyController::class, 'submissionExport'])->name('submissionExport');
+
+
+
 
                 
 // Auth::routes();

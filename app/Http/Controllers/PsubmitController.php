@@ -33,7 +33,11 @@ class PsubmitController extends Controller
 
         $search =  $id->input('q');
         if($search!=""){
-            $users = submission::join('enrollments','enrollments.cpm','=','submissions.cmp')->
+            $users = submission::join('enrollments',
+            function($join)
+            {
+            $join->on([['submissions.cmp','=','enrollments.cpm'],['submissions.themeCAT','=','enrollments.theme_category']]);
+            })->
             where('themeCAT','=',$cat)
             ->where(function ($query) use ($search){
                     $query->where('name', 'like', '%'.$search.'%')
@@ -43,6 +47,13 @@ class PsubmitController extends Controller
             }
         else{
             $users = submission::
+            join('enrollments',
+            function($join)
+            {
+                $join->on([['submissions.cmp','=','enrollments.cpm'],['submissions.themeCAT','=','enrollments.theme_category']]);
+
+
+            })->
             where('themeCAT','=',$cat)
             ->paginate(10);
         }

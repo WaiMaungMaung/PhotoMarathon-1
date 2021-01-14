@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Exports\UsersExport;
 use App\Imports\UsersImport;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\SubmissionExport;
+
+use App\Exports\EnrollmentExport;
+use Facade\Ignition\QueryRecorder\Query;
 
 class MyController extends Controller
 {
@@ -62,6 +66,15 @@ class MyController extends Controller
         return Excel::download(new UsersExport('idio'), 'users.xlsx');
     }
      
+    public function enrollmentExport(Request $data){
+        $cat=$data->get('category');
+        return Excel::download(new EnrollmentExport($cat),"$cat Enrollment.xlsx");
+    }
+
+    public function submissionExport(Request $data){
+        $cat=$data->get('category');
+        return Excel::download(new SubmissionExport($cat),"$cat Submission.xlsx");
+    }
     /**
     * @return \Illuminate\Support\Collection
     */
