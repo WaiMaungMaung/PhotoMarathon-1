@@ -52104,8 +52104,13 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
+__webpack_require__(/*! D:\PHOTO_MARATHON\Canon_Photo_Marathon_2021\PhotoMarathon\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\PHOTO_MARATHON\Canon_Photo_Marathon_2021\PhotoMarathon\resources\sass\app.scss */"./resources/sass/app.scss");
+=======
 __webpack_require__(/*! C:\Users\MGR\Desktop\Jan\PhotoMarathon\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\Users\MGR\Desktop\Jan\PhotoMarathon\resources\sass\app.scss */"./resources/sass/app.scss");
+>>>>>>> 7690366de7abe8251b8c8a0dcd377a7f1e4b8f42
 
 
 /***/ })

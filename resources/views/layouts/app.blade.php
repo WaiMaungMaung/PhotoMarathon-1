@@ -12,7 +12,7 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
    
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -26,7 +26,7 @@
             yearRange: '1930:-18',
             maxDate: '-18y'
         });
-    } );
+    } );    
     </script> 
     {{-- end of datepicker script and css --}}
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5edf63078d9f5e00138d7ac1&product=inline-follow-buttons" async="async"></script>
@@ -47,9 +47,7 @@
     	if (pos > ml) pos=0;
         window.setTimeout("moveTitle()",speed);
       }
-  
       moveTitle();
-      
   </script>
   <script>
     function isNumberKey(evt){
@@ -232,8 +230,6 @@
                                     <li class="nav-item">
                                         <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                                     </li>
-                                
-
                                 @endif
                             @else
                                 
@@ -253,8 +249,9 @@
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="lgout-ddl">
                                         @if(Auth::user()->access!=null)
-                                            <a class="dropdown-item" id="lgout-nav" href="{{ route('admin_view') }}"
+                                            <a class="dropdown-item" id="lgout-nav" href="{{ route('admin_view') }}"                                            
                                         >Admin View</a>
+                                            <a class="dropdown-item" id="lgout-nav" href="{{ route('config')}}">Configuration</a>
                                         @endif
 
                                         @if(Auth::user()->access==1)

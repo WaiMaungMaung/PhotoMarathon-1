@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Helper;
 
 
 // use App\Providers\RouteServiceProvider;
@@ -25,7 +26,14 @@ class PsubmitController extends Controller
     }
 
     public function show(String $id){
-        return view('photosubmit')->with('id',$id);
+        $data = DB::table('configs')->where('type',$id)->first();
+        $isValid = Helper::isValidTime($data->from_time,$data->to_time);
+        if($isValid){
+            return view('photosubmit')->with('id',$id);
+        }else{
+            return view('expired')->with('msg','Sorry, Submission Time is not start or over');
+        }
+        
     }
     
     public function showByCat(Request $id,String $cat){
