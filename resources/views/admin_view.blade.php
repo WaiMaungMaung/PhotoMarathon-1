@@ -1,29 +1,42 @@
 @extends('layouts.admin_layout')
 @section('content')
-@if(Auth::user()->access !=null)
 
+            <a class="nav-link text-white admin-li" style="text-align: center;" href="{{ url('/member/pending')}}">{{ __('Registered ') }} </a>
+        </div>
+        <div class="col-2"  id="admin_row">
 
+            <a class="nav-link text-white admin-li" style="text-align: center;" href="{{ url('/member/approved')}}">{{ __('Approved List') }} </a>
+        </div>
+        <div class="col-2"  id="admin_row">
+
+            <a class="nav-link text-white admin-li" style="text-align: center;" href="{{ url('/member/approved')}}">{{ __('Reject List') }}</a>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-2">
+
+            <form action="" >
     
+                        
+                <div class="form-inline row">
+                    <input type="text" name="q" placeholder="Search...!" class="form-control"/>
+                    <input type="submit" class="btn btn-danger" value="Search"/>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
         <div class="row justify-content-center">
-            <div class="col-md-10">
-                <form action="" >
-
-                    
-                    <div class="form-group row">
-                        <input type="text" name="q" placeholder="Search...!" class="form-control col-10"/>
-                        <input type="submit" class="btn btn-primary col-2" value="Search"/>
-                    </div>
-                </form>
-            </div>
+           
             <div class="col-md-10">
                 <table class="table">
-                    <thead class="thead-dark">
-                        <td scope="col">Name</td>
-                        <td scope="col">Email</td>
-                        <td scope="col">NRC</td>
-                        <td scope="col">Created at</td>
-                        <td scope="col">Status</td>
-                        <td scope="col">action</td>
+                    <thead class="thead-light">
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">NRC</th>
+                        <th scope="col">Created at</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">action</th>
 
 
                     </thead>
@@ -51,6 +64,12 @@
                 {{ $data->links() }}
             </div>
             
+
+            <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                
+                <a class="btn btn-secondary" href="{{ route('export') }}">Export All User Data</a>
+            </form>
             
 
         </div>
@@ -59,9 +78,7 @@
     
 @stop
 
-@else 
-  <script>window.location = "/";</script>
-@endif
+
 
 
 

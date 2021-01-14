@@ -35,6 +35,38 @@ class PsubmitController extends Controller
         }
         
     }
+    
+    public function showByCat(Request $id,String $cat){
+
+
+        $search =  $id->input('q');
+        if($search!=""){
+            $users = submission::join('enrollments',
+            function($join)
+            {
+            $join->on([['submissions.cmp','=','enrollments.cpm'],['submissions.themeCAT','=','enrollments.theme_category']]);
+            })->
+            where('themeCAT','=',$cat)
+            ->where(function ($query) use ($search){
+                    $query->where('name', 'like', '%'.$search.'%')
+                        ->orWhere('cpm', 'like', '%'.$search.'%');})->paginate(10);  
+            
+               $users->appends(['q' => $search]);
+            }
+        else{
+            $users = submission::
+            join('enrollments',
+            function($join)
+            {
+                $join->on([['submissions.cmp','=','enrollments.cpm'],['submissions.themeCAT','=','enrollments.theme_category']]);
+
+
+            })->
+            where('themeCAT','=',$cat)
+            ->paginate(10);
+        }
+        return view('admin_submit_view',['data'=>$users,'category'=>$cat]);
+    }
 
     public function store(Request $request, String $id){
         $request->validate([
@@ -73,7 +105,7 @@ class PsubmitController extends Controller
                     'submitTime'=>now(),
                 ]);
                 Mail::send('submitMail', $data, function($message) {                
-                    $message->to(Auth::user()->email, '')->subject
+                    $message->to('myatthuaung@myanmargoldenrock.com', 'MMM')->subject
                     ('Submission Successful!');
                     $message->from(env('MAIL_FROM_ADDRESS'),'Cannon Photo Marathon');
                 });

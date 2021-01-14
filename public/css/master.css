@@ -77,6 +77,40 @@ h2.headertekst {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.admin-nav{
+    width: 400px;
+    text-align: center;
+    margin-left:100px;
+    line-height: 10px;
+
+
+}
+.admin-li:hover{
+    text-decoration:underline;
+    transition: 1s;
+}
+.admin-ul{
+    background-color: rgba(138, 138, 170, 0.178);
+    text-align: center;
+    line-height: 22.3px;
+
+    padding-left: 50px;
+
+}
+#admin_title{
+    width: 200px;
+    background-color: rgb(199, 18, 18);
+    color: #fff;
+    margin-left: 680px;
+    padding: 30px;
+    float: right;
+}
+#admin_row{
+    
+    color: #fff;
+    background-color: rgb(199, 18, 18);
+}
 #bg-nav,#lgout-ddl{
     background-color:#871c11;     
 }

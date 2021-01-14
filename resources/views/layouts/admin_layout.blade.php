@@ -1,3 +1,5 @@
+@if(Auth::user()->access !=null)
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -95,22 +97,10 @@
     $(document).ready(function(){
         document.getElementById("lblimage").style.display="none";
         document.getElementById("image").style.display="none";
-        // document.getElementById("onepay-pf").style.display="none";
-        // document.getElementById("wavepay-pf").style.display="none";
-        // document.getElementById("cbpay-pf").style.display="none";
-        // document.getElementById("kbz-pf").style.display="none";
-        // document.getElementById("lbl-kbz-pf").style.display="none";
-        // document.getElementById("lbl-onepay-pf").style.display="none";
-        // document.getElementById("lbl-wavepay-pf").style.display="none";
-        // document.getElementById("lbl-cbpay-pf").style.display="none";
-        // document.getElementById("payment-type").value="";
+ 
     });
     function kbzform() {
-        // document.getElementById("wavepay-pf").style.display="none";
-        // document.getElementById("cbpay-pf").style.display="none";
-        // document.getElementById("lbl-onepay-pf").style.display="none";
-        // document.getElementById("lbl-cbpay-pf").style.display="none";
-        // document.getElementById("lbl-wavepay-pf").style.display="none";
+     
         document.getElementById("payment-type").value="kbzpay";
         var x = document.getElementById("image");
         var y= document.getElementById("lblimage");
@@ -181,25 +171,11 @@
 </head>
 <body>
     <div id="app">
-        <div class="fixed-top ">
-            <div class="logo">
-                <div class="row justify-content-center">
-                    <div class="col-sm-4 col-lg-4 child_logo">                
-                        <img class="imgresp canon" id="first-logo" src="{{url('/img/Canon.png')}}" > 
-                    </div>
-                    <div class="col-lg-4 col-sm-4 child_logo">
-                        <img class="imgresp marathon" id="second-logo" src="{{url('/img/cpmlogo.png')}}">
-                    </div>
-                    <div class="col-sm-4 col-lg-4 child_logo" >
-                        <img class="imgresp mgr" id="third-logo" src="{{url('/img/MGR.png')}}">       
-                    </div>
-                </div>
-            </div>
+        <div class=" ">
+            
             <nav class="navbar navbar-expand-md navbar-light shadow-sm" id="bg-nav">
                 <div class="container">
-                    <a class="navbar-brand" href="{{ url('/') }}" id="hm-nav">
-                    Home {{-- {{ config('app.name', 'PHOTOMARATHON') }} --}}                    
-                    </a>
+                    
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -207,19 +183,15 @@
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mr-auto">                                
                            
-                            @if(Route::has('contact'))
-                                <li class="nav-item">
-                                    <a class="nav-link" id="lin-nav-2" href="{{ route('admin_view')}}">{{ __('All') }} </a>
-                                </li>
-                            @endif
+                            
                             <li class="nav-item">
-                                <a class="nav-link" id="lin-nav-2" href="{{ url('admin_view?q=Approved')}}">{{ __('Approved ') }} </a>
+                                <a class="nav-link" id="lin-nav-2" href="{{ url('/member/pending')}}">{{ __('Registration ') }} </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="lin-nav-2" href="{{ url('admin_view?q=Rejected')}}">{{ __('Reject ') }} </a>
+                                <a class="nav-link" id="lin-nav-2" href="{{ url('/enroll/student')}}">{{ __('CPM-Enrollment ') }} </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="lin-nav-2" href="{{ url('admin_view?q=pending')}}">{{ __('Pending ') }} </a>
+                                <a class="nav-link" id="lin-nav-2" href="{{ url('/submit/student')}}">{{ __('CPM-submission ') }} </a>
                             </li>
 
                         </ul>
@@ -275,9 +247,10 @@
                 </div>
             </nav>
         </div>
-        <main class="py-4 ">            
+        <main class="py-4 ">   
+              
                  
-            <div id="content">
+            <div id="admin_content">
                 @yield('content')
             </div>
         </main>
@@ -289,3 +262,6 @@
     </div>
 </body>
 </html>
+@else 
+  <script>window.location = "/";</script>
+@endif

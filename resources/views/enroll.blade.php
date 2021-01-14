@@ -1,6 +1,14 @@
+
+
+
 @extends('layouts.app')
 @section('content')
-</script>
+
+@if(DB::table('enrollments')->where([
+  ['cpm','=',Auth::user()->cmp],
+  ['theme_category','=',$id],
+])->first()==null)
+
 <script>
 $(document).ready(function()
 {
@@ -27,6 +35,7 @@ $(document).ready(function()
   });
 });
 </script>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -45,15 +54,14 @@ $(document).ready(function()
                     <input class="col-md-5" style="border:red;" name="theme_category" value="{{$id}}" readonly>
 
                     <label class="col-md-5" for="cbrand">Camera Brand</label>
-                    <input class="col-md-5" list="cbrand" name="camera">
-
-                    <datalist class="col-md-5" id="cbrand">
-                      <option value="Cannon">
-                      <option value="Fugi">
-                      <option value="Sony">
-                      <option value="Nikon">
-                      <option value="Other">
-                    </datalist>
+                    
+                    <select class="col-md-5" name="camera" id="camera">
+                      <option value="Cannon">Canon</option>
+                      <option value="Fugi">Fuji</option>
+                      <option value="Sony">Sony</option>
+                      <option value="Nikon">Nikon</option>
+                      <option value="Other">Other</option>
+                    </select>
                     <br>
                     <button type="submit" class="btn btn-success enrollbtn">Enroll</button>
                   </br></br>
@@ -63,4 +71,11 @@ $(document).ready(function()
         </div> 
     </div>
 </div>
+
 @endsection
+@else 
+<script>alert('You already enrolled Theme1')</script>
+@endif
+
+
+

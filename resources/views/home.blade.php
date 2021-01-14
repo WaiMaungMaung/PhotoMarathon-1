@@ -26,23 +26,24 @@
                                     </div>
                                     <div id="collapseOne" class="collapse show" data-parent="#accordion">
                                         <div class="card-body ">
-                                            This is Theme I photo.</br>
-                                            This is Theme I photo.</br>
-                                            This is Theme I photo.</br>
-                                            This is Theme I photo.</br>
-                                            This is Theme I photo.</br>
-                                            @if(DB::table('enrollments')
-                                                ->where([
-                                                    ['cpm','=',Auth::user()->cmp],
-                                                ['theme_category','=','Student'],
-                                                ])->first())
-                                <p class="alert text-center">You already Enrolled,
-                                                                                                Please submit your photo
-                                                                                                <a href="{{url('/submission')}}">CPM-submission</a> </p>
-                                                                                           
+                                            This is Theme I photo.<br>
+                                            This is Theme I photo.<br>
+                                            This is Theme I photo.<br>
+                                            This is Theme I photo.<br>
+                                            This is Theme I photo.<br>
+                                            @if ($age<21)
+                                                @if(DB::table('enrollments')
+                                                    ->where([  ['cpm','=',Auth::user()->cmp],
+                                                    ['theme_category','=','Student'],
+                                                    ])->first())
+                                                    <p class="alert text-center">You already Enrolled,
+                                                    Please submit your photo
+                                                    <a href="{{url('/submission')}}">CPM-submission</a> </p>
+                                                                                            
 
-                                            @else
-                                                <a class="text-white" href="{{ url('enrollment/Student') }}"><button type="button" class="btn btn-success enrollbtn" >Enroll</button></a></br></br>
+                                                @else
+                                                    <a class="text-white" href="{{ url('enrollment/Student') }}"><button type="button" class="btn btn-success enrollbtn" >Enroll</button></a><br><br>
+                                                @endif
                                             @endif
                                         </div>
                                     </div>

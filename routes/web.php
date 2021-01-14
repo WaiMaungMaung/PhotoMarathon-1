@@ -9,6 +9,7 @@ use App\Http\Controllers\PsubmitController;
 use App\Models\Member;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\MyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -63,6 +64,10 @@ Route::get('/admin_view', 'App\Http\Controllers\MembersController@index')->name(
 
 Route::resource('/enrollment', EnrollmentController::class);
 // Route::post('/enrollment/store', [EnrollmentController::class, 'store']);
+Route::get('/member/{id}', [MembersController::class, 'show'])->name('member.show');
+Route::get('/enroll/{id}', [EnrollmentController::class, 'showByCat'])->name('enroll.showByCat');
+
+
 
 
 Route::get('/submission', [App\Http\Controllers\SubmissionController::class, 'index'])->name('submission');
@@ -70,6 +75,11 @@ Route::get('/submission', [App\Http\Controllers\SubmissionController::class, 'in
 Route::get('/photosubmit', [App\Http\Controllers\PsubmitController::class, 'index'])->name('photosubmit');
 
 Route::get('/photosubmit/{id}', [App\Http\Controllers\PsubmitController::class, 'show'])->name('photosubmit/id');
+
+Route::get('/submit/{id}', [App\Http\Controllers\PsubmitController::class, 'showByCat'])->name('submit.showByCat');
+
+
+
 
 Route::post('/photosubmit/{id}',[PsubmitController::class,'store'])->name('photosubmit/id');
 
@@ -106,6 +116,17 @@ Route::post('/theme1-time-config',[ConfigController::class,'theme1_time_store'])
 Route::post('/theme2-time-config',[ConfigController::class,'theme2_time_store'])->name('theme2-time-config');
 
 // Route::get('/enroll',[EnrollmentController::class,'index'])->name('enroll');
+
+//Excel Route
+Route::get('importExportView', [MyController::class, 'importExportView']);
+Route::get('export', [MyController::class, 'export'])->name('export');
+Route::post('import', [MyController::class, 'import'])->name('import');
+
+Route::get('enrollmentExport', [MyController::class, 'enrollmentExport'])->name('enrollmentExport');
+
+Route::get('submissionExport', [MyController::class, 'submissionExport'])->name('submissionExport');
+
+
 
 
                 

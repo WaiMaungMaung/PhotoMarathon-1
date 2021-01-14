@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Enrollment;
+use Exception;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\User;
 
 class EnrollmentController extends Controller
 {
@@ -16,9 +20,39 @@ class EnrollmentController extends Controller
      */
     public function index()
     {
-        return view('enroll');
-        
+    
+            // $user=Auth::user();
+            // $request->validate(
+            //     $minAge = ( ! empty($parameters)) ? (int) $parameters[0] : 21;
+            //     return 
+            //     echo"(new DateTime)->diff(new DateTime($value))->y>= $minAge;)";
+               
+            return view('home');
     }
+
+    public function showByCat(Request $id,String $cat){
+
+        $search =  $id->input('q');
+        if($search!=""){
+            $users = Enrollment::join('users','enrollments.cpm','=','users.cmp')
+            ->where('theme_category','=',$cat)
+            ->where(function ($query) use ($search){
+                    $query->where('name', 'like', '%'.$search.'%')
+                        ->orWhere('cpm', 'like', '%'.$search.'%');})->paginate(3);  
+            
+               $users->appends(['q' => $search]);
+            }
+        else{
+            $users = Enrollment::
+            join('users','enrollments.cpm','=','users.cmp')
+            ->where('theme_category','=',$cat)
+            ->paginate(3);
+        }
+        return view('admin_enroll_view',['data'=>$users,'category'=>$cat]);
+
+
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -38,6 +72,12 @@ class EnrollmentController extends Controller
      */
     public function store(Request $request)
     {
+        try{
+
+           if( DB::table('enrollments')->where([
+      ['cpm','=',Auth::user()->cmp],
+      ['theme_category','=',$request->get('theme_category')],
+            ]))
         $request->validate([
             'camera'=>'required',
             
@@ -58,6 +98,11 @@ class EnrollmentController extends Controller
              ('ENROLLED!');
           $message->from(env('MAIL_FROM_ADDRESS'),'Canon Photo Marathon');
        });
+    }
+    catch(Exception $e){
+        // return view('ErrorReport')->with('error',$e);
+        return back()->with('errors',$e->getMessage())->withInput();
+    }
  
  
        return redirect('/dashboard')->with('success','Enroll done');
