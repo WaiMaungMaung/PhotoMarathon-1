@@ -4,6 +4,7 @@ use App\Http\Controllers\MembersController;
 use App\Http\Controllers\UploadFileController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\EnrollmentController;
+use App\Http\Controllers\ConfigController;
 use App\Http\Controllers\PsubmitController;
 use App\Models\Member;
 use Illuminate\Support\Facades\Route;
@@ -91,6 +92,18 @@ Route::get('html_email',[MailController::class,'html_email']);
 
 Route::get('sendhtmlemail','MailController@html_email');
 Route::get('sendattachmentemail','MailController@attachment_email');
+
+Route::get('/config',[ConfigController::class,'index'])->name('config');
+
+Route::post('/reg-time-config',[ConfigController::class,'reg_time_store'])->name('reg-time-config');
+
+Route::post('/enroll-time-config',[ConfigController::class,'enroll_time_store'])->name('enroll-time-config');
+
+Route::post('/student-time-config',[ConfigController::class,'student_time_store'])->name('student-time-config');
+
+Route::post('/theme1-time-config',[ConfigController::class,'theme1_time_store'])->name('theme1-time-config');
+
+Route::post('/theme2-time-config',[ConfigController::class,'theme2_time_store'])->name('theme2-time-config');
 
 // Route::get('/enroll',[EnrollmentController::class,'index'])->name('enroll');
 

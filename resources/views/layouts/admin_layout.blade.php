@@ -13,7 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
    
     {{-- conflict with datepicker  --}}
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     {{-- start of datepicker script and css --}}
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -68,7 +68,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" defer rel="stylesheet">
     <link href="{{ asset('css/master.css')}}" rel="stylesheet"/>
     <meta charset="UTF-8">
 	<title>Document</title>
@@ -255,6 +255,7 @@
 
                                         @if(Auth::user()->access==1)
                                             <a class="dropdown-item" id="lgout-nav" href="{{ route('admin_reg')}}">{{ __('Create admin') }} </a>
+                                            <a class="dropdown-item" id="lgout-nav" href="{{ route('config')}}">{{ __('Configuration') }} </a>
                                         @endif
                                         
                                         <a class="dropdown-item" id="lgout-nav" href="{{ route('logout') }}"
