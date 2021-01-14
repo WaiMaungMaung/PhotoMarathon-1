@@ -1,3 +1,6 @@
+@if(Auth::user()->cmp!=null)
+
+
 @extends('layouts.app')
 
 @section('content')
@@ -16,6 +19,14 @@
                     @endif                    
                     <div class="container">
                         <div id="accordion">
+
+
+
+                            @if(DB::table('enrollments')
+                            ->where([
+                                ['cpm','=',Auth::user()->cmp],
+                            ['theme_category','=','Student'],
+                            ])->first())
                             <div class="card">
                                 <div class="card-header">
                                     <a class="card-link" data-toggle="collapse" href="#collapseOne"><strong>Student Category</strong></a>
@@ -35,8 +46,16 @@
                                             <br><br>
                                         @endif                                        
                                     {{-- @endforeach --}}
+                                    </div>
                                 </div>
                             </div>
+                            @endif
+
+                            @if(DB::table('enrollments')
+                            ->where([
+                                ['cpm','=',Auth::user()->cmp],
+                            ['theme_category','=','Theme1'],
+                            ])->first())
                             <div class="card">
                                 <div class="card-header">
                                     <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
@@ -55,9 +74,19 @@
                                         <a class="text-white" href="{{ url('photosubmit/Theme1') }}"><button type="button" class="btn btn-success enrollbtn">Submit</button></a>
                                         <br></br>
                                     @endif                                        
-                                    
+                                        
+                                    </div>
                                 </div>
-                            </div>                            
+                            </div>  
+
+                            @endif
+                            
+                            @if(DB::table('enrollments')
+                                        ->where([
+                                            ['cpm','=',Auth::user()->cmp],
+                                        ['theme_category','=','Theme2'],
+                                        ])->first())
+
                             <div class="card">
                                 <div class="card-header">
                                     <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
@@ -70,19 +99,37 @@
                                         This is Theme II photo.</br>
                                         This is Theme II photo.</br>
                                         This is Theme II photo.</br>                                        
+                                        
+                                        
+                                    
                                         @if($data['theme3'] > 0)                       
                                             <p class="alert text-center">You already uploaded photo.</p>
                                         @else
                                             <a class="text-white" href="{{ url('photosubmit/Theme2') }}"><button type="button" class="btn btn-success enrollbtn">Submit</button></a>
                                             <br><br>
-                                        @endif                                            
+                                        @endif      
+                                        
+                                        
                                         
                                     </div>
                                 </div>
                             </div>
+                                @endif
+
+
+                        
+                        
+                            </div>
                         </div>
-            </div>
+                    </div>
+                </div>
         </div>
     </div>
 </div>
 @endsection
+
+@else 
+<script>alert('Your payment slip is processing ,Please wait for Admin Approve');</script>
+
+  <script>window.location = "/";</script>
+@endif
