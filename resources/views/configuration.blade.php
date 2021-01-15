@@ -192,7 +192,7 @@
                                     <div class="row">                            
                                         <div class="col-md-6">
                                             <label for="studentft" class="col-md-2">From Time</label>
-                                            <input id="datetimepicker" type="text" class="col-md-6 form-control @error('studentft') is-invalid @enderror" name="studentft" required placeholder="dd-mm-yyyy" value="{{ $data['student']->from_time}}"/>
+                                            <input id="datetimepicker" type="text" class="col-md-6 form-control @error('studentft') is-invalid @enderror" name="studentft" required placeholder="dd-mm-yyyy"/>
                                             @error('studentft')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -201,7 +201,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label for="studenttt" class="col-md-2">To Time</label>
-                                            <input id="datetimepicker" type="text" class="col-md-6 form-control @error('studenttt') is-invalid @enderror" name="studenttt" required placeholder="dd-mm-yyyy" value="{{ $data['student']->to_time}}"/>
+                                            <input id="datetimepicker" type="text" class="col-md-6 form-control @error('studenttt') is-invalid @enderror" name="studenttt" required placeholder="dd-mm-yyyy"/>
                                             @error('studenttt')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
