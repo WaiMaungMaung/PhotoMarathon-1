@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Helper;
-use Illuminate\Contracts\Session\Session;
-
+use Exception;
 
 class SubmissionController extends Controller
 {
@@ -17,6 +16,7 @@ class SubmissionController extends Controller
     }
     
     public function index(){
+
         $theme1 = DB::table('submissions')
         ->where([
             ['cmp','=',Auth::user()->cmp],
@@ -35,14 +35,37 @@ class SubmissionController extends Controller
             ['themeCAT','=','Theme2']
             ])->count();
 
-        $d = DB::table('configs')->where('type','student')->first();        
-        $isValidStudent = Helper::isValidTime($d->from_time,$d->to_time);
+        $d = Helper::getConfigsData();
+        if(array_key_exists('student',$d)){
+            if($d['theme1'] != null){
+                $isValidStudent = Helper::isValidTime($d['student']->from_time,$d['student']->to_time);
+            }else{
+                $isValidStudent = false;
+            }
+        }
+        else{
+            $isValidStudent = false;
+        }
 
-        $d = DB::table('configs')->where('type','theme1')->first();        
-        $isValidTheme1 = Helper::isValidTime($d->from_time,$d->to_time);
+        if(array_key_exists('theme1',$d)){
+            if($d['theme1'] != null){
+                $isValidTheme1 = Helper::isValidTime($d['theme1']->from_time,$d['theme1']->to_time);
+            }else{
+                $isValidTheme1 = false;
+            }
+        }else{
+            $isValidTheme1 = false;
+        }
 
-        $d = DB::table('configs')->where('type','theme2')->first();        
-        $isValidTheme2 = Helper::isValidTime($d->from_time,$d->to_time);
+        if(array_key_exists('theme2',$d)){
+            if($d['theme2'] != null){
+                $isValidTheme2 = Helper::isValidTime($d['theme2']->from_time,$d['theme2']->to_time);
+            }else{
+                $isValidTheme2 = false;
+            }
+        }else{
+            $isValidTheme2 = false;
+        }
         
         $data = array(
             'theme1'=>$theme1,
@@ -52,9 +75,6 @@ class SubmissionController extends Controller
             'isValidTheme1'=>$isValidTheme1,
             'isValidTheme2'=> $isValidTheme2
         );
-
-        // print_r($data);
-
         return view('submission')->with('data',$data);
     }
 }

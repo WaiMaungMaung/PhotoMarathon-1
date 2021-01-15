@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Helper;
+use Illuminate\Support\Facades\Storage;
+
 
 
 // use App\Providers\RouteServiceProvider;
@@ -37,8 +39,6 @@ class PsubmitController extends Controller
     }
     
     public function showByCat(Request $id,String $cat){
-
-
         $search =  $id->input('q');
         if($search!=""){
             $users = submission::join('enrollments',
@@ -60,9 +60,7 @@ class PsubmitController extends Controller
             {
                 $join->on([['submissions.cmp','=','enrollments.cpm'],['submissions.themeCAT','=','enrollments.theme_category']]);
 
-
-            })->
-            where('themeCAT','=',$cat)
+            })->where('themeCAT','=',$cat)
             ->paginate(10);
         }
         return view('admin_submit_view',['data'=>$users,'category'=>$cat]);
@@ -78,26 +76,32 @@ class PsubmitController extends Controller
         $enrollData = DB::table('enrollments')->where([
             ['cpm',$cmp],['theme_category',$themeCAT]
             ])->get();
-        $img="";
         if($enrollData->isNotEmpty()){
             $arr_enroll= $enrollData->toArray();
             $obj_enroll = $arr_enroll[0];
             $cBrand = $obj_enroll->camera_brand;
-            if(request()->hasFile('image')){                
-                $img=request()->file('image')->getClientOriginalName();
-                request()->file('image')->move(public_path($themeCAT),$cmp.'_'.$cBrand.'_'.$img,'');            
+            if(request()->hasFile('image')){
+                $filenameWithExt = $request->file('image')->getClientOriginalName();
+                //Get just filename
+                $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+                // Get just ext
+                $extension = $request->file('image')->getClientOriginalExtension();
+                // Filename to store
+                $fileNameToStore = $cmp.'_'.$cBrand.'_'.$filename.'.'.$extension;
+                // Upload Image
+                $request->file('image')->storeAs($themeCAT,$fileNameToStore);                
             }
             date_default_timezone_set('Asia/Rangoon'); 
             $submitTime = date('d M Y h:i:s A');
             $status="";
-            $data=array('name'=>$name,'themeCAT'=>$themeCAT,'orgfileName'=>$img,'submitTime'=>$submitTime,'id'=>$id);
+            $data=array('name'=>$name,'themeCAT'=>$themeCAT,'orgfileName'=>$filenameWithExt,'submitTime'=>$submitTime,'id'=>$id);
             $status="success";
             $msg = "Submission Success. You will recieve successful submission email.";
             submission::create([
                 'cmp'=>$cmp,
                 'name'=>$name,
                 'themeCAT'=>$themeCAT,
-                'fileName'=>$cmp.'_'.$cBrand.'_'.$img,
+                'fileName'=>$fileNameToStore,
                 'submitTime'=>now(),
             ]);
             Mail::send('submitMail', $data, function($message) {                
@@ -105,7 +109,6 @@ class PsubmitController extends Controller
                 ('Submission Successful!');
                 $message->from(env('MAIL_FROM_ADDRESS'),'Cannon Photo Marathon');
             });
-
             return redirect()->route('submission')
                             ->with($status,$msg);
         }else{

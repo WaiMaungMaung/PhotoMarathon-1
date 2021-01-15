@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddColsToUsersTbl extends Migration
+class AddAgreewithToUsersTbl extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,8 @@ class AddColsToUsersTbl extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            //add cols
-            
-            $table->string('access')->nullable();
-            $table->string('cmp')->nullable();
-            $table->date('dob')->nullable();
-            
+            //
+            $table -> boolean('agreewith')->default(false);
         });
     }
 

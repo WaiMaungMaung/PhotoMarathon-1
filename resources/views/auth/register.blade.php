@@ -184,7 +184,7 @@
                         <div class="form-group row">                            
                             <label for="image" id="lblimage" class="col-md-4 col-form-label text-md-right"></label>
                             <div class="col-md-8" id="pf">
-                                <input id="image" type="file" class="form-control" @error('image') is-invalid @enderror" name="image" required>
+                                <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image" required>
                                 @error('image')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -192,10 +192,16 @@
                                 @enderror
                             </div>
                             <input type="hidden" id="payment-type" name="payment-type"/>
-                        </div>                        
+                        </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary" onclick="submitForm()">
+                                <input id="chkagree" type="checkbox" class="@error('chkagree') is-invalid @enderror" name="chkagree" required onchange="ctrlBtn(this)">                                
+                                <label for="chkagree" id="lblagree" class="col-form-label text-md-right">{{__('Agree with terms and conditions')}}</label>
+                            </div>
+                        </div>                      
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" id="btnReg" class="btn btn-primary" onclick="submitForm()" disabled>
                                     {{ __('Register') }}
                                 </button>
                             </div>

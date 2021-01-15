@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\User;
+use App\Http\Helper;
 
 class EnrollmentController extends Controller
 {
@@ -20,14 +20,7 @@ class EnrollmentController extends Controller
      */
     public function index()
     {
-    
-            // $user=Auth::user();
-            // $request->validate(
-            //     $minAge = ( ! empty($parameters)) ? (int) $parameters[0] : 21;
-            //     return 
-            //     echo"(new DateTime)->diff(new DateTime($value))->y>= $minAge;)";
-               
-            return view('home');
+        return view('home');
     }
 
     public function showByCat(Request $id,String $cat){
@@ -49,7 +42,6 @@ class EnrollmentController extends Controller
             ->paginate(3);
         }
         return view('admin_enroll_view',['data'=>$users,'category'=>$cat]);
-
 
     }
 
@@ -121,8 +113,17 @@ class EnrollmentController extends Controller
      */
     public function show(String $id)
     {
-        
-        return view('enroll')->with('id',$id);
+        $data = DB::table('configs')->where('type','enroll')->first();
+        if($data != null){
+            $isValid = Helper::isValidTime($data->from_time,$data->to_time);  
+        }else{
+            $isValid = false;
+        }
+        if($isValid){
+            return view('enroll')->with('id',$id);
+        }else{
+            return view('expired')->with('msg','Sorry, '.$id.' Enrollment Time is not start or over.');
+        }       
 
     }
 
@@ -146,7 +147,7 @@ class EnrollmentController extends Controller
      */
     public function update(Request $request, Enrollment $enrollment)
     {
-echo "updated";
+        echo "updated";
     }
 
     /**

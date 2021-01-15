@@ -14,7 +14,6 @@ class PhandlocationAddToUsersTbl extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            //            
             $table->string('ph_no')->nullable();
             $table->string('location')->nullable();   
         });

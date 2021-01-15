@@ -23,10 +23,18 @@
             autoclose: true,
             changeYear: true,
             changeMonth: true,
-            yearRange: '1930:-18',
-            maxDate: '-18y'
-        });
-    } );    
+            yearRange: '1930:-0',
+            maxDate: '-0y'
+        });        
+    } );
+    
+    function ctrlBtn(checkboxElem) {
+    if (checkboxElem.checked) {
+        $('#btnReg').removeAttr('disabled');
+    } else {
+        $('#btnReg').attr('disabled','disabled');
+    }
+    }
     </script> 
     {{-- end of datepicker script and css --}}
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5edf63078d9f5e00138d7ac1&product=inline-follow-buttons" async="async"></script>

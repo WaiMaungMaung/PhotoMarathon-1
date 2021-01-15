@@ -135,18 +135,13 @@ h2.headertekst {
 #payment-div{
     width: 100%;
 }
-.logo{
-  
+.logo{  
     height: auto;
 }
-
-
-
 #payslip_img{
     width:40px;
     height: auto;
 }
-
 .zoom {
     padding: 50px;
    
@@ -154,20 +149,16 @@ h2.headertekst {
     width: 400px;
     height: auto;
     margin: 0 auto;
-  }
-  
-  .zoom:hover {
-      margin-top: 50px;
-      align-content: center;
-    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }  
+.zoom:hover {
+    margin-top: 50px;
+    align-content: center;
+transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 
-  }
+}
 .card{
 margin-bottom: 10px;
 }
-
-
-
-/* #kbz-pf,#onepay-pf,#wavepay-pf,#cbpay-pf{
-    display: none;
-} */
+#content{
+    height: 100%;
+}

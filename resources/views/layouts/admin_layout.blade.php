@@ -84,90 +84,6 @@
 			font-family:Myanmar3,Yunghkio,'Masterpiece Uni Sans';
 		}
 	</style>
-    <script>
-    /*Get Township short term json */
-    $(document).ready(function(){
-        var tsc = "{{ url('document/townshipcode.json')}}";
-        $.getJSON( tsc , function( result ){ 
-            $.each(result, function(i, option){
-                $('#nrc-code').append($('<option/>').attr("value", option.value).text(option.value));
-            });
-        });
-    });
-    $(document).ready(function(){
-        document.getElementById("lblimage").style.display="none";
-        document.getElementById("image").style.display="none";
- 
-    });
-    function kbzform() {
-     
-        document.getElementById("payment-type").value="kbzpay";
-        var x = document.getElementById("image");
-        var y= document.getElementById("lblimage");
-        if (x.style.display === "none" || y.innerHTML != "KBZ Pay") {
-            y.innerHTML = "KBZ Pay";
-            y.style.display = "block";
-            x.style.display = "block";
-        } else {
-            y.style.display ="none";
-            x.style.display = "none";
-        }
-    }
-    function onepayform(){
-        // document.getElementById("kbz-pf").style.display="none";
-        // document.getElementById("wavepay-pf").style.display="none";
-        // document.getElementById("cbpay-pf").style.display="none";        
-        // document.getElementById("lbl-kbz-pf").style.display="none";
-        // document.getElementById("lbl-wavepay-pf").style.display="none";
-        // document.getElementById("lbl-cbpay-pf").style.display="none";
-        document.getElementById("payment-type").value="onepay";
-        var x = document.getElementById("image");
-        var y= document.getElementById("lblimage");
-        if (x.style.display === "none" || y.innerHTML != "One Pay") {            
-            y.innerHTML="One Pay";
-            x.style.display = "block";
-            y.style.display = "block";
-
-        } else {
-            x.style.display = "none";
-            y.style.display = "none";
-
-        }
-    }
-    function wavepayform(){
-       
-        document.getElementById("payment-type").value="wavepay";
-        var x = document.getElementById("image");
-        var y= document.getElementById("lblimage");
-        if (x.style.display === "none" || y.innerHTML != "Wave Pay") {
-            y.innerHTML = "Wave Pay";
-            x.style.display = "block";
-            y.style.display = "block";
-        } else {
-            x.style.display = "none";
-            y.style.display = "none";
-        }
-    }
-    function cbpayform(){
-        // document.getElementById("kbz-pf").style.display="none";
-        // document.getElementById("wavepay-pf").style.display="none";
-        // document.getElementById("onepay-pf").style.display="none";
-        // document.getElementById("lbl-kbz-pf").style.display="none";
-        // document.getElementById("lbl-wavepay-pf").style.display="none";
-        // document.getElementById("lbl-onepay-pf").style.display="none";
-        document.getElementById("payment-type").value="cbpay";
-        var x = document.getElementById("image");
-        var y= document.getElementById("lblimage");
-        if (x.style.display === "none" || y.innerHTML != "CB Pay") {
-            y.innerHTML = "CB Pay";
-            x.style.display = "block";
-            y.style.display = "block";
-        } else {
-            x.style.display = "none";
-            y.style.display = "none";
-        }
-    }
-    </script>
 </head>
 <body>
     <div id="app">
@@ -209,12 +125,8 @@
                                     <li class="nav-item">
                                         <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                                     </li>
-                                
-
                                 @endif
                             @else
-                                
-                            
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }}
