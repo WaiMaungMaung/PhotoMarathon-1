@@ -1,4 +1,4 @@
-@extends('layouts.admin_layout')
+@extends('layouts.app')
 <style>
     #txtdiv{
         display: none;
@@ -20,12 +20,14 @@
                           </svg>
 
                     </a>
+
+
                     {{$data->cmp}}</div>
+
+                    
                 <div class="card-body ">
-                    <form method="post" action="" enctype="multipart/form-data">
-                        @method("PATCH")
-                        @csrf
-                        
+                    <form method="post" action="{{route('update_approve')}}" >
+                    @csrf
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
@@ -53,7 +55,7 @@
                             <label for="dob" class="col-md-4 col-form-label text-md-right">{{ __('Date Of Birth') }}</label>
                             <div class="col-md-8">
                                 {{-- date picker --}}
-                                <input type="text" class="form-control" name="dob" required maxlength="10" minlength="10" value="{{$data->dob}}" readonly>
+                                <input type="text" class="form-control" name="dob" maxlength="10" minlength="10" value="{{$data->dob}}" readonly>
                                 
                             </div>
                         </div>                        
@@ -92,7 +94,7 @@
                         <div class="form-group row">                            
                             <label for="image" id="lblimage" class="col-md-4 col-form-label text-md-right"></label>
                             <div class="col-md-8" id="pf">
-                                <input id="image" type="file" class="form-control" name="image" required>
+                                <input id="image" type="file" class="form-control" name="image" >
                                 @error('image')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -100,16 +102,38 @@
                                 @enderror
                             </div>
                             <input type="hidden" id="payment-type" name="payment-type"/>
-                        </div>                        
+                        </div>   
+                       
+                                             
                       
+                        <input type="hidden" name="id" value={{$data->id}} >
+
+                        <strong class="row offset-md-4">Status::{{$data->status}}</strong>
+
                         @if(Auth::user()->access!=null)
+
+                            <input  type="hidden" name="status" value={{$data->status}} readonly>
+                       
                         @if($data->status!="Approved")
+
+                        <div class="form-group row">
+                            <label for="exampleFormControlSelect1" class="col-md-4 col-form-label text-md-right">Status</label>
+                        <div class="col-md-8">
+                            <select class="form-control" id="exampleFormControlSelect1" name="state">
+                              <option value="Approved">Approve</option>
+                              <option value="Rejected">Reject</option>
+                              
+                            </select>
+                        </div>
+                          </div>
                         
-                        <a class="text-white" href="{{ url("update_approve/$data->id") }}"><button type="button" class="btn btn-success enrollbtn" >Approve</button></a>
+                        <input type="submit" class="btn btn-success enrollbtn" value="Send">
+                  
+
                         
                         @else
-                        <a class="text-white" href="{{ url("update_approve/$data->id") }}"><button type="button" class="btn btn-success enrollbtn" >Reject</button></a>
-        <a href="{{ route('member.destroy', $data->id) }}" class="btn btn-danger" method="get">Delete</a>
+                        {{-- <input type="submit" class="btn btn-success enrollbtn" value="Reject" > --}}
+        {{-- <a href="{{ route('member.destroy', $data->id) }}" class="btn btn-danger" method="get">Delete</a> --}}
 
                         
                         @endif
