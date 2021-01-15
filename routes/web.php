@@ -88,7 +88,9 @@ Route::post('/photosubmit/{id}',[PsubmitController::class,'store'])->name('photo
 
 Route::post('/admin_reg', [MembersController::class, 'store']);
 
-Route::get('/update_approve/{id}', [MembersController::class, 'update'])->name('/update_approve/id');
+Route::post('/update_approve', [MembersController::class, 'update'])->name('update_approve');
+
+// Route::get('update_reject/{id}',[MembersController::class,'update_reject'])->name('')
 
 Route::post('/admin_reg', [MembersController::class, 'store']);
 
