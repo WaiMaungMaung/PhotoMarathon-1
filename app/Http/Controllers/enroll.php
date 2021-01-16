@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 
 namespace App\Http\Controllers;
 
@@ -16,4 +16,4 @@ class enroll extends Controller
     }
 }
 ?>
- -->
+

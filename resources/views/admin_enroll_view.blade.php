@@ -73,9 +73,11 @@ margin-left: 120px;color: #800000;"><strong>
                    <div class="d-flex justify-content-center">
                     {{ $data->links() }}
                 </div>
-                
-                
-    
+                <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    
+                    <a class="btn btn-secondary" href="{{ route('enrollmentExport',['category'=>$category]) }}">Export {{$category}} Enroll Data</a>
+                </form>
             </div>
         
 

@@ -1,9 +1,5 @@
 @extends('layouts.admin_layout')
 @section('content')
-@if(Auth::user()->access !=null)
-<div class="">
-    <div class="row justify-content-center">
-        <div class="col-2" id="admin_row">
 
             <a class="nav-link text-white admin-li" style="text-align: center;" href="{{ url('/member/pending')}}">{{ __('Registered ') }} </a>
         </div>
@@ -13,7 +9,7 @@
         </div>
         <div class="col-2"  id="admin_row">
 
-            <a class="nav-link text-white admin-li" style="text-align: center;" href="{{ url('/member/approved')}}">{{ __('Reject List') }}</a>
+            <a class="nav-link text-white admin-li" style="text-align: center;" href="{{ url('/member/rejected')}}">{{ __('Reject List') }}</a>
         </div>
         <div class="col-2"></div>
         <div class="col-2">
@@ -36,6 +32,7 @@
                 <table class="table">
                     <thead class="thead-light">
                         <th scope="col">Name</th>
+                        <th scope="col">CPM_ID</th>
                         <th scope="col">Email</th>
                         <th scope="col">NRC</th>
                         <th scope="col">Created at</th>
@@ -47,6 +44,7 @@
                     @foreach($data as $user)
                     <tr>
                         <td>{{$user->name}}</td>
+                        <td>{{$user->cmp}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->nrc}}</td>
                         <td>{{$user->created_at}}</td>
@@ -82,9 +80,7 @@
     
 @stop
 
-@else 
-  <script>window.location = "/";</script>
-@endif
+
 
 
 

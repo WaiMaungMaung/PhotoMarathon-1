@@ -56,7 +56,7 @@
     
                         </thead>
                         <tbody>
-                        
+                            {{-- <pre>{{print_r($data)}}</pre> --}}
                         
                         @foreach($data as $user)
                         <tr>
@@ -64,6 +64,7 @@
                             <td>{{$user->name}}</td>
                             <td>{{$user->camera_brand}}</td>
                             <td>{{$user->submitTime}}</td>
+                            <td>{{$user->themeCAT}}</td>
                             {{-- <td><img src="{{url("/payslips/$user->image")}}" alt="img" id="payslip_img"></td> --}}
                             
                         </tr>
@@ -74,6 +75,12 @@
                    <div class="d-flex justify-content-center">
                     {{ $data->links() }}
                 </div>
+
+                <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    
+                    <a class="btn btn-secondary" href="{{ route('submissionExport',['category'=>$category]) }}">Export {{$category}} Submission Data</a>
+                </form>
                 
                 
     

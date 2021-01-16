@@ -4,6 +4,7 @@ use App\Http\Controllers\MembersController;
 use App\Http\Controllers\UploadFileController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\EnrollmentController;
+use App\Http\Controllers\ConfigController;
 use App\Http\Controllers\PsubmitController;
 use App\Models\Member;
 use Illuminate\Support\Facades\Route;
@@ -41,6 +42,9 @@ Auth::routes(['verify' => true]);
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 Route::get('/about', [App\Http\Controllers\MyController::class, 'about'])->name('about');
+
+Route::get('/waiting_approve', [App\Http\Controllers\MyController::class, 'waiting_approve'])->name('waiting_approve');
+
 
 Route::get('/prizes', [App\Http\Controllers\MyController::class, 'prizes'])->name('prizes');
 
@@ -84,7 +88,9 @@ Route::post('/photosubmit/{id}',[PsubmitController::class,'store'])->name('photo
 
 Route::post('/admin_reg', [MembersController::class, 'store']);
 
-Route::get('/update_approve/{id}', [MembersController::class, 'update'])->name('/update_approve/id');
+Route::post('/update_approve', [MembersController::class, 'update'])->name('update_approve');
+
+// Route::get('update_reject/{id}',[MembersController::class,'update_reject'])->name('')
 
 Route::post('/admin_reg', [MembersController::class, 'store']);
 
@@ -95,6 +101,7 @@ Route::get('/member/destroy/{id}',[MembersController::class,'destroy'])->name('m
 Route::get('/fileupload',[UploadFileController::class,'imageUpload']);
 Route::post('/fileupload',[UploadFileController::class,'imageUploadPost'])->name('image.upload.post');
 
+
 Route::get('sendbasicemail','MailController@basic_email');
 Route::get('sendbasicemail',[MailController::class,'basic_email']);
 Route::get('html_email',[MailController::class,'html_email']);
@@ -102,12 +109,30 @@ Route::get('html_email',[MailController::class,'html_email']);
 Route::get('sendhtmlemail','MailController@html_email');
 Route::get('sendattachmentemail','MailController@attachment_email');
 
+Route::get('/config',[ConfigController::class,'index'])->name('config');
+
+Route::post('/reg-time-config',[ConfigController::class,'reg_time_store'])->name('reg-time-config');
+
+Route::post('/enroll-time-config',[ConfigController::class,'enroll_time_store'])->name('enroll-time-config');
+
+Route::post('/student-time-config',[ConfigController::class,'student_time_store'])->name('student-time-config');
+
+Route::post('/theme1-time-config',[ConfigController::class,'theme1_time_store'])->name('theme1-time-config');
+
+Route::post('/theme2-time-config',[ConfigController::class,'theme2_time_store'])->name('theme2-time-config');
+
 // Route::get('/enroll',[EnrollmentController::class,'index'])->name('enroll');
 
 //Excel Route
 Route::get('importExportView', [MyController::class, 'importExportView']);
 Route::get('export', [MyController::class, 'export'])->name('export');
 Route::post('import', [MyController::class, 'import'])->name('import');
+
+Route::get('enrollmentExport', [MyController::class, 'enrollmentExport'])->name('enrollmentExport');
+
+Route::get('submissionExport', [MyController::class, 'submissionExport'])->name('submissionExport');
+
+
 
 
                 

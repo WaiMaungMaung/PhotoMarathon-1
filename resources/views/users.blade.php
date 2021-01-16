@@ -28,6 +28,7 @@
 
     <tr>
         <th>Name</th>
+        <th>CPM-ID</th>
         <th>Email</th>
         <th>NRC</th>
         <th>Contact No</th>
@@ -39,6 +40,7 @@
     @foreach($users as $user)
         <tr>
             <td>{{ $user->name }}</td>
+            <td>{{$user->cmp}}</td>
             <td>{{ $user->email }}</td>
             <td>{{$user->nrc}}</td>
             <td>{{$user->ph_no}}</td>

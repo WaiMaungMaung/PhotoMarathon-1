@@ -17,7 +17,6 @@ class AddColsToUsersTbl extends Migration
             //add cols
             
             $table->string('access')->nullable();
-
             $table->string('cmp')->nullable();
             $table->date('dob')->nullable();
             

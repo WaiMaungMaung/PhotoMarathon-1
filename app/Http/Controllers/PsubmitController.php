@@ -9,6 +9,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Helper;
+use Illuminate\Support\Facades\Storage;
+
 
 
 // use App\Providers\RouteServiceProvider;
@@ -25,15 +28,24 @@ class PsubmitController extends Controller
     }
 
     public function show(String $id){
-        return view('photosubmit')->with('id',$id);
+        $data = DB::table('configs')->where('type',$id)->first();
+        $isValid = Helper::isValidTime($data->from_time,$data->to_time);
+        if($isValid){
+            return view('photosubmit')->with('id',$id);
+        }else{
+            return view('expired')->with('msg','Sorry, Submission Time is not start or over');
+        }
+        
     }
     
     public function showByCat(Request $id,String $cat){
-
-
         $search =  $id->input('q');
         if($search!=""){
-            $users = submission::join('enrollments','enrollments.cpm','=','submissions.cmp')->
+            $users = submission::join('enrollments',
+            function($join)
+            {
+            $join->on([['submissions.cmp','=','enrollments.cpm'],['submissions.themeCAT','=','enrollments.theme_category']]);
+            })->
             where('themeCAT','=',$cat)
             ->where(function ($query) use ($search){
                     $query->where('name', 'like', '%'.$search.'%')
@@ -43,7 +55,12 @@ class PsubmitController extends Controller
             }
         else{
             $users = submission::
-            where('themeCAT','=',$cat)
+            join('enrollments',
+            function($join)
+            {
+                $join->on([['submissions.cmp','=','enrollments.cpm'],['submissions.themeCAT','=','enrollments.theme_category']]);
+
+            })->where('themeCAT','=',$cat)
             ->paginate(10);
         }
         return view('admin_submit_view',['data'=>$users,'category'=>$cat]);
@@ -59,45 +76,43 @@ class PsubmitController extends Controller
         $enrollData = DB::table('enrollments')->where([
             ['cpm',$cmp],['theme_category',$themeCAT]
             ])->get();
-        $img="";
         if($enrollData->isNotEmpty()){
             $arr_enroll= $enrollData->toArray();
             $obj_enroll = $arr_enroll[0];
             $cBrand = $obj_enroll->camera_brand;
-            if(request()->hasFile('image')){                
-                $img=request()->file('image')->getClientOriginalName();
-                request()->file('image')->move(public_path($themeCAT),$cmp.$cBrand.$img,'');            
+            if(request()->hasFile('image')){
+                $filenameWithExt = $request->file('image')->getClientOriginalName();
+                //Get just filename
+                $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+                // Get just ext
+                $extension = $request->file('image')->getClientOriginalExtension();
+                // Filename to store
+                $fileNameToStore = $cmp.'_'.$cBrand.'_'.$filename.'.'.$extension;
+                // Upload Image
+                $request->file('image')->storeAs($themeCAT,$fileNameToStore);                
             }
-            // to control submission time 
-            $isValidTime = true;
             date_default_timezone_set('Asia/Rangoon'); 
             $submitTime = date('d M Y h:i:s A');
             $status="";
-            
-            if($isValidTime){
-                $data=array('name'=>$name,'themeCAT'=>$themeCAT,'orgfileName'=>$img,'submitTime'=>$submitTime,'id'=>$id);
-                $status="success";
-                $msg = "Submission Success. You will recieve successful submission email.";
-                submission::create([
-                    'cmp'=>$cmp,
-                    'name'=>$name,
-                    'themeCAT'=>$themeCAT,
-                    'fileName'=>$cmp.$cBrand.$img,
-                    'submitTime'=>now(),
-                ]);
-                Mail::send('submitMail', $data, function($message) {                
-                    $message->to('myatthuaung@myanmargoldenrock.com', 'MMM')->subject
-                    ('Submission Successful!');
-                    $message->from(env('MAIL_FROM_ADDRESS'),'Cannon Photo Marathon');
-                });
-            }else{
-                $status="error";
-                $msg = "Sorry, Photo submission time is over";                
-            }   
+            $data=array('name'=>$name,'themeCAT'=>$themeCAT,'orgfileName'=>$filenameWithExt,'submitTime'=>$submitTime,'id'=>$id);
+            $status="success";
+            $msg = "Submission Success. You will recieve successful submission email.";
+            submission::create([
+                'cmp'=>$cmp,
+                'name'=>$name,
+                'themeCAT'=>$themeCAT,
+                'fileName'=>$fileNameToStore,
+                'submitTime'=>now(),
+            ]);
+            Mail::send('submitMail', $data, function($message) {                
+                $message->to(Auth::user()->email, Auth::user()->name)->subject
+                ('Submission Successful!');
+                $message->from(env('MAIL_FROM_ADDRESS'),'Cannon Photo Marathon');
+            });
             return redirect()->route('submission')
                             ->with($status,$msg);
-            }else{
-                return redirect()->route('dashboard');
-            }        
-        }
+        }else{
+            return redirect()->route('dashboard');
+        }        
+    }
 }

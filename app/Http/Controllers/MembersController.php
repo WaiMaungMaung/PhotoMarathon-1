@@ -145,7 +145,7 @@ class MembersController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    public function update(String $id)
+    public function update(Request $req)
     {
         $users=DB::table('users')->orderBy('cmp', 'desc')->first();
         if($users != null){            
@@ -154,8 +154,10 @@ class MembersController extends Controller
             $cmp = null;
         }
 
-        $contact = User::find($id);
-        $contact->status = "Approved";
+        $contact = User::find($req->id);
+        $contact->status = $req->state;
+
+        if($req->state=="Approved"){
         if($contact->cmp==null)
         $contact->cmp= Helper::getCMPID($cmp);
         
@@ -167,10 +169,16 @@ class MembersController extends Controller
              ('Approved!');
           $message->from('waimaungmaung@myanmargoldenrock.com','Canon Photo Marathon');
        });
+        }
         
         $contact->save();
 
         return redirect()->back()->withInput();
+    }
+
+    public function test(Request $req){
+        print_r($req->state);
+        echo $req->status;
     }
 
     /**
@@ -179,18 +187,18 @@ class MembersController extends Controller
      * @param  \App\Models\Member  $member
      * @return \Illuminate\Http\Response
      */
-    public function destroy(String $id)
-    {
-        $contact = User::find($id);
-        $contact->status = "Rejected";
-        $contact->save();
+    // public function destroy(String $id)
+    // {
+    //     $contact = User::find($id);
+    //     $contact->status = "Rejected";
+    //     $contact->save();
 
-        return redirect()->back()->withInput();
+    //     return redirect()->back()->withInput();
     
-        //     $User_del = User::find($id);
+    //     //     $User_del = User::find($id);
 
-    // $User_del->delete();
-    // return redirect('admin_view');
+    // // $User_del->delete();
+    // // return redirect('admin_view');
 
-    }
+    // }
 }
