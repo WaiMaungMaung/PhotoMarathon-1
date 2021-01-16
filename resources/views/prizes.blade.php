@@ -203,7 +203,7 @@ https://youtu.be/9MM8Nc8YrAA​
             <div class="card-header">
         <a class="card-link text-dark" style="color: #ffffff;" data-toggle="collapse" href="#collapseOne"><h4><strong> Student Category </strong> </h4></a>
             </div>
-        <div class="collapse multi-collapse" id="collapseOne">
+        <div class="collapse multi-collapse show" id="collapseOne">
       <div class="card card-body">
 
         
@@ -243,7 +243,7 @@ https://youtu.be/9MM8Nc8YrAA​
             <div class="card-header">
         <a class="card-link text-dark" style="color: #ffffff;" data-toggle="collapse" href="#collapse2"><h4><strong> Open Category Theme - 1 </strong></h4></a>
             </div>
-        <div class="collapse multi-collapse" id="collapse2">
+        <div class="collapse multi-collapse show" id="collapse2">
       <div class="card card-body">
         
 
@@ -280,12 +280,13 @@ https://youtu.be/9MM8Nc8YrAA​
 
 
           </div></div></div></div>
+
 <div class="container-fluid">
    <div class="card " style="    background: linear-gradient(to left, #ffcc00 0%, #ff0066 100%);">
             <div class="card-header">
         <a class="card-link text-dark" style="color: #ffffff;" data-toggle="collapse" href="#collapse3"><h4><strong> Open Category Theme - 2 </strong></h4></a>
             </div>
-        <div class="collapse multi-collapse" id="collapse3">
+        <div class="collapse multi-collapse show" id="collapse3">
       <div class="card card-body">
         
 
