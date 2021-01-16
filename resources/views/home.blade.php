@@ -121,7 +121,7 @@
 @stop
 
 @else 
-<script>alert('Your payment slip is processing ,Please wait for Admin Approve');</script>
+<script>alert('Your Registration is processing ,Please wait for Admin Approve');</script>
 
 <script>window.location = "/";</script>
   
