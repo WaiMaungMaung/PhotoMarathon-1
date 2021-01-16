@@ -289,7 +289,7 @@
                 @yield('content')
             </div>
         </main>
-        <footer class="bg-light text-center ">
+        <footer class="bg-light text-center " id="foot">
             <!-- Grid container -->
             <div class="container">
               <!--Grid row-->

@@ -159,6 +159,6 @@ transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will g
 .card{
 margin-bottom: 10px;
 }
-#content{
-    height: 100%;
+#foot{
+    margin-top:200px;
 }
