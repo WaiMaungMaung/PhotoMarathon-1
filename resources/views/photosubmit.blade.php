@@ -27,7 +27,7 @@
                         <label class="col-md-5" for="image">Attach Photo</label>
                         <input class="col-md-5" type="file" id="image" name="image" required>
                         </br></br>                        
-                        <button type="submit" class="col-md-5 btn btn-primary">Submit</button>
+                        <button type="submit" class="col-md-5 btn btn-primary" style="float: right">Submit</button>
                     </form>
                 </div>
             </div>
