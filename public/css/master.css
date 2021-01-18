@@ -162,3 +162,9 @@ margin-bottom: 10px;
 #content{
     height: 100%;
 }
+.txtsuccess{
+    color:green;
+}
+.txtexp{
+    color:red;
+}

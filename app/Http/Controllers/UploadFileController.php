@@ -14,15 +14,17 @@ class UploadFileController extends Controller
     }
     public function imageUpload()
     {
-        request()->headers->set('referer', '');
-        $referer = request()->headers->get('referer');
-        print_r($referer);
+        // request()->headers->set('referer', '');
+        // $referer = request()->headers->get('referer');
+        // print_r($referer);
 
-        if($referer == null){
-            return view('home');
-        }else{
-            return view('auth.register');
-        }
+        // if($referer == null){
+        //     return view('home');
+        // }else{
+        //     return view('auth.register');
+        // }
+
+        return view('file-upload');
         
 
 
@@ -38,12 +40,12 @@ class UploadFileController extends Controller
      */
     public function imageUploadPost(Request $request)
     {
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
-        ]);
+        // $request->validate([
+        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+        // ]);
   
-        $imageName = time().'.'.$request->image->extension();
-        $request->image->move(public_path('payslips'), $imageName);
+        // $imageName = time().'.'.$request->image->extension();
+        // $request->image->move(public_path('payslips'), $imageName);
 
         // $imageName = time().'.'.$request->image->extension();  
         // $request->image->move(public_path('payslips'), $imageName);
@@ -55,9 +57,9 @@ class UploadFileController extends Controller
         //     $files->move($destinationPath, $profileImage);
         // }   
    
-        return back()
-            ->with('success','You have successfully upload image.')
-            ->with('image',$imageName);
+        // return back()
+        //     ->with('success','You have successfully upload image.')
+        //     ->with('image',$imageName);
    
     }
 }
