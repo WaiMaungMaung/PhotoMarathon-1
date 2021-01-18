@@ -133,6 +133,7 @@ a:focus {
 
 .profile-card-6:hover img {
     filter: brightness(80%);
+    size:120%;
 }
 
 .profile-card-6:hover .profile-name {
