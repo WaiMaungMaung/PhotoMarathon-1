@@ -66,7 +66,7 @@
             return false;
         return true;
     }
-    </script>
+    </script>   
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -166,6 +166,9 @@
             document.getElementById("regFrm").submit();
         }
     }
+    </script>
+    <script>
+        @yield('script');
     </script>
 </head>
 <body>
