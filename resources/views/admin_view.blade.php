@@ -1,5 +1,8 @@
 @extends('layouts.admin_layout')
 @section('content')
+<div class="">
+    <div class="row justify-content-center">
+        <div class="col-2" id="admin_row">
 
             <a class="nav-link text-white admin-li" style="text-align: center;" href="{{ url('/member/pending')}}">{{ __('Registered ') }} </a>
         </div>

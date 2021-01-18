@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Helper;
+use Exception;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -67,6 +68,8 @@ class PsubmitController extends Controller
     }
 
     public function store(Request $request, String $id){
+       
+       try{
         $request->validate([
             'image' => 'required'
         ]);
@@ -113,6 +116,12 @@ class PsubmitController extends Controller
                             ->with($status,$msg);
         }else{
             return redirect()->route('dashboard');
-        }        
+        }     
+        
+    }
+    catch(Exception $e){
+        // return view('ErrorReport')->with('error',$e);
+        return back()->with('errors',$e->getMessage())->withInput();
+    }
     }
 }

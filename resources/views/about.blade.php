@@ -1,29 +1,28 @@
 @extends('layouts.app')
 <style>
 
-div.b {
-  line-height: 1.6;
-}
 
 #rcorners1 {
-  border-radius: 10px;
-  background:  rgb(3, 196, 255);
-  padding: 2px; 
+  border-radius: 5px;
+  background:  rgb(0, 51, 153);
+  padding: 7px; 
   width: 400px;
-  border:2px solid rgb(4, 0, 255);
-  height: 40px;  
+  border:2px solid rgb(255, 255, 255);
+  height: 50px; 
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); 
   text-align:center;
   font-size:20px;
 }
 
 #rcorners2 {
-  border-radius: 10px;
-  background:  rgb(216, 36, 36);
-  
-  border:2px solid rgb(4, 0, 255);
-  padding: 2px; 
+  border-radius: 5px;
+  background:  rgb(240, 0, 0);
+  row-gap: 1.5rem;
+  border:2px solid rgb(255, 255, 255);
+  padding: 7px; 
   width: 400px;
-  height: 40px;  
+  height: 50px;  
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   text-align:center;
   font-size:20px;
 }
@@ -34,13 +33,12 @@ div.b {
         <h5><strong>The Region’s Largest On-ground Photography Competition!</strong>​</h5>
         Singapore was the birthplace of CPM back in 2003. With overwhelming response, the competition is now 
         available in most parts of Asia, Hong Kong, Taiwan, the Philippines, Singapore, Malaysia,
-         Indonesia, Vietnam, India, Brunei, Cambodia, China and Sri Lanka.​
-         Join the multitude of participants who rose to the challenge of this photo competition and create
+        Indonesia, Vietnam, India, Brunei, Cambodia, China and Sri Lanka. Join the multitude of participants who rose to the challenge of this photo competition and create
          photographic masterpieces in line with assigned themes - under time pressure.<br>
         </p>
         
         <p>
-        <h4><strong>CANON PHOTOMARATHON MYANMAR​​</strong></h4>
+        <h4><strong>CANON PHOTOMARATHON MYANMAR 2019​​</strong></h4>
         The first Canon PhotoMarathon Myanmar was hosted in year 2019 at Thuwunna Indoor Stadium, Yangon and a
         total of over 700 enthusiastic contestants were participating under the two unusual themes in the event. Three
         amazing prizes were awarded for each theme and one grand prize was awarded to a participant who showed
@@ -70,7 +68,7 @@ div.b {
         </div>			   
         
         <br>
-        <div class="container w_slide" >
+        <div class="container w_slide" style="width: 80%" >
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -104,6 +102,7 @@ div.b {
           </div>
           </div>
         <br>
+        <h4><strong>CANON PHOTOMARATHON MYANMAR 2020</strong></h4>
         <p>Even in menacing of Covid-19 outbreak in the world, the second Canon PhotoMarathon Myanmar was
         successfully hosted in year 2020 at Rose Garden Hotel, Yangon and a total of over 400 enthusiastic
         contestants were participating under the three unexpected themes in the event. In the 2nd CPM, the amateur
@@ -144,7 +143,22 @@ div.b {
           </div>
         </div>	   
         <br>
-        <div class="container w_slide" >
+        <div class="row" >
+
+          <div class="offset-md-4 offset-sm-1 text-white" id="rcorners1">
+            <strong>    PROFESSIONAL CATEGORY THEME - 2         </strong>
+
+          </div>
+        </div>
+        <div class="row" >
+
+          <div class="offset-md-4 offset-sm-1 text-white" id="rcorners2">
+            <strong>    REFLECTION         </strong>
+
+          </div>
+        </div>
+        <br>
+        <div class="container w_slide" style="width: 80%" >
           <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>

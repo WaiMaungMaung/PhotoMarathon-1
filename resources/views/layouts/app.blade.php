@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" src="{{ asset('js/nicepage.js') }}" media="screen">
+  <link rel="stylesheet" src="{{ asset('css/nicepage.css') }}">
     <script>
     $( function() {
         $( "#dob" ).datepicker({
@@ -292,7 +294,7 @@
                 @yield('content')
             </div>
         </main>
-        <footer class="bg-light text-center ">
+        <footer class="bg-light text-center " id="foot">
             <!-- Grid container -->
             <div class="container">
               <!--Grid row-->

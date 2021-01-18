@@ -49,11 +49,10 @@ h1 {
 </style>
 @section('content')
 
-<div class="center" style="font-size:31px;text-align:center;"><strong>
+<div class="center" style="font-size:31px;text-align:center;">
+<strong>Photo Gallery</strong>
+</div>
 
-Photo Gallery</strong>
-</div>
-</div>
 <br>
 <div class="grid-container">
   <div>
